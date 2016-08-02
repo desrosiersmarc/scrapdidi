@@ -1,0 +1,26 @@
+.product-card {
+  background-color: #FFF;
+  border-radius: 4px;
+  box-shadow: 5px 5px 15px #AAA;
+}
+
+.product-thumb {
+  margin: 10px;
+  height:188px;
+
+}
+
+.product-content {
+  margin: 10px;
+  color:#BBBBBB;
+}
+
+.product-card i {
+  font-size: 20px;
+  color: #CE1483;
+}
+
+.product-informations ul{
+  display: flex;
+  justify-content: space-between;
+}

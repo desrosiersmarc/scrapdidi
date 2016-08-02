@@ -1,11 +1,18 @@
 /*import style from differents css sheets*/
 @import url(components/avatar.css);
-@import url(components/banner.css);
 @import url(components/banner-animation.css);
+@import url(components/banner.css);
 @import url(components/buttons.css);
+@import url(components/card.css);
+@import url(components/features.css);
 @import url(components/fonts.css);
+@import url(components/footer.css);
+@import url(components/header_menu.css);
+@import url(components/modal.css);
+@import url(components/news.css);
 @import url(components/nouveautes-content.css);
 @import url(components/picto.css);
+@import url(components/product-card.css);
 @import url(components/promotions-content.css);
 @import url("components/titre-content.css");
 @import url("components/titre-et-recherche.css");

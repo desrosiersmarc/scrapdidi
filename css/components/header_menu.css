@@ -1,0 +1,35 @@
+.wrapper-header {
+  background-color:#CE1483;
+  font-family: 'Open-sans', cursive;
+  font-weight: lighter;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-header-font-logo {
+  color: #FFF;
+}
+.wrapper-header a {
+  color: #FFF;
+}
+
+.wrapper-header i {
+  color:#FFF;
+  font-size: 25px;
+  padding: 15px 0;
+}
+
+.wrapper-header-left a, i {
+  margin-left: 10px;
+}
+
+.wrapper-header-right a, i {
+  margin-left: 10px;
+}
+
+.wrapper-header-right {
+  margin-right: 10px;
+}
+
+

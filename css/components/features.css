@@ -1,0 +1,28 @@
+.wrapper-features {
+  background-color: ##F4F4F4;
+}
+
+.wrapper-header-features-circle {
+  background-color: #CE1483;
+  height: 60px;
+  width:60px;
+  border-radius: 30px;
+}
+
+.wrapper-features i {
+  color: #CE1483;
+  font-size: 40px;
+}
+
+.wrapper-features h4 {
+  font-size: 20px;
+}
+
+
+.features-card {
+  background-color: #EEE;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px #AAA;
+  padding: 15px 0;
+  margin: 15px;
+}

@@ -1,0 +1,27 @@
+.modal-picture {
+  /*background-color: red;*/
+}
+.modal-picture {
+  width:100%;
+}
+
+.color-red {
+  background-color: red;
+  color: red;
+}
+
+.wrapper-test {
+  background-color: #f3cfd9;
+  color: #CE1483;
+}
+
+.wrapper-test p {
+  color:#989898;
+  font-size: 20px;
+  padding-top: 10px;
+
+}
+
+.wrapper-test i {
+  font-size: 25px;
+}
