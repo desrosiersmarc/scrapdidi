@@ -1,0 +1,66 @@
+html
+{
+
+}
+	
+p
+{
+	font-family: fantasy;
+	/*color:#4c378a;*/
+	font-style:italic;
+}
+
+body
+{
+	background-color:#99A2A8 ;
+}
+
+.bloc
+{
+	/*height:200px;*/
+	width:90%;
+	/*height:100%;*/
+	background-color: gray;
+	border-radius: 10%;
+	margin:auto;
+	float:left;
+	
+}
+
+
+.imgAlign
+{
+	width:100%;
+	/*height:100%;*/
+	vertical-align: middle;
+	
+}
+
+#zoneTest
+{
+	float:left;
+}
+
+.floatTexte
+{
+	float:left;
+}
+
+img
+{
+	width:100%;
+}
+
+.rondArticle
+{
+	background-color: red;
+	color:#FFFFFF;
+	height:30px;
+	width:30px;
+	border-radius:15px;
+	position: relative;
+	left:150px;
+	top:-200px;
+	line-height: 30px;
+	text-align:center;
+}

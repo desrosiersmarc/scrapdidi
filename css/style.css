@@ -1,0 +1,88 @@
+/*import style from differents css sheets*/
+@import url(components/avatar.css);
+@import url(components/banner.css);
+@import url(components/banner-animation.css);
+@import url(components/buttons.css);
+@import url(components/fonts.css);
+@import url(components/nouveautes-content.css);
+@import url(components/picto.css);
+@import url(components/promotions-content.css);
+@import url("components/titre-content.css");
+@import url("components/titre-et-recherche.css");
+@import url("components/top-vente-content.css");
+@import url("components/trait-home.css");
+
+
+/*Declaration of CSS's variables*/
+:root
+{
+  --main_background_color:#000000;/*None use*/
+  --main_bg_color_blue:#CEE3F6;/*Use in background of differents div- intial color : #CEE3F6*/
+  --main_bg_color_pink:#F7D1F6;/*Use for the background of differentss -  intial color : #CEE3F6 div*/
+  --main_color_blue_dark:#4c378a;/*Use for font and border-initial color : #4c378a*/
+  --main_color_grey_border:#ebebeb;/*use for borders-intial color : #ebebeb*/
+  --main_color_pink_border:#F7D1F6; /*Use for borders with background blue*/
+
+  /*Warning : css's variables are not disponible with IE*/
+  /*need to continue to replace other color by css's variables*/
+}
+  /*Quelques spécifications pour la Home page permettant de basculer sur le site en php*/
+  #htmlHP {
+    background-color:var(--main_background_color);
+  }
+
+  #HPContent {
+    width:100%;
+  }
+
+  #logoHP {
+    width:100%;
+  }
+
+  #videoHP {
+    width:100%;
+  }
+
+  /*Modification des autres que div*/
+  #htmlSite {
+    background-image:url("media_css/fond3.png");
+  }
+
+  p {
+    font-family: "dancing script", fantasy, sans-serif;
+    margin:0;
+    font-size: 1.4em;
+  }
+
+/*
+ * Ajouter une mise en forme du texte placeholder dans les blocs input
+ */
+  input
+  {
+    font-family: "dancing script", fantasy, sans-serif;
+    font-size: 1em;
+  }
+
+  ul
+  {
+    margin:0;
+
+  }
+
+  a:link
+  {
+    text-decoration: none
+  }
+
+
+  #zone_md
+  {
+      margin: 0 auto;
+      width: 100%;/*02032016*/
+      min-width:1008px;
+
+  }
+
+  #zone_mdcontenu {
+    /*background :#FF1493 ;*/
+  }

@@ -1,0 +1,1023 @@
+/*Définition des div de la seconde partie*/
+
+/*Définition des div du menu*/
+	#produitsContent
+	{
+	    /*rien pour le moment*/
+	    /*height:60px;*/
+	}
+
+	#produits
+	{
+	    background-color: rgba(255,255,255,0.5);
+	    background :#FFFFFF ;
+	    border: 1px solid var(--main_bg_color_pink);
+	    border-radius:5px;
+	   	height: 60px;
+	  	line-height: 60px;
+	}
+
+	.menuContent
+	{
+		margin-left:50px;
+		float:left;
+		text-align: center;
+	}
+
+
+
+	.imgHomeMenu
+	{
+		height:50px;
+	}
+
+	.imgHomeMenuButton
+	{
+		background-color:#FFF;
+		border:none;
+	}
+
+
+
+/*Fin des div du menu*/
+
+	#compositionPlatsContent
+	  {
+	  	width: 95%;/*02032016*/
+	    margin: 0 auto;
+
+
+	   }
+	#compositionPlats
+	{
+	    background: #FFFFFF;
+	    border: 1px solid var(--main_bg_color_pink);
+	    border-radius:5px;
+	    color:var(--main_color_blue_dark);
+	    min-height: 900px;
+
+
+	}
+
+	#choixProduitsPlatsContent
+	  {
+	  	width: 100px;
+	    float: left;
+	    margin: 0 auto;
+	    height: 100px;
+	   }
+
+	/*#ProduitsPlats
+	{
+
+	  	background :var(--main_bg_color_blue) ;
+	    border: 1px solid var(--main_color_grey_border);
+	    margin: 5px;
+	    max-height:439px;
+	    overflow: auto;
+	    color:#FFFFFF;
+	}*/
+
+
+
+
+
+/*Définition des titres*/
+	.titreHP
+	{
+		text-align: center;
+		line-height: 40px;
+		width:150px;
+		background-color: white;
+	}
+
+/*Define div about basket */
+	#basketDivContent
+	{
+		margin-top:10px;
+	}
+
+	#basketDiv
+	{
+		padding:10px;
+		width:90%;
+		border : solid 1px #797D80;
+		border-radius:20Px;
+		margin:auto;
+		box-shadow: 8px 8px 12px #aaa;
+	}
+
+
+	.basketDivAlert
+	{
+		background-color:#F10091;
+	}
+
+th
+{
+	font-family:arial;
+	font-weight:normal;
+	font-size: 0.8em;
+	color:#797D80;
+}
+
+td
+{
+	/*border: solid 1px #797D80;
+	text-align: center;*/
+}
+
+.td_libelle
+{
+	width:450px;
+}
+
+.td_others
+{
+	width:100px;
+	text-align: center;
+}
+
+.td_total
+{
+	font-family:arial;
+	font-size:1.2em;
+	font-weight:bold;
+	text-align: center;
+}
+
+
+.tr_title
+{
+	background-color:#E6E6E6;
+}
+
+.td_alert
+{
+	background-color: ;
+	border : solid 2px;
+	border-color:red;
+
+}
+
+
+
+.buttonFraisPort
+{
+	width:220px;
+	height: 40px;
+	border-radius:5px;
+	background-color:#FFF;
+	border:solid 1px #797D80;
+}
+
+.buttonFraisPortSelected
+{
+	width:220px;
+	height: 40px;
+	border-radius:5px;
+	background-color:#F8E0F7;
+	border:solid 1px #F10091;/*To see the FP selected*/
+}
+
+.buttonFraisPort:hover
+{
+	box-shadow: 8px 8px 12px #aaa;
+	color:#FFFFFF;
+	background-color: #F10091;
+}
+
+.imgButtonFraisPort
+{
+	height: 34px;
+}
+
+.buttonPasserCommande
+{
+	width:200px;
+	height: 40px;
+	border-radius:5px;
+	background-color:var(--main_bg_color_blue);
+	border:solid 1px #F10091;
+}
+
+.buttonPasserCommande:hover
+{
+	box-shadow: 8px 8px 12px #aaa;
+	color:#FFFFFF;
+	background-color: #F10091;
+}
+
+
+/*Définition du bloc en bas de la page pour les réseaux sociaux et les CGR*/
+	#basPageContent
+	{
+		height: 200px;
+		width:900px;
+		background :var(--main_bg_color_blue) ;
+
+	    border: 1px solid var(--main_color_grey_border);
+	    margin: auto;
+	    overflow: auto; /*Activate on 17th april 2016*/
+	    color:#FFFFFF;
+	    border-radius:5px;
+
+	}
+
+	.blocsBasPage
+	{
+		height: 90px;
+		width:270px;
+		/*background :#0033FF;*/
+		margin:5px;
+		margin-left:20px;
+		float:left;
+
+
+	}
+
+	#reseauxSociauxContent
+	{
+		height:40px;
+		width:450px;
+		margin-top:5px;
+		margin-left:5px;
+		float:left;
+		/*border: 1px solid white;à supprimer*/
+	}
+
+	#reseauxSociaux
+	{
+		width:300px;
+		height:40px;
+		float:left;
+		line-height: 40px;
+	}
+
+	.img_reseau
+	{
+		height:30px;
+		float:left;
+		margin:2px;
+		display:block;/*?*/
+		vertical-align:middle ;/*?*/
+
+	}
+
+	.tailleTexteInformations
+	{
+		font-size: 0.9em;
+	}
+
+	#newsLetterContent
+	{
+		height:40px;
+		width:550px;
+		margin-top:5px;
+		margin-left:5px;
+		float:left;
+		/*border: 1px solid white;à supprimer*/
+	}
+
+
+	#newsletter_p
+	{
+		width:220px;
+		float:left;
+		line-height: 40px; /*pour centrer le texte verticalement*/
+	}
+
+	#traitBasPageHContent
+	{
+		width:900px;
+		float:left;
+
+	}
+	#traitBasPageH
+	{
+		height: 2px;
+		width:880px;
+		margin-left:10px;
+		background-color: var(--main_color_blue_dark);
+		float:left;
+	}
+
+
+	.traitBasPageV
+	{
+		height: 80px;
+		width:2px;
+		background-color: var(--main_color_blue_dark);
+		float:left;
+		margin-top:10px;
+	}
+
+	#blocsContent
+	{
+		height: 100px;
+		width:900px;
+		float:left;
+	}
+
+/*Définition du logo bas de page*/
+	#logoBasContent
+	{
+		width: 820px;
+		display:block;
+		margin:auto;
+
+	}
+
+	#logoBas
+	{
+		width:820px;
+	}
+/*Définition du comportement des images*/
+	.img_paiement
+	{
+		height: 50px;
+	}
+
+	.img_baniere
+	{
+		display: block;
+	    margin: auto;
+	    margin-top: 10px;
+	    margin-bottom:auto;
+	}
+	.img_centrer
+	{
+		display: block;
+	    margin: auto;
+	}
+
+	.img_blocs
+	{
+		height: 160px;
+		width:160px;
+		margin: 10px;
+		float: left;
+	}
+
+/*describe div about client's account
+ *
+ */
+
+.divBasketContent
+{
+
+	width:90%;
+	margin:auto;
+	padding: 5px;
+}
+
+.divBasketContentUnder
+{
+
+	margin:auto;
+	float:left;
+	padding: 5px;
+}
+
+
+
+#divBasket
+{
+	margin-top:10px;
+	padding:10px;
+	height:350px;
+	border-radius:20px;
+	background-color:#FFF;
+	box-shadow: 8px 8px 12px #aaa;
+	border:solid 1px #797D80;
+	/*background-color:#F2F2F2;*/
+}
+
+#divBasketUnknow, #divBasketKnow
+{
+	width: 300px;
+	border:solid 1px #797D80;
+	border-radius:10px;
+	padding:10px;
+	margin:5px;
+	height:200px;
+}
+
+/*design the contact_us page*/
+#contactUs
+{
+	padding: 10px;
+
+}
+
+#contactUsMessageDiv
+{
+	margin-top: 10px;
+}
+
+textarea
+{
+	border:solid 1px #797D80;
+	border-radius:10px;
+}
+
+/*Boutons administration*/
+.buttonAdmin
+{
+
+     font-size: 0.8em;
+     width: 100px;
+     height: 30px;
+ 	font-family: "dancing script", fantasy, sans-serif;
+	color: #FFF;
+	cursor:pointer;
+	background-color: #99a2a8;
+	border:solid #797d80 2px;
+	box-shadow: 0px 1px 3px #FFF;
+}
+
+.buttonAdmin:hover
+{
+	background: #FFF;
+	border:solid #f10091 2px;
+	color:#f10091;
+	text-decoration: none;
+}
+
+.listeDeroulante
+{
+     width: 60px;
+     height: 30px;
+}
+
+.listeCategorie
+{
+     width: 172px;
+     height: 30px;
+}
+
+.TitreH
+{
+		font-family: "dancing script", fantasy, sans-serif;
+		color: #F10091;
+		font-size: 6em;/*en ligne*/
+
+}
+
+/*
+ * Gestion des boutons des sous menus
+ *
+ */
+	.buttonSousMenu
+	{
+	font-family: "dancing script", fantasy, sans-serif;
+	font-size: 1.4em;/*en ligne*/
+	height:60px;
+	width:150px;
+	color: var(--main_color_blue_dark);
+	cursor:pointer;
+	border-radius:10px;
+	background-color: var(--main_bg_color_blue);
+	border:solid 1px #F8E0F7;
+	margin-left: 2px;
+
+	}
+
+	.buttonSousMenu:hover
+	{
+	background: #f10091;
+	/*background-image: linear-gradient(to bottom, #f10091, var(--main_color_blue_dark));*/
+	color:#FFF;
+	text-decoration: none;
+	}
+
+/*Gestion de la div menu navigation*/
+#idNavigationContent
+{
+	height:40px;
+	/*background-color: var(--main_bg_color_blue);
+	border:solid 1px;*/
+}
+
+#idNavigation
+{
+
+}
+
+#imgHome
+{
+	height:40px;
+	float:left;
+}
+
+.butonFlecheNavigation
+{
+	font-family: sans-serif;
+	font-size: 0.8em;/*en ligne*/
+	height:20px;
+	width:20px;
+	color: var(--main_color_blue_dark);
+	cursor:none;
+	background-color: #FFF;
+	border:solid 2px;
+	border:none;/*annule la présence de la bordure*/
+	margin-left: 2px;
+	border-radius:20px;
+}
+
+.buttonNavigation
+{
+	font-family: "dancing script", fantasy, sans-serif;
+	font-size: 1.1em;/*en ligne*/
+	height:40px;
+	color: var(--main_color_blue_dark);
+	cursor:pointer;
+	background-color: #FFF;
+	border:none;
+	margin-left: 2px;
+}
+
+/*
+ * Div for the Family
+ */
+
+.menu_sous_famille_content
+{
+	height:225px; /*old 200px*/
+	width:175px;/*old 150px*/
+	float:left;
+	/*border:solid 1px var(--main_bg_color_blue);*/
+	margin-left:10px; /*old 5px*/
+	text-align:center;
+	margin-top: 10px;
+}
+
+
+.image_sous_famille_content
+{
+	height:150px; /*old 125px*/
+	width:150px; /*old 125px*/
+	margin:auto;
+	margin-top:5px;
+	margin-bottom:5px;
+
+}
+
+.image_sous_famille_dimension
+{
+	width:100%;
+}
+
+/*
+ *end of the zone which define div 'sous famille'
+ */
+
+.imgArticles
+{
+	width:50px;
+	text-align:center;
+}
+
+/*
+ * Gestion de la mise en page des articles dans la page produit
+ *
+ */
+
+#divArticlesArea
+{
+	/*float:left;*/
+	/*width:70%; value with active filters*/
+	width:95%;
+
+
+}
+
+#divArticles
+{
+	overflow: auto;
+}
+
+.p_en_stock
+{
+	font-size:0.7em;
+	color:green;
+	font-family: arial;
+}
+
+.p_en_stock_limit
+{
+	font-size:0.7em;
+	color:#FE9A2E;
+	font-family: arial;
+}
+
+.p_en_rupture
+{
+	font-size:0.7em;
+	color:#AAAAAA;
+	font-family: arial;
+}
+
+/*Filters zone*/
+#filtresArticles
+{
+	width:200px;
+	height:100%;/*Pour pouvoir adapter la taille de la zone de filtre à la liste des articles*/
+	min-height: 850px;
+	/*background-color:#99A2A8;*/
+	float:left;
+	padding:10px;
+}
+
+.filterZone
+{
+	width:100%;
+	/*height:200px;*/
+	margin-top:5px;
+	/*border:solid 1px #E6E6E6;*/
+	margin-bottom:10px;
+
+}
+
+/*Button filtre dispo*/
+.buttonAvailableFilter
+{
+
+    font-size: 0.9em;
+    width: 100%;
+    height: 30px;
+ 	font-family: "dancing script", fantasy, sans-serif;
+	color: #99a2a8;
+	cursor:pointer;
+	background-color: #FFF;
+	border:solid #797d80 1px;
+	/*box-shadow: 0px 1px 3px #FFF;*/
+	margin-top :5px;
+}
+
+/*Button filtre dispo*/
+.buttonSelectedFilter
+{
+
+    font-size: 0.9em;
+    width: 100%;
+    height: 30px;
+ 	font-family: "dancing script", fantasy, sans-serif;
+	color: #FFF;
+	cursor:pointer;
+	background-color: #99a2a8;
+
+	box-shadow: 0px 1px 3px #FFF;
+
+	background: #FFF;
+	border:solid #f10091 2px;
+	color:#f10091;
+	text-decoration: none;
+	margin-top: 5px;
+}
+
+.activeButtonFilters
+{}
+
+.nonActiveButtonFilters
+{}
+
+/*Text area form categorie and number of 'articles'
+ */
+#sousFamille_number
+{
+	margin:5px;
+	padding-left:5px;
+	background-color:var(--main_bg_color_blue);
+	height:24px;
+	border-radius:4px;
+	border: 1px #F8E0F7 solid;
+	padding:5px;
+}
+
+.formArticles
+{
+	float:left;
+}
+.articlesContent
+{
+	width:220px;/*20160407-old 190px puis 200px*/
+	height:320px;/*20160407-old 260px puis 300px*/
+	margin-top:5px;
+	float:left;
+	border: solid 1px ;
+	border-color:#E6E6E6;
+	margin-left:10px;
+}
+
+.articlesContent:hover
+{
+	/*background-color: #F10091;*/
+	background-color: #f8e0f7;
+
+}
+
+.imageArticlesContent
+{
+	padding-top:5px;
+	max-width:90%;
+	height:225px;/*Pour fixer la hauteur de toutes les images quelques soit le format et aligner les boutons ajouter au panier-185px*/
+	margin:auto;
+}
+.imageArticles
+{
+
+}
+
+.imagesArticlesClass
+{
+	max-width:100%;
+	max-height: 220px;
+	display:block;
+	margin:auto;
+}
+
+.libelleArticlesContent
+{
+	text-align:center;
+	height: 30px;
+}
+.libelleArticles
+{
+
+}
+
+.prixStockContent
+{
+	height:16px;
+	width:100%;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.prixArticles
+{
+	float:left;
+	width:50%;
+}
+
+.stockArticles
+{
+	width:50%;
+	float:right;
+}
+
+.ajouterPanierContent
+{
+	text-align:center;
+}
+.ajouterPanier
+{
+
+}
+
+.buttonAjouterPanier
+{
+	height: 30px;
+	width:90%;
+	background-color:var(--main_bg_color_blue);
+	border-radius:5px;
+	border:solid #797D80 1px;
+}
+
+.buttonAjouterPanierRupture
+{
+	height: 30px;
+	width:90%;
+	background-color:#E6E6E6;
+	border-radius:5px;
+	border:solid #797D80 1px;
+}
+
+.texteArticles
+{
+	font-size:0.9em;
+	line-height: 1em;
+	font-family: arial;
+}
+
+.textePrixArticles
+{
+	font-size:0.9em;
+	line-height: 1em;
+	font-family: arial;
+	float:left;
+}
+
+.prixArticles_barre
+{
+	text-decoration: line-through;
+	font-size:0.6em;
+	float:left;
+}
+.prixArticlesPromo
+{
+	font-size:0.9em;
+	line-height: 1em;
+	font-family: arial;
+	color : #F10091;
+	float:left;
+}
+
+.lessMoreLeft
+{
+	background-color: #f8e0f7;
+	border: solid 1px #f10091;
+	color:#f10091;
+	width: 20px;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+	margin:0px;
+}
+
+.quantityBasket
+{
+	border: solid 1px #f10091;
+	color:#f10091;
+	width: 20px;
+	background-color:white;
+	margin:-5px;
+}
+
+.lessMoreRight
+{
+	background-color: #f8e0f7;
+	border: solid 1px #f10091;
+	color:#f10091;
+	width: 20px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	margin:0px;
+}
+
+.basketImage
+	{
+		max-height:80px;
+	}
+
+.basketBin
+{
+	width:15px;
+}
+
+.basketBinButton
+{
+	border:none;
+	background-color: #FFFFFF;
+	width:30px;
+	height:25px;
+	border-radius:5px;
+}
+
+.basketBinButton:hover
+{
+	background-color: #f8e0f7;
+	border: solid 1px #f10091;
+}
+/*
+ * Gestion de la police d'affichage du panier
+ */
+
+.basketText
+{
+	font-family:arial;
+	font-size:1em;
+}
+
+.basketTextReference
+{
+	font-family:arial;
+	font-size:0.7em;
+	color:#99A2A8;
+	font-style:italic;
+}
+
+/*
+ * CSS de la zone de validation du panier
+ */
+
+
+
+.p_valider_panier
+{
+
+}
+
+.input_css
+{
+	height:30px;
+	width:250px;
+	border-radius:5px;
+	padding:5px;
+	border:none;
+	margin-top:5px;
+	font-family: arial;
+	font-size:0.8em;
+	border:solid 1px #797D80;
+}
+
+.input_css:hover
+{
+	border:solid 1px #F10091;
+}
+
+.input_css:required
+{
+	border:solid 1px #F10091;
+}
+
+#code_postal, #mobile_phone
+{
+	width:120px;
+}
+
+#adresse
+{
+	width:435px;
+}
+
+#mailClient
+{
+}
+
+
+#ville, #birthday
+{
+	width:300px;
+}
+
+#namePassword
+{
+	width: 125px;
+}
+
+#test
+{
+	width: 525px;
+}
+
+.submitCompte
+{
+	width:260px;
+}
+
+/*Test */
+a:hover span, a:focus span{
+    transform:scale(1) rotate(0);
+    opacity:1;
+}
+a span
+{
+
+    position:absolute;
+    margin-top:0px;
+    margin-left:-10px;
+    color:white;
+    background:rgba(0,0,0,.9);
+    padding:15px;
+    border-radius:3px;
+    box-shadow:0 0 2px rgba(0,0,0,.5);
+    transform:scale(0.1) rotate(-12deg);
+    transition:all .25s;
+    opacity:0;
+}
+
+button:hover span, button:focus span{
+    transform:scale(1) rotate(0);
+    opacity:1;
+}
+button span
+{
+    position:absolute;
+    margin-top:0px;
+    margin-left:0px;/*old-145px*/
+    color:white;
+    background:rgba(206,227,246,1.0);
+    padding:15px;
+    border-radius:3px;
+    box-shadow:0 0 2px rgba(0,0,0,.5);
+    transform:scale(0.1) rotate(-12deg);
+    transition:all .25s;
+    opacity:0;
+}
+
+.messageDivContent
+{
+}
+
+.messageDiv
+{
+	width:500px;
+	border : 1px solid var(--main_color_pink_border);
+	border-radius:10px;
+	background-color:var(--main_bg_color_blue);
+	margin:auto;
+	margin-top:20px;
+	padding:20px;
+}

@@ -1,0 +1,17 @@
+  #topVenteContent
+  {
+    width: 95%;
+      float: center;
+      margin-top:10px;
+      margin-left: auto;
+      margin-right: auto;
+      /*height: 260px;*/
+  }
+
+  #topVente
+  {
+    width:95%;
+    /*max-height: 260px;*/
+    overflow:auto;
+
+  }

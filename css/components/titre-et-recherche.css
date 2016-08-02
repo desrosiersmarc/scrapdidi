@@ -1,0 +1,108 @@
+#zoneHorsTitreContent {
+  width: 100%;
+  float: center;
+  margin: 0px auto;
+}
+
+#recherchePanier{
+  margin: 0px;
+  height : 100px;
+  color:var(--main_color_blue_dark);
+}
+
+.titreEtRecherche {
+  width:32%;
+  min-width:298px;
+  height: 78px;
+  float:left;
+}
+
+/*
+ * Normalement pas utilisé
+ */
+#loupeSearch {
+  width: 15px;
+  vertical-align: middle;
+}
+
+.blocRecherche {
+  width:240px;
+  height: 34px;
+  border-radius:5px 0px 0px 5px;
+  border: 1px solid var(--main_color_grey_border);
+  float:left;
+}
+
+#rechercheContent {
+  margin-top: 30px;
+  height: 58px;
+}
+
+#recherche {
+  float:left;
+}
+
+.loupe {
+  height:36px;
+  width: 36px;
+  float:left;
+  border: 1px solid var(--main_color_grey_border);
+  background-color: #FFFFFF;
+  border-radius:0px 5px 5px 0px;
+  text-align: center;
+  line-height: 36px;
+  color:var(--main_color_blue_dark);
+}
+
+.panierLogo {
+  width:40px;
+  vertical-align:middle;
+}
+
+#panierContent {
+  height:100px;
+  width:298px;
+  float:left;
+  text-align: center;
+  line-height: 100px;
+}
+
+#panier {
+  height:100px;
+  width:150px;
+  float:left;
+  text-align:right;
+  -moz-margin-top:30px;
+}
+
+#basketButtonCSS {
+  background-color:rgba(0,0,0,0);
+  border:none;
+}
+
+#infoPanier {
+  height:50px;
+  width:140px;
+  float:left;
+  line-height:20px;
+  margin-top:30px;
+}
+
+.rondArticle {
+font-style:arial;
+font-size:0.6em;
+background-color: #f10091;
+color:#FFFFFF;
+height:20px;
+width:20px;
+border-radius:10px;
+position: relative;
+left:30px;
+top:-45px;
+line-height: 20px;
+text-align:center;
+}
+
+.textePanier {
+  font-size: 1em;
+}

@@ -1,0 +1,40 @@
+.btn-go {
+  height: 80px;
+  background-color: #F10091;
+  padding: 20px 45px;
+  border-radius: 5px;
+}
+
+/*Mise en forme des boutons du menu*/
+  .buttonMenu
+  {
+    font-family: "dancing script", fantasy, sans-serif;
+    font-size: 1.4em;/*en ligne*/
+    height:60px;
+    color: var(--main_color_blue_dark);
+    cursor:pointer;
+    background-color: #FFF;
+    border:none;
+
+  }
+
+  .buttonMenu:hover, .imgHomeMenuButton:hover, .buttonNavigation:hover
+  {
+    background: #f10091;
+    /*background-image: linear-gradient(to bottom, #f10091, var(--main_color_blue_dark));*/
+    color:#FFF;
+    text-decoration: none;
+  }
+
+  /*Layout the first menu buttons*/
+  .buttonMenuTop
+  {
+    font-family: "dancing script", fantasy, sans-serif;
+    font-size: 1.4em;/*en ligne*/
+    /*height:60px;*/
+    color: var(--main_color_blue_dark);
+    cursor:pointer;
+    background-color: var(--main_bg_color_blue);
+    border:none;
+
+  }

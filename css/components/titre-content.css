@@ -1,0 +1,27 @@
+  #titreContent {
+    width: 100%;
+    float: center;
+    margin: 0 auto;
+  }
+
+  #titre {
+    height: 40px;
+    background :var(--main_bg_color_blue) ;
+    border: 1px solid var(--main_bg_color_pink);
+    margin: 0px;
+    line-height: 40px;
+    border-radius:5px;
+  }
+
+  .couleurpTitre {
+    color: var(--main_color_blue_dark);
+  }
+
+  #titreContact {
+    width: 140px;
+    float: right;
+  }
+
+  #titreCompte {
+    float:right;
+  }

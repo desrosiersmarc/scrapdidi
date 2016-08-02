@@ -1,0 +1,115 @@
+#banniereContent {
+    width: 950px;
+    height:425px;
+    /*border: 1px solid var(--main_color_grey_border);*/
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: auto;
+  }
+
+  #banniere {
+    width:950px;
+    height:425px;
+  }
+
+  .imgBanniere {
+    /*width:630px;
+    height:270px;*/
+    width:950px;
+    height:425px;
+    /*
+     * Largeur 950, hauteur 425
+     */
+  }
+  /*
+   * Animation de la bannière
+   * % de réalisation, left: décalage en px. Dans la réalisation ci-dessous balayage à droite puis à gauche
+   */
+  @keyframes AutoSlide {
+    0% {
+        left: 0px; /*1ère image*/
+    }
+    10% {
+        left: 0px; /*idem pour attente*/
+    }
+    12% {
+        left: -950px; /*2ème image*/
+    }
+    22% {
+        left: -950px; /*idem pour attente*/
+    }
+    24% {
+        left: -1905px; /*3ème image*/
+    }
+    34% {
+        left: -1905px; /*idem pour attente*/
+    }
+    36% {
+        left: -2860px; /*4ème image*/
+    }
+    46% {
+        left: -2860px; /*idem pour attente*/
+    }
+    48% {
+        left: -3815px; /*5ème image*/
+    }
+    58% {
+        left: -3815px; /*idem pour attente*/
+    }
+    60% {
+        left: -2860px; /*5ème image*/
+    }
+    70% {
+        left: -2860px; /*idem pour attente*/
+    }
+    72% {
+        left: -1905px; /*5ème image*/
+    }
+    82% {
+        left: -1905px; /*idem pour attente*/
+    }
+    84% {
+        left: -950px; /*5ème image*/
+    }
+    94% {
+        left: -950px; /*idem pour attente*/
+    }
+    96% {
+        left: -0px; /*5ème image*/
+    }
+    100% {
+        left: -0px; /*idem pour attente*/
+    }
+
+    /*100% {
+        left: 0px; A utiliser pour revenir d'un coup au début
+    }*/
+}
+
+#slideshow {
+    position: relative;
+    width: 950px;
+    height: 425px;
+    margin:  0px auto;
+    overflow: hidden;
+}
+
+#sContent li {
+    display: inline;
+}
+
+#sContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5000px;
+    margin: 0;
+    padding: 0;
+
+    /*CSS3 keyframes animation*/
+    animation-name: AutoSlide;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+

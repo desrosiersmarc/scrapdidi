@@ -1,0 +1,13 @@
+#promotionsContent {
+  width: 95%;
+  float: center;
+  margin-top:10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:10px;
+}
+
+#promotions {
+  width:95%;
+  overflow:auto;
+}
