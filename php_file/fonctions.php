@@ -1242,13 +1242,21 @@ function createCommande($sessionInformation)
 		include ("php_file/commun.php");
 		$functionName=__function__;
 
-		$rq="INSERT INTO commande VALUES ('','$sessionInformation', '', '', '', '', '')";
+    $dateTime=date('Y-m-d H:i:s');
+
+		$rq="INSERT INTO commande VALUES ('','$sessionInformation', '', '', '', '$dateTime', '')";
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 	}
 
-function updateCommande()
+function updateCommande($champ, $value)
 	{
+    include ("php_file/commun.php");
+    $functionName=__function__;
 
+    $idCommande = $_SESSION['idCommande'];
+
+    $rq = "UPDATE commande SET $champ = '$value' WHERE idCommande = $idCommande;";
+    mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 	}
 
 function createPanier($sessionInformation)
