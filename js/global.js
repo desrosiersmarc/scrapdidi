@@ -1,10 +1,24 @@
+// $(document).ready(function() {
+//   $('.buttonAjouterPanier').on('click', function(e){
+//     e.preventDefault();
+//     // console.log(e);
+//     var $idTarget = e.target.id;
+//     // console.log($idTarget);
+//     window.location.href= "#" + $idTarget;
 
-function hello_word()
-	{
-		alert("Hello_world");
-	}
+//     var result = $.ajax({
+//         url: 'php_file/fonctions.php',
+//         type: 'post',
+//         data: { "articleValue": $idTarget,
+//                 "idCommande": 54
+//               },
+//         success: function(response) { console.log(response); }
+//     });
 
-function do_not_clic()
-	{
-		alert("Do not clic on this button");
-	}
+//     console.log(result);
+//   });
+// });
+
+// function goToTarget(target) {
+//   window.location.href= "#" + target;
+// };
