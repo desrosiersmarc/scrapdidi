@@ -436,8 +436,9 @@
 				if (empty($iDi))
 					{
 						//Création d'une sous familles
-						$rq="INSERT INTO sousfamilles VALUES ('','$ordre',$idCat,'$nom','$actif');";
-						$reponse=mysqli_query($connexion,$rq) or die ("Execution impossible de la requete creerSousFamilles");
+						$rq="INSERT INTO sousfamilles VALUES ('','$ordre',$idCat,'$nom','$actif','');";
+            popupmessage($rq);
+            $reponse=mysqli_query($connexion,$rq) or die ("Execution impossible de la requete creerSousFamilles");
 					}
 				else
 					{
@@ -1260,7 +1261,7 @@ function updateCommande($champ, $value)
 	}
 
 //20160807
-function numberOrderByEtat ($id_etat)
+function numberOrderByState($id_etat)
   {
     include ("php_file/commun.php");
     $functionName=__function__;
@@ -1270,6 +1271,18 @@ function numberOrderByEtat ($id_etat)
     $number_rows = mysqli_num_rows($reponse);
     echo"$number_rows";
   }
+
+function listOfOrderByState($id_etat)
+{
+  include ("php_file/commun.php");
+  $functionName=__function__;
+
+  $rq = "SELECT * FROM commande WHERE etatCommande = $id_etat;";
+  $reponse = mysqli_query($connexion, $rq) or die ("Request's Error... $FunctionName");
+  // while {$listOfOrder = mysqli_fetch_assoc($reponse);
+
+  // }
+}
 
 function createPanier($sessionInformation)
 	{

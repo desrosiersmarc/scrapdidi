@@ -41,7 +41,7 @@
             Commande(s) à traiter
           </h4>
           <p>
-            Tu as <?php numberOrderByEtat(1);?> commande(s) reçues
+            Tu as <?php numberOrderByState(1);?> commande(s) reçues
           </p>
         </div>
         </div>
@@ -52,7 +52,7 @@
               Préparation
             </h4>
             <p>
-              Tu as <?php numberOrderByEtat(2);?> commandes en cours
+              Tu as <?php numberOrderByState(2);?> commandes en cours
             </p>
           </div>
         </div>
