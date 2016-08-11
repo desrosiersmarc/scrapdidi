@@ -1,9 +1,10 @@
+<?php include ("php_file/fonctions.php"); ?>
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html;charset=utf-8">
     <meta name="author" content="Marc DESROSIERS, Amandine VANNIEUWERBURGH">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/div_md.css">
 
     <script type="text/javascript" src="js/global.js"></script>
@@ -40,7 +41,7 @@
             Commande(s) à traiter
           </h4>
           <p>
-            Tu as 26 commande(s) reçues
+            Tu as <?php numberOrderByEtat(1);?> commande(s) reçues
           </p>
         </div>
         </div>
@@ -51,7 +52,7 @@
               Préparation
             </h4>
             <p>
-              Tu as 2 commandes en cours
+              Tu as <?php numberOrderByEtat(2);?> commandes en cours
             </p>
           </div>
         </div>

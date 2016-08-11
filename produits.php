@@ -111,8 +111,7 @@
 										{
                       //To add information into BD. etatCommandeClient => Ok, etatCommande => To validate
                       //
-                      updateCommande('etatCommandeClient', 'OK');
-                      updateCommande('etatCommande', 'a traiter');
+                      updateCommande('etatCommande', 1);
                       // Find an other solution for the statement of etat commande with an other table an id
 
 											include ("php_file/envoiMailOrder.php");

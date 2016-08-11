@@ -1247,7 +1247,7 @@ function createCommande($sessionInformation)
 		$rq="INSERT INTO commande VALUES ('','$sessionInformation', '', '', '', '$dateTime', '')";
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 	}
-
+//20160807 Create request
 function updateCommande($champ, $value)
 	{
     include ("php_file/commun.php");
@@ -1258,6 +1258,18 @@ function updateCommande($champ, $value)
     $rq = "UPDATE commande SET $champ = '$value' WHERE idCommande = $idCommande;";
     mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 	}
+
+//20160807
+function numberOrderByEtat ($id_etat)
+  {
+    include ("php_file/commun.php");
+    $functionName=__function__;
+
+    $rq = "SELECT * FROM commande WHERE etatCommande = $id_etat;";
+    $reponse = mysqli_query($connexion, $rq) or die ("Request's Error... $FunctionName");
+    $number_rows = mysqli_num_rows($reponse);
+    echo"$number_rows";
+  }
 
 function createPanier($sessionInformation)
 	{
