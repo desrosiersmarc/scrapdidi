@@ -437,7 +437,6 @@
 					{
 						//Création d'une sous familles
 						$rq="INSERT INTO sousfamilles VALUES ('','$ordre',$idCat,'$nom','$actif','');";
-            popupmessage($rq);
             $reponse=mysqli_query($connexion,$rq) or die ("Execution impossible de la requete creerSousFamilles");
 					}
 				else
