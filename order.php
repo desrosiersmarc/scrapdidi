@@ -3,6 +3,7 @@
   <head>
     <meta http-equiv="Content-type" content="text/html;charset=utf-8">
     <meta name="author" content="Marc DESROSIERS, Amandine VANNIEUWERBURGH">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/div_md.css">
@@ -34,200 +35,200 @@
    <div class="container">
      <div class="row">
        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="features-card">
-          <i class="fa fa-clipboard" aria-hidden="true"></i>
-          <h4>
-            Commande(s) à traiter
-          </h4>
-          <p>
-            Tu as <?php numberOrderByState(1);?> commande(s) reçues
-          </p>
-        </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="features-card">
-            <i class="fa fa-paperclip" aria-hidden="true"></i>
+            <i class="fa fa-clipboard" aria-hidden="true"></i>
             <h4>
-              Préparation
+              A traiter
             </h4>
             <p>
-              Tu as <?php numberOrderByState(2);?> commandes en cours
+              <strong>
+                <?php numberOrderByState(1);?>
+              </strong>
             </p>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="features-card">
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+            <h4>
+              En préparation
+            </h4>
+            <p>
+              <strong>
+                <?php numberOrderByState(2);?>
+              </strong>
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <a href="#waiting">
+            <div class="features-card">
+              <i class="fa fa-pause" aria-hidden="true"></i>
+              <h4>
+                En attente
+              </h4>
+              <p>
+                <strong>
+                  <?php numberOrderByState(2);?>
+                </strong>
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="features-card">
             <i class="fa fa-truck" aria-hidden="true"></i>
             <h4>
               Expédiées
             </h4>
             <p>
-              Liste des commandes expédiées
+              <strong>
+                <?php numberOrderByState(2);?>
+              </strong>
             </p>
           </div>
         </div>
      </div>
   </div>
-  <div class="wrapper-news padder-100">
-    <h2 class="text-center">Commande(s) à traiter</h2>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="product-card">
-              <div class="product-thumb" style="background-image: url(https://unsplash.it/242/188)">
-              </div>
-              <div class="product-content">
-                <div class="product-name">
-                  <p>Tampon Clear Lora Bailora - ABC Sketch</p>
-                </div>
-                <div class="product-informations">
-                  <ul class="list-inline">
-                    <li>11,95 €</li>
-                    <li>Dernière piéce</li>
-                    <li><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="product-card">
-              <div class="product-thumb" style="background-image: url(https://unsplash.it/242/189)">
-              </div>
-              <div class="product-content">
-                <div class="product-name">
-                  <p>Tampon Clear Lora Bailora - ABC Sketch</p>
-                </div>
-                <div class="product-informations">
-                  <ul class="list-inline">
-                    <li>11,95 €</li>
-                    <li>Dernière piéce</li>
-                    <li><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="product-card">
-              <div class="product-thumb" style="background-image: url(https://unsplash.it/242/190)">
-              </div>
-              <div class="product-content">
-                <div class="product-name">
-                  <p>Tampon Clear Lora Bailora - ABC Sketch</p>
-                </div>
-                <div class="product-informations">
-                  <ul class="list-inline">
-                    <li>11,95 €</li>
-                    <li>Dernière piéce</li>
-                    <li><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="product-card">
-              <div class="product-thumb" style="background-image: url(https://unsplash.it/242/191)">
-              </div>
-              <div class="product-content">
-                <div class="product-name">
-                  <p>Tampon Clear Lora Bailora - ABC Sketch</p>
-                </div>
-                <div class="product-informations">
-                  <ul class="list-inline">
-                    <li>11,95 €</li>
-                    <li>Dernière piéce</li>
-                    <li><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="wrapper-news padder-100 text-center">
+    <h2 class="text-center">Commande(s) à traiter  (maxi 5)</h2>
+      <div class="container" id="to_treat">
+        <table class="table table-condensed">
+          <tr>
+            <th class="">Date commande</th>
+            <th class="">No commande</th>
+            <th class="">Nom client</th>
+            <th class="">Total</th>
+            <th class="">moyen de paiement</th>
+            <th class="">mode de livraison</th>
+            <th class=""></th>
+            <th class=""></th>
+            <th class=""></th>
+            <th class=""></th>
+          </tr>
+          <tr>
+            <td class="">15/08/2016</td>
+            <td class="">3214</td>
+            <td class="">DESROSIERS</td>
+            <td class="">12,54€</td>
+            <td class="">paypal</td>
+            <td class="">colissimo</td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""><i class="fa fa-search-plus" aria-hidden="true"></i></td>
+          </tr>
+          <tr>
+            <td class="">16/08/2016</td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""><i class="fa fa-search-plus" aria-hidden="true"></i></td>
+          </tr>
+        </table>
       </div>
   </div>
 
-  <!-- Your cards code -->
   <div class="wrapper-card padder-100 text-center">
-    <h2>Préparation</h2>
-    <div class="container">
-      <div class="row">
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="product-card">
-              <div class="product-thumb" style="background-image: url(https://unsplash.it/242/192)">
-              </div>
-              <div class="product-content">
-                <div class="product-name">
-                  <p>Tampon Clear Lora Bailora - ABC Sketch</p>
-                </div>
-                <div class="product-informations">
-                  <ul class="list-inline">
-                    <li>11,95 €</li>
-                    <li>Dernière piéce</li>
-                    <li><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="product-card">
-              <div class="product-thumb" style="background-image: url(https://unsplash.it/242/193)">
-              </div>
-              <div class="product-content">
-                <div class="product-name">
-                  <p>Tampon Clear Lora Bailora - ABC Sketch</p>
-                </div>
-                <div class="product-informations">
-                  <ul class="list-inline">
-                    <li>11,95 €</li>
-                    <li>Dernière piéce</li>
-                    <li><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="product-card">
-              <div class="product-thumb" style="background-image: url(https://unsplash.it/242/194)">
-              </div>
-              <div class="product-content">
-                <div class="product-name">
-                  <p>Tampon Clear Lora Bailora - ABC Sketch</p>
-                </div>
-                <div class="product-informations">
-                  <ul class="list-inline">
-                    <li>11,95 €</li>
-                    <li>Dernière piéce</li>
-                    <li><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="product-card">
-              <div class="product-thumb" style="background-image: url(https://unsplash.it/242/195)">
-              </div>
-              <div class="product-content">
-                <div class="product-name">
-                  <p>Tampon Clear Lora Bailora - ABC Sketch</p>
-                </div>
-                <div class="product-informations">
-                  <ul class="list-inline">
-                    <li>11,95 €</li>
-                    <li>Dernière piéce</li>
-                    <li><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
+    <h2>Préparation  (maxi 5)</h2>
+    <div class="container" id="in_progress">
+        <table class="table table-condensed">
+          <tr>
+            <th class="">Date commande</th>
+            <th class="">No commande</th>
+            <th class="">Nom client</th>
+            <th class="">Total</th>
+            <th class="">moyen de paiement</th>
+            <th class="">mode de livraison</th>
+            <th class="">date de préparation</th>
+            <th class=""></th>
+            <th class=""></th>
+            <th class=""></th>
+          </tr>
+          <tr>
+            <td class="">15/08/2016</td>
+            <td class="">3214</td>
+            <td class="">DESROSIERS</td>
+            <td class="">12,54€</td>
+            <td class="">paypal</td>
+            <td class="">colissimo</td>
+            <td class="">16/08/2016</td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class="">
+              <a href="">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="">16/08/2016</td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""><i class="fa fa-search-plus" aria-hidden="true"></i></td>
+          </tr>
+        </table>
     </div>
+  </div>
+
+  <div class="wrapper-news padder-100 text-center">
+    <h2>En attente  (maxi 5)</h2>
+      <div class="container" id="waiting">
+        <table class="table table-condensed">
+          <tr>
+            <th class="">Date commande</th>
+            <th class="">No commande</th>
+            <th class="">Nom client</th>
+            <th class="">Total</th>
+            <th class="">moyen de paiement</th>
+            <th class="">mode de livraison</th>
+            <th class="">date de préparation</th>
+            <th class="">date de mise en attente</th>
+            <th class="">motif</th>
+            <th class=""></th>
+          </tr>
+          <tr>
+            <td class="">15/08/2016</td>
+            <td class="">3214</td>
+            <td class="">DESROSIERS</td>
+            <td class="">12,54€</td>
+            <td class="">paypal</td>
+            <td class="">Récupérer à domicile</td>
+            <td class="">16/08/2016</td>
+            <td class="">17/08/2016</td>
+            <td class="">En attente réglement</td>
+            <td class="">
+              <a href="">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="">16/08/2016</td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""><i class="fa fa-search-plus" aria-hidden="true"></i></td>
+          </tr>
+        </table>
+      </div>
   </div>
   <!-- Your footer code -->
   <div class="wrapper-footer">
