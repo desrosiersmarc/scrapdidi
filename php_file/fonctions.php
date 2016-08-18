@@ -1598,7 +1598,6 @@ function showBasket ()
 					echo"
 										<img class='imgButtonFraisPort' src='media_site/picto_monnaie.png'>
 										Espéces
-										<span>Do not clic on this button... Please</span>
 								</button>
 
 					";
@@ -1614,7 +1613,6 @@ function showBasket ()
 
 								<img class='imgButtonFraisPort' src='media_site/picto_cheque.png'>
 								Chéque
-								<span>Do not clic on this button... Please</span>
 							</button>
 						</td>
 						<td></td>
@@ -1638,7 +1636,6 @@ function showBasket ()
 
 								<img class='imgButtonFraisPort' src='media_site/picto_paypal.jpg'>
 									Paypal
-								<span>Do not clic on this button... Please</span>
 							</button>
 
 						</td>
@@ -1673,8 +1670,9 @@ function updateValidatedBasket()
   $idC = $_SESSION['idCommande'];
   $shippingText = $_SESSION['shippingSelectedText'];
   $payement = $_SESSION['payementChoiceText'];
+  $idCli = $_SESSION['idClient'];
 
-  $rq = "UPDATE commande SET payement = '$payement', shippingMode = '$shippingText' WHERE idCommande = $idC";
+  $rq = "UPDATE commande SET idClient = $idCli ,payement = '$payement', shippingMode = '$shippingText' WHERE idCommande = $idC";
   mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 }
 
@@ -2013,4 +2011,15 @@ function connected_message()
 			</div>
 		";
 	}
+
+function display_information_on_order()
+  {
+    //Connexion informations
+    include ("php_file/commun.php");
+    $functionName=__function__;
+
+    $rq = "select ";
+
+  }
+
 ?>
