@@ -107,30 +107,7 @@
             <th class=""></th>
             <th class=""></th>
           </tr>
-          <tr>
-            <td class="">15/08/2016</td>
-            <td class="">3214</td>
-            <td class="">DESROSIERS</td>
-            <td class="">12,54€</td>
-            <td class="">paypal</td>
-            <td class="">colissimo</td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""><i class="fa fa-search-plus" aria-hidden="true"></i></td>
-          </tr>
-          <tr>
-            <td class="">16/08/2016</td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""><i class="fa fa-search-plus" aria-hidden="true"></i></td>
-          </tr>
+          <?php display_information_on_order(1); ?>
         </table>
       </div>
   </div>

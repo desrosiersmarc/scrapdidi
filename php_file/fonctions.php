@@ -2012,14 +2012,34 @@ function connected_message()
 		";
 	}
 
-function display_information_on_order()
+function display_information_on_order($etatCommande)
   {
     //Connexion informations
     include ("php_file/commun.php");
     $functionName=__function__;
 
-    $rq = "select ";
+    $rq = "SELECT * FROM commande c JOIN client cl ON c.idClient = cl.idClient WHERE etatCommande = $etatCommande ";
 
+    $reponse=mysqli_query($connexion,$rq) or die ("Execution impossible-récupération categorie");
+
+    while ($ligne=mysqli_fetch_assoc($reponse))
+      {
+        echo"
+          <tr>
+            <td>$ligne[dateCommande]</td>
+            <td>$ligne[idCommande]</td>
+            <td>$ligne[nomClient]</td>
+            <td>..,..€</td>
+            <td>$ligne[payement]</td>
+            <td>$ligne[shippingMode]</td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td class=''><i class='fa fa-search-plus' aria-hidden='true'></i></td>
+          </tr>
+        ";
+      }
   }
 
 ?>
