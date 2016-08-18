@@ -1244,7 +1244,8 @@ function createCommande($sessionInformation)
 
     $dateTime=date('Y-m-d H:i:s');
 
-		$rq="INSERT INTO commande VALUES ('','$sessionInformation', '', '', '', '$dateTime', '')";
+		$rq="INSERT INTO commande VALUES ('','$sessionInformation', '', '', '', '$dateTime', '', '', '')";
+    //popupmessage($rq);
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 	}
 //20160807 Create request
@@ -1662,6 +1663,21 @@ function showBasket ()
 		";
 
 	}
+
+function updateValidatedBasket()
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+
+  $idC = $_SESSION['idCommande'];
+  $shippingText = $_SESSION['shippingSelectedText'];
+  $payement = $_SESSION['payementChoiceText'];
+
+  $rq = "UPDATE commande SET payement = '$payement', shippingMode = '$shippingText' WHERE idCommande = $idC";
+  mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+}
+
 
 function deleteArticle($refArticle, $idCommande)
 	{

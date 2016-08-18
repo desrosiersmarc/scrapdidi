@@ -111,6 +111,7 @@
 										{
                       //To add information into BD. etatCommandeClient => Ok, etatCommande => To validate
                       //
+                      updateValidatedBasket();
                       updateCommande('etatCommande', 1);
                       // Find an other solution for the statement of etat commande with an other table an id
 
