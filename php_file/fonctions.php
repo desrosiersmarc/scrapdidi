@@ -2024,12 +2024,13 @@ function display_information_on_order($etatCommande)
 
     while ($ligne=mysqli_fetch_assoc($reponse))
       {
+        $total_basket = total_basket($ligne['idCommande']);
         echo"
           <tr>
             <td>$ligne[dateCommande]</td>
             <td>$ligne[idCommande]</td>
             <td>$ligne[nomClient]</td>
-            <td>..,..€</td>
+            <td>$total_basket</td>
             <td>$ligne[payement]</td>
             <td>$ligne[shippingMode]</td>
             <td></td>
@@ -2041,5 +2042,17 @@ function display_information_on_order($etatCommande)
         ";
       }
   }
+
+function total_basket($idCommande)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+
+  $rq = "SELECT sum(a.prixVenteArticles) as total_basket FROM panier p JOIN commande c ON p.idCommande = c.idCommande JOIN articles a ON p.referenceArticles = a.referenceArticles WHERE p.idCommande = $idCommande;";
+  $reponse = mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+    $ligne = mysqli_fetch_assoc($reponse);
+    return $ligne['total_basket'];
+}
 
 ?>

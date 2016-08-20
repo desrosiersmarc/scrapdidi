@@ -7,6 +7,6 @@
 </head>
 <body>
   <h2>Here the number of order</h2>
-  <?php numberOrderByEtat(1);?>
+  <?php total_basket(70);?>
 </body>
 </html>
