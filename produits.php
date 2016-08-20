@@ -201,37 +201,6 @@
 				include ("php_file/produitsNavigation.inc");
 				afficheFamillesMenu();
 			}
-		//Work on a solution to stay on the same page when we clic on an article or 'ajouter au panier
-/*		elseif ((isset($_POST['nomMenuSousFamilles']) or (!empty($_SESSION['noSousFamilles']))) and empty($_POST['menuHP']) )
-		{
-			//Premier passage et initialisation des variables de filtre
-			if (isset($_POST['nomMenuSousFamilles']))
-				{
-					$_SESSION['noSousFamilles']=$_POST['nomMenuSousFamilles'];
-				}
-
-			$_SESSION['nomSousFamillesNoTable']=nomNoTable($_SESSION['noSousFamilles'],'sousfamilles');
-
-			$_SESSION['etapesArray']=[$_SESSION['nomCategorieNoTable'],$_SESSION['nomFamillesNoTable'], $_SESSION['nomSousFamillesNoTable']];
-
-			//Affichage des menus et sous menus pour arriver à la sélection des articles
-			include ("php_file/produitsNavigation.inc");
-
-			//Display filter's menu
-			include ("php_file/filtersZone.inc");
-
-			sousFamille_number();
-			//put this information in a function to use it in different location
-
-			afficheArticlesMenu();
-
-			echo "
-					</div>
-				</div>
-			";
-
-
-		}*/
 
 		elseif (isset($_POST['nomMenuSousFamilles']) or $_SESSION['noSousFamilles']!='')
 		{

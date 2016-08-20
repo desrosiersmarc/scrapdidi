@@ -1244,7 +1244,7 @@ function createCommande($sessionInformation)
 
     $dateTime=date('Y-m-d H:i:s');
 
-		$rq="INSERT INTO commande VALUES ('','$sessionInformation', '', '', '', '$dateTime', '', '', '')";
+		$rq="INSERT INTO commande VALUES ('','$sessionInformation', '', '', '', '$dateTime', '', '', '', '', '', '')";
     //popupmessage($rq);
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 	}
