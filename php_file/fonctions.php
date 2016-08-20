@@ -2033,10 +2033,21 @@ function display_information_on_order($etatCommande)
             <td>$total_basket</td>
             <td>$ligne[payement]</td>
             <td>$ligne[shippingMode]</td>
-            <td></td>
-            <td></td>
-            <td></td>
-
+        ";
+        if ($etatCommande >= 2)
+          {
+          echo"
+            <td>$ligne[preparation_date]</td>
+          ";
+          };
+          if ($etatCommande >= 3)
+          {
+            echo"
+              <td>$ligne[wait_date]</td>
+              <td>$ligne[waiting_pattern]</td>
+            ";
+          };
+        echo"
             <td class=''><i class='fa fa-search-plus' aria-hidden='true'></i></td>
           </tr>
         ";

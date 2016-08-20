@@ -128,34 +128,7 @@
             <th class=""></th>
             <th class=""></th>
           </tr>
-          <tr>
-            <td class="">15/08/2016</td>
-            <td class="">3214</td>
-            <td class="">DESROSIERS</td>
-            <td class="">12,54€</td>
-            <td class="">paypal</td>
-            <td class="">colissimo</td>
-            <td class="">16/08/2016</td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class="">
-              <a href="">
-                <i class="fa fa-search-plus" aria-hidden="true"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="">16/08/2016</td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""><i class="fa fa-search-plus" aria-hidden="true"></i></td>
-          </tr>
+          <?php display_information_on_order(2); ?>
         </table>
     </div>
   </div>
@@ -176,34 +149,7 @@
             <th class="">motif</th>
             <th class=""></th>
           </tr>
-          <tr>
-            <td class="">15/08/2016</td>
-            <td class="">3214</td>
-            <td class="">DESROSIERS</td>
-            <td class="">12,54€</td>
-            <td class="">paypal</td>
-            <td class="">Récupérer à domicile</td>
-            <td class="">16/08/2016</td>
-            <td class="">17/08/2016</td>
-            <td class="">En attente réglement</td>
-            <td class="">
-              <a href="">
-                <i class="fa fa-search-plus" aria-hidden="true"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="">16/08/2016</td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""></td>
-            <td class=""><i class="fa fa-search-plus" aria-hidden="true"></i></td>
-          </tr>
+          <?php display_information_on_order(3); ?>
         </table>
       </div>
   </div>
