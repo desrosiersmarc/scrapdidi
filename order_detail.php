@@ -2,16 +2,14 @@
 <?php include ("layouts/orders/top0.php"); ?>
 
 <?php $_SESSION['idCommande']=$_POST['idCommande']?>
-<?php popupmessage($_SESSION['idCommande']) ?>
+<?php $_SESSION['idClient']=$_POST['idClient']?>
+<!-- <?php popupmessage($_SESSION['idClient'])?> -->
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-6">
       <div class="information-div">
-        <p>Nom, prénom</p>
-        <p>Adresse</p>
-        <p>No de téléphone</p>
-        <p>mail</p>
+        <?php details_customer($_SESSION['idClient']); ?>
       </div>
     </div>
     <div class="col-xs-12 col-md-6">
