@@ -46,7 +46,7 @@
         <tr>
           <td>...</td>
           <td>SZ3245</td>
-          <td>Joli petit tduc</td>
+          <td>Joli petit truc</td>
           <td>12.5€</td>
           <td>3</td>
           <td>37.5€</td>

@@ -22,7 +22,9 @@
   <div class="wrapper-header text-center">
     <div class="">
       <i class="fa fa-envelope" aria-hidden="true"></i>
-      <i class="fa fa-home" aria-hidden="true"></i>
+      <a href="order.php">
+        <i class="fa fa-home" aria-hidden="true"></i>
+      </a>
       <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
       <span class="sr-only">Loading...</span>
       <i class="fa fa-truck fa-flip-horizontal" aria-hidden="true"></i>
