@@ -3,7 +3,8 @@
 
 <?php $_SESSION['idCommande']=$_POST['idCommande']?>
 <?php $_SESSION['idClient']=$_POST['idClient']?>
-<!-- <?php popupmessage($_SESSION['idClient'])?> -->
+<?php $_SESSION['shippingMode'] = $_POST['shippingMode'] ?>
+<!-- <?php popupmessage($shippingMode)?> -->
 
 <div class="container">
   <div class="row">
@@ -14,7 +15,8 @@
     </div>
     <div class="col-xs-12 col-md-6">
       <div class="information-div">
-        <p>Choix du mode de livraison</p>
+        <p>Choix du mode de livraison :</p>
+        <p> <?php echo"$_SESSION[shippingMode]" ?></p>
       </div>
     </div>
   </div>

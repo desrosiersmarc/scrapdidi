@@ -2052,6 +2052,7 @@ function display_information_on_order($etatCommande)
                 <form method='post' action='order_detail.php'>
                   <input name='idCommande' value='$ligne[idCommande]' type='hidden'/>
                   <input name='idClient' value='$ligne[idClient]' type='hidden'/>
+                  <input name='shippingMode' value='$ligne[shippingMode]' type='hidden'/>
 
                   <button name='' class='button-css'>
                     <i class='fa fa-search-plus' aria-hidden='true'></i>
@@ -2085,11 +2086,11 @@ function details_customer($idClient)
   $reponse = mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
     $ligne = mysqli_fetch_assoc($reponse);
     echo"
-     <p>$ligne[nomClient] $ligne[prenomClient] ($ligne[birthdayDate])</p>
+     <p>$ligne[nomClient] $ligne[prenomClient] | $ligne[birthdayDate]</p>
      <p>$ligne[adresseClient]</p>
      <p>$ligne[complementAdresseClient]</p>
      <p>$ligne[codePostalClient] $ligne[villeClient]</p>
-     <p>$ligne[emailClient] $ligne[telClient]</p>
+     <p>$ligne[emailClient] | $ligne[telClient]</p>
     ";
 }
 
