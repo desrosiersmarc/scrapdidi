@@ -2053,6 +2053,7 @@ function display_information_on_order($etatCommande)
                   <input name='idCommande' value='$ligne[idCommande]' type='hidden'/>
                   <input name='idClient' value='$ligne[idClient]' type='hidden'/>
                   <input name='shippingMode' value='$ligne[shippingMode]' type='hidden'/>
+                  <input name='waiting_pattern' value='$ligne[waiting_pattern]' type='hidden'/>
 
                   <button name='' class='button-css'>
                     <i class='fa fa-search-plus' aria-hidden='true'></i>
@@ -2094,4 +2095,18 @@ function details_customer($idClient)
     ";
 }
 
+function waiting_pattern_sentence($idWaiting)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+
+  $rq="SELECT waiting_pattern FROM waiting_patterns WHERE id = $idWaiting;";
+  $reponse = mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+    $ligne = mysqli_fetch_assoc($reponse);
+    echo"
+      <p>Motif de mise en attente :
+        $ligne[waiting_pattern]
+      </p>";
+}
 ?>

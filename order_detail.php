@@ -4,6 +4,8 @@
 <?php $_SESSION['idCommande']=$_POST['idCommande']?>
 <?php $_SESSION['idClient']=$_POST['idClient']?>
 <?php $_SESSION['shippingMode'] = $_POST['shippingMode'] ?>
+<?php $_SESSION['waiting_pattern'] = $_POST['waiting_pattern'] ?>
+
 <!-- <?php popupmessage($shippingMode)?> -->
 
 <div class="container">
@@ -26,7 +28,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="waiting-comment">
-        <p>Motif de mise en attente</p>
+        <?php waiting_pattern_sentence($_SESSION['waiting_pattern']); ?>
       </div>
     </div>
   </div>
