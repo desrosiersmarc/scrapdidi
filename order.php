@@ -1,5 +1,6 @@
 <?php include ("php_file/fonctions.php"); ?>
-<?php include ("layouts/orders/top.php"); ?>
+<?php include ("layouts/orders/top0.php"); ?>
+<?php include ("layouts/orders/top1.php"); ?>
   <div class="wrapper-news padder-100 text-center">
     <h2 class="text-center">Commande(s) à traiter  (maxi 5)</h2>
       <div class="container" id="to_treat">

@@ -1,6 +1,21 @@
-.information {
-  height: 200px;
+.information-div, .waiting-comment {
+  background-color: #EEE;
   border-radius: 5px;
-  box-shadow: 0 0 10px #DDD;
-  background-color: red;
+  box-shadow: 5px 5px 10px #AAA;
+  padding: 15px;
+  margin: 15px;
+}
+
+.information-div {
+  height: 170px;
+}
+
+.waiting-comment {
+  /*height: 50px;*/
+}
+
+.buttons-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
 }
