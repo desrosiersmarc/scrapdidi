@@ -1,6 +1,9 @@
 <?php include ("php_file/fonctions.php"); ?>
 <?php include ("layouts/orders/top0.php"); ?>
 
+<?php $_SESSION['idCommande']=$_POST['idCommande']?>
+<?php popupmessage($_SESSION['idCommande']) ?>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-6">
@@ -65,6 +68,9 @@
         </a>
         <a href="" class="btn btn-success">
           Validate
+        </a>
+        <a href="" class="btn btn-warning">
+          Update
         </a>
         <a href="" class="btn btn-danger">
           Denie

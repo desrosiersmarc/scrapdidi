@@ -19,3 +19,8 @@
   justify-content: space-around;
   align-items: flex-end;
 }
+
+.button-css {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}

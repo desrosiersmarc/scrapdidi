@@ -2048,7 +2048,14 @@ function display_information_on_order($etatCommande)
             ";
           };
         echo"
-            <td class=''><i class='fa fa-search-plus' aria-hidden='true'></i></td>
+              <td class=''>
+                <form method='post' action='order_detail.php'>
+                  <input name='idCommande' value='$ligne[idCommande]' type='hidden'/>
+                  <button name='' class='button-css'>
+                    <i class='fa fa-search-plus' aria-hidden='true'></i>
+                  </button>
+                </form>
+              </td>
           </tr>
         ";
       }
