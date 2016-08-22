@@ -1244,7 +1244,7 @@ function createCommande($sessionInformation)
 
     $dateTime=date('Y-m-d H:i:s');
 
-		$rq="INSERT INTO commande VALUES ('','$sessionInformation', '', '', '', '$dateTime', '', '', '', '', '', '')";
+		$rq="INSERT INTO commande VALUES ('','$sessionInformation', '', '', '', '$dateTime', '', '', '', '', '', '', '','')";
     //popupmessage($rq);
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 	}
@@ -1671,8 +1671,10 @@ function updateValidatedBasket()
   $shippingText = $_SESSION['shippingSelectedText'];
   $payement = $_SESSION['payementChoiceText'];
   $idCli = $_SESSION['idClient'];
+  $shippingPrice = str_replace(',', '.', $_SESSION['shippingPrice']);
+  popupmessage($shippingPrice);
 
-  $rq = "UPDATE commande SET idClient = $idCli ,payement = '$payement', shippingMode = '$shippingText' WHERE idCommande = $idC";
+  $rq = "UPDATE commande SET idClient = $idCli ,payement = '$payement', shippingMode = '$shippingText', shippingPrice = '$shippingPrice' WHERE idCommande = $idC";
   mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 }
 
@@ -1743,46 +1745,9 @@ function shipping ($weight, $shipping_type )
 
 		return $shippingPrice;
 
-		//popupMessage($shippingPrice);
 	}
 
-//Under this line the differents tests about the user's account creation
-/*function checkNom($nom)
-	{
-		//Test le nom qui ne doit pas être vide et qui doit avoir au moins deux lettres.
-		if ($nom=='') return 'empty';
-		elseif (strlen($nom)<2) return 'tooshort';
-		else
-			{return 'ok';}
-	}
-function checkPrenom($prenom)
-	{
-		//Test le prénom qui ne doit pas être vide et qui doit avoir au moins deux lettres.
-		if ($prenom=='') return 'empty';
-		elseif (strlen($prenom)<2) return 'tooshort';
-		else
-			{return 'ok';}
-	}
-function checkMail($mail)
-	{
-		//Test la présence d'un email et la validité de la forme de l'email
-	    if($mail == '') return 'empty';
-	    else if(!preg_match('#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#', $mail))
-	   		{return 'isnt';}
-	    else
-	    	{return 'ok';}
-	}
-function checkPortable($portable)
-	{
-		//Test la présence d'un numéro de portable et de la validité d'un portable
-	    if($portable == '') return 'empty';
-	    else if(!preg_match('#^0[6-7]([-. ]?[0-9]{2}){4}$#', $portable)) return 'isnt';
 
-	    else
-	    {
-	     return 'ok';
-	    }
-	}*/
 //Function to test existing account
 function check_existing_mail($mail)
 	{
@@ -2142,5 +2107,20 @@ function list_article_commande($idCommande)
       ";
       }
 }
+
+function shipping_price ($idCommande)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+
+  $rq="SELECT shippingPrice FROM commande WHERE idCommande = $idCommande;";
+  $reponse = mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+  $ligne = mysqli_fetch_assoc($reponse);
+  $_SESSION['shippingPrice'] = $ligne['shippingPrice'];
+  echo"$ligne[shippingPrice]";
+
+}
+
 
 ?>

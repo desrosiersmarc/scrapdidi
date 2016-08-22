@@ -83,11 +83,17 @@
         </tr>
         <tr>
           <td>Livraison</td>
-          <td>3.5€</td>
+          <td><?php shipping_price ($_SESSION['idCommande']) ?> €</td>
         </tr>
         <tr>
           <td>Total</td>
-          <td>41.0€</td>
+          <td>
+            <?php
+            $total = $_SESSION['shippingPrice'] + total_basket($_SESSION['idCommande']);
+            echo"$total";
+            ?>
+            €
+          </td>
         </tr>
       </table>
     </div>
