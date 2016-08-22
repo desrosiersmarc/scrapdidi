@@ -1672,7 +1672,7 @@ function updateValidatedBasket()
   $payement = $_SESSION['payementChoiceText'];
   $idCli = $_SESSION['idClient'];
   $shippingPrice = str_replace(',', '.', $_SESSION['shippingPrice']);
-  popupmessage($shippingPrice);
+
 
   $rq = "UPDATE commande SET idClient = $idCli ,payement = '$payement', shippingMode = '$shippingText', shippingPrice = '$shippingPrice' WHERE idCommande = $idC";
   mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
