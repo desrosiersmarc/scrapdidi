@@ -2119,7 +2119,7 @@ function list_article_commande($idCommande)
   include ("php_file/commun.php");
   $functionName=__function__;
 
-  $rq="SELECT * FROM articles a JOIN panier p ON a.referenceArticles = p.referenceArticles WHERE idCommande = $idCommande";
+  $rq="SELECT a.imagesArticles1, a.descriptionArticles, a.referenceArticles, a.libelleArticles, a.prixVenteArticles, sum(p.quantiteArticles) as quantiteArticles, a.prixVenteArticles, a.stockArticles   FROM articles a JOIN panier p ON a.referenceArticles = p.referenceArticles WHERE idCommande = $idCommande GROUP BY a.referenceArticles;";
   $reponse = mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
     while ($ligne=mysqli_fetch_assoc($reponse))
       {
