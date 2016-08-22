@@ -2053,6 +2053,9 @@ function display_information_on_order($etatCommande)
                   <input name='idCommande' value='$ligne[idCommande]' type='hidden'/>
                   <input name='idClient' value='$ligne[idClient]' type='hidden'/>
                   <input name='shippingMode' value='$ligne[shippingMode]' type='hidden'/>
+
+                  <input name='shippingMode' value='$ligne[shippingMode]' type='hidden'/>
+
                   <input name='waiting_pattern' value='$ligne[waiting_pattern]' type='hidden'/>
 
                   <button name='' class='button-css'>
@@ -2109,4 +2112,35 @@ function waiting_pattern_sentence($idWaiting)
         $ligne[waiting_pattern]
       </p>";
 }
+
+function list_article_commande($idCommande)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+
+  $rq="SELECT * FROM articles a JOIN panier p ON a.referenceArticles = p.referenceArticles WHERE idCommande = $idCommande";
+  $reponse = mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+    while ($ligne=mysqli_fetch_assoc($reponse))
+      {
+      echo"
+        <tr>
+          <td><img src='media_site/produits/$ligne[imagesArticles1]' class='picture-order' alt='$ligne[descriptionArticles]'></td>
+          <td>$ligne[referenceArticles]</td>
+          <td>$ligne[libelleArticles]</td>
+          <td>$ligne[prixVenteArticles]</td>
+          <td>$ligne[quantiteArticles]</td>
+          <td>
+      ";
+          $total = $ligne['quantiteArticles'] * $ligne['prixVenteArticles'];
+      echo"
+          $total €</td>
+          <td>$ligne[stockArticles]</td>
+          <td><i class='fa fa-check-square-o' aria-hidden='true'></i>
+          </td>
+        </tr>
+      ";
+      }
+}
+
 ?>

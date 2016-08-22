@@ -17,8 +17,13 @@
     </div>
     <div class="col-xs-12 col-md-6">
       <div class="information-div">
-        <p>Choix du mode de livraison :</p>
-        <p> <?php echo"$_SESSION[shippingMode]" ?></p>
+        <p>
+          <strong>N° de commande : <?php echo"$_SESSION[idCommande]" ?></strong>
+        </p>
+        <p>
+          Choix du mode de livraison :
+          <?php echo"$_SESSION[shippingMode]" ?>
+        </p>
       </div>
     </div>
   </div>
@@ -47,16 +52,7 @@
           <th>Qté disponible</th>
           <th>Check</th>
         </tr>
-        <tr>
-          <td>...</td>
-          <td>SZ3245</td>
-          <td>Joli petit truc</td>
-          <td>12.5€</td>
-          <td>3</td>
-          <td>37.5€</td>
-          <td>6</td>
-          <td>x</td>
-        </tr>
+        <?php list_article_commande($_SESSION['idCommande']) ?>
       </table>
     </div>
   </div>
