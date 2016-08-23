@@ -2,6 +2,7 @@
 <?php include ("layouts/orders/top0.php"); ?>
 
 <?php $_SESSION['idCommande']=$_POST['idCommande']?>
+<?php  $idCommande = $_SESSION['idCommande']?>
 <?php $_SESSION['idClient']=$_POST['idClient']?>
 <?php $_SESSION['shippingMode'] = $_POST['shippingMode'] ?>
 <?php $_SESSION['waiting_pattern'] = $_POST['waiting_pattern'] ?>
@@ -59,20 +60,31 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4">
+    <div class="col-xs-12 col-md-8">
       <div class="buttons-div">
-        <a href="" class="btn btn-primary">
-          Print
-        </a>
-        <a href="" class="btn btn-success">
-          Validate
-        </a>
-        <a href="" class="btn btn-warning">
-          Update
-        </a>
-        <a href="" class="btn btn-danger">
-          Denie
-        </a>
+
+        <form action="order.php" method="post">
+          <input type="hidden"  name="statement" value="2"/>
+          <input type="hidden"  name="idCommande" value= <?php echo"$idCommande" ?>>
+          <input type="submit" class="btn btn-primary" value="Préparation en cours"/>
+        </form>
+        <form action="order.php" method="post">
+          <input type="hidden"  name="statement" value="3"/>
+          <input type="hidden"  name="idCommande" value= <?php echo"$idCommande" ?>>
+          <input type="submit" class="btn btn-warning" value="Mise en attente"/>
+        </form>
+        <form action="order.php" method="post">
+          <input type="hidden"  name="statement" value="4"/>
+          <input type="hidden"  name="idCommande" value= <?php echo"$idCommande" ?>>
+          <input type="submit" class="btn btn-success" value="Expédiée"/>
+        </form>
+        <form action="order.php" method="post">
+          <input type="hidden"  name="statement" value="5"/>
+          <input type="hidden"  name="idCommande" value= <?php echo"$idCommande" ?>>
+          <input type="submit" class="btn btn-danger" value="Annuler"/>
+        </form>
+
+
       </div>
     </div>
     <div class="col-xs-12 col-md-4">
@@ -108,6 +120,11 @@
             <label for="commentsOrder">Commentaires</label>
             <textarea class="form-control" rows="3" id="commentsOrder">
             </textarea>
+
+          <button type="submit" value="2" name="statement" class="btn btn-info">
+            Mettre à jour
+          </button>
+
             </div>
         </form>
       </div>

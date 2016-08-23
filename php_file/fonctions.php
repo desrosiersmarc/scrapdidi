@@ -2122,5 +2122,29 @@ function shipping_price ($idCommande)
 
 }
 
+function change_order_statement ($idCommande, $order_statement)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+
+  $dateTime=date('Y-m-d H:i:s');
+
+  if ($order_statement == 2)
+  {
+    $rq="UPDATE commande SET etatCommande = $order_statement, preparation_date = '$dateTime' WHERE idCommande = $idCommande";
+    popupmessage($rq);
+  }
+  elseif ($order_statement == 3)
+  {
+    $rq="UPDATE commande SET etatCommande = $order_statement, wait_date = '$dateTime' WHERE idCommande = $idCommande";
+  }
+  else
+  {
+     $rq="UPDATE commande SET etatCommande = $order_statement WHERE idCommande = $idCommande";
+  }
+
+  mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+}
 
 ?>

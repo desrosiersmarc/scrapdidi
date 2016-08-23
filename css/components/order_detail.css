@@ -11,9 +11,10 @@
 }
 
 .buttons-div {
+  height: 115px;
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .button-css {
