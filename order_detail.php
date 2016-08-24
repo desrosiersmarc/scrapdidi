@@ -68,16 +68,19 @@
           <input type="hidden"  name="idCommande" value= <?php echo"$idCommande" ?>>
           <input type="submit" class="btn btn-primary" value="Préparation en cours"/>
         </form>
+
         <form action="order.php" method="post">
           <input type="hidden"  name="statement" value="3"/>
           <input type="hidden"  name="idCommande" value= <?php echo"$idCommande" ?>>
           <input type="submit" class="btn btn-warning" value="Mise en attente"/>
         </form>
+
         <form action="order.php" method="post">
           <input type="hidden"  name="statement" value="4"/>
           <input type="hidden"  name="idCommande" value= <?php echo"$idCommande" ?>>
           <input type="submit" class="btn btn-success" value="Expédiée"/>
         </form>
+
         <form action="order.php" method="post">
           <input type="hidden"  name="statement" value="5"/>
           <input type="hidden"  name="idCommande" value= <?php echo"$idCommande" ?>>
@@ -116,16 +119,24 @@
     <div class="col-xs-12">
       <div class="comment-div">
         <form action="">
-          <div class="form-group">
-            <label for="commentsOrder">Commentaires</label>
-            <textarea class="form-control" rows="3" id="commentsOrder">
-            </textarea>
-
-          <button type="submit" value="2" name="statement" class="btn btn-info">
-            Mettre à jour
-          </button>
-
+          <div class="container">
+            <div class="row">
+              <div class="comment-button">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="commentsOrder">Commentaires</label>
+                    <textarea class="form-control" rows="3" id="commentsOrder">
+                      </textarea>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" value="2" name="statement" class="btn btn-info btn-block btn-lg">
+                    Mettre à jour
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
         </form>
       </div>
     </div>

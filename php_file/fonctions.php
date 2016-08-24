@@ -2139,9 +2139,13 @@ function change_order_statement ($idCommande, $order_statement)
   {
     $rq="UPDATE commande SET etatCommande = $order_statement, wait_date = '$dateTime' WHERE idCommande = $idCommande";
   }
-  else
+  elseif ($order_statement == 4)
   {
-     $rq="UPDATE commande SET etatCommande = $order_statement WHERE idCommande = $idCommande";
+    $rq="UPDATE commande SET etatCommande = $order_statement, send_date = '$dateTime' WHERE idCommande = $idCommande";
+  }
+  elseif ($order_statement == 5)
+  {
+    $rq="UPDATE commande SET etatCommande = $order_statement, canceled_date = '$dateTime' WHERE idCommande = $idCommande";
   }
 
   mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");

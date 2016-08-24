@@ -35,3 +35,7 @@
 .picture-order {
   height: 50px;
 }
+.comment-button {
+  display: flex;
+  align-items: center;
+}
