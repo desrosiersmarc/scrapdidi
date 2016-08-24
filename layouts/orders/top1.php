@@ -37,7 +37,7 @@
               </h4>
               <p>
                 <strong>
-                  <?php numberOrderByState(2);?>
+                  <?php numberOrderByState(3);?>
                 </strong>
               </p>
             </div>
@@ -51,7 +51,7 @@
             </h4>
             <p>
               <strong>
-                <?php numberOrderByState(2);?>
+                <?php numberOrderByState(4);?>
               </strong>
             </p>
           </div>
