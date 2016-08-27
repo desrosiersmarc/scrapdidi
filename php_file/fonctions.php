@@ -2133,7 +2133,6 @@ function change_order_statement ($idCommande, $order_statement)
   if ($order_statement == 2)
   {
     $rq="UPDATE commande SET etatCommande = $order_statement, preparation_date = '$dateTime' WHERE idCommande = $idCommande";
-    popupmessage($rq);
   }
   elseif ($order_statement == 3)
   {
@@ -2149,6 +2148,29 @@ function change_order_statement ($idCommande, $order_statement)
   }
 
   mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+}
+
+function update_comments ($idCommande, $comments)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+  $comments = mysql_real_escape_string(trim($comments));
+
+  $rq="UPDATE commande SET comments = '$comments' WHERE idCommande = $idCommande";
+  mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+
+}
+
+function read_comments ($idCommande)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+  $rq="SELECT comments FROM commande WHERE idCommande = $idCommande";
+  $reponse = mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+  $ligne = mysqli_fetch_assoc($reponse);
+  return $ligne['comments'];
 }
 
 ?>

@@ -1,13 +1,21 @@
+<?php  session_start() ?>
 <?php include ("php_file/fonctions.php"); ?>
 <?php include ("layouts/orders/top0.php"); ?>
 
-<?php $_SESSION['idCommande']=$_POST['idCommande']?>
-<?php  $idCommande = $_SESSION['idCommande']?>
-<?php $_SESSION['idClient']=$_POST['idClient']?>
-<?php $_SESSION['shippingMode'] = $_POST['shippingMode'] ?>
-<?php $_SESSION['waiting_pattern'] = $_POST['waiting_pattern'] ?>
+<?php if (isset($_POST['idCommande'])) {$_SESSION['idCommande']=$_POST['idCommande'];}?>
+<?php $idCommande = $_SESSION['idCommande']; ?>
+<?php if (isset($_POST['idClient'])){$_SESSION['idClient']=$_POST['idClient'];} ?>
+<?php if (isset($_POST['shippingMode'])){$_SESSION['shippingMode'] = $_POST['shippingMode'];} ?>
+<?php if (isset($_POST['waiting_pattern'])){$_SESSION['waiting_pattern'] = $_POST['waiting_pattern'];} ?>
 
-<!-- <?php popupmessage($shippingMode)?> -->
+<?php
+  if (isset($_POST['comments']))
+  {
+    update_comments($_SESSION['idCommande'], $_POST['comments']);
+  }
+?>
+
+<?php $comments = trim(read_comments($idCommande)); ?>
 
 <div class="container">
   <div class="row">
@@ -118,19 +126,20 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="comment-div">
-        <form action="">
+        <form action="order_detail.php" method="post">
           <div class="container">
             <div class="row">
               <div class="comment-button">
                 <div class="col-md-8">
                   <div class="form-group">
                     <label for="commentsOrder">Commentaires</label>
-                    <textarea class="form-control" rows="3" id="commentsOrder">
-                      </textarea>
+                    <textarea class="form-control" name="comments" id="commentsOrder">
+                    <?php echo"$comments" ?>
+                    </textarea>
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <button type="submit" value="2" name="statement" class="btn btn-info btn-block btn-lg">
+                  <button type="submit" class="btn btn-info btn-block btn-lg">
                     Mettre à jour
                   </button>
                 </div>

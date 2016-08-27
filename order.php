@@ -1,3 +1,4 @@
+<?php  session_start() ?>
 <?php include ("php_file/fonctions.php"); ?>
 <?php include ("layouts/orders/top0.php"); ?>
 <?php include ("layouts/orders/top1.php"); ?>
