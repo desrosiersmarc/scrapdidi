@@ -2151,4 +2151,23 @@ function change_order_statement ($idCommande, $order_statement)
   mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 }
 
+function update_comments ($idCommande, $comments)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+
+  $rq="UPDATE commande SET comments = $comments WHERE idCommande = $idCommande";
+  mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+
+}
+
+function read_comments ($idCommande)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+  $rq="";
+}
+
 ?>
