@@ -2133,6 +2133,7 @@ function change_order_statement ($idCommande, $order_statement)
   if ($order_statement == 2)
   {
     $rq="UPDATE commande SET etatCommande = $order_statement, preparation_date = '$dateTime' WHERE idCommande = $idCommande";
+    include("php_file/envoiMailPreparation.php");
   }
   elseif ($order_statement == 3)
   {
@@ -2141,6 +2142,7 @@ function change_order_statement ($idCommande, $order_statement)
   elseif ($order_statement == 4)
   {
     $rq="UPDATE commande SET etatCommande = $order_statement, send_date = '$dateTime' WHERE idCommande = $idCommande";
+    include("php_file/envoiMailOrderSent.php");
   }
   elseif ($order_statement == 5)
   {
@@ -2155,7 +2157,7 @@ function update_comments ($idCommande, $comments)
   //Connexion informations
   include ("php_file/commun.php");
   $functionName=__function__;
-  $comments = mysql_real_escape_string(trim($comments));
+  // $comments = mysqli_real_escape_string(trim($comments), "'");
 
   $rq="UPDATE commande SET comments = '$comments' WHERE idCommande = $idCommande";
   mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
@@ -2172,5 +2174,19 @@ function read_comments ($idCommande)
   $ligne = mysqli_fetch_assoc($reponse);
   return $ligne['comments'];
 }
+
+function load_information_customer ($idCommande)
+{
+  //Connexion informations
+  include ("php_file/commun.php");
+  $functionName=__function__;
+  $rq="SELECT * FROM client c JOIN commande co ON c.idClient = co.idClient WHERE idCommande = $idCommande";
+  $reponse = mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+  $ligne = mysqli_fetch_assoc($reponse);
+  $_SESSION['mailClient']=$ligne['emailClient'];
+  $_SESSION['nom']=$ligne['nomClient'];
+  $_SESSION['prenom']=$ligne['prenomClient'];
+}
+
 
 ?>

@@ -2,11 +2,14 @@
 <?php include ("php_file/fonctions.php"); ?>
 <?php include ("layouts/orders/top0.php"); ?>
 
+
 <?php if (isset($_POST['idCommande'])) {$_SESSION['idCommande']=$_POST['idCommande'];}?>
 <?php $idCommande = $_SESSION['idCommande']; ?>
 <?php if (isset($_POST['idClient'])){$_SESSION['idClient']=$_POST['idClient'];} ?>
 <?php if (isset($_POST['shippingMode'])){$_SESSION['shippingMode'] = $_POST['shippingMode'];} ?>
 <?php if (isset($_POST['waiting_pattern'])){$_SESSION['waiting_pattern'] = $_POST['waiting_pattern'];} ?>
+
+<?php load_information_customer($idCommande); ?>
 
 <?php
   if (isset($_POST['comments']))
@@ -16,6 +19,7 @@
 ?>
 
 <?php $comments = trim(read_comments($idCommande)); ?>
+<!-- <?php print_r($_SESSION); ?> -->
 
 <div class="container">
   <div class="row">
