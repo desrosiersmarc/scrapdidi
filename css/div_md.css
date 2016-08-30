@@ -359,49 +359,7 @@ td
 		float: left;
 	}
 
-/*describe div about client's account
- *
- */
 
-.divBasketContent
-{
-
-	width:90%;
-	margin:auto;
-	padding: 5px;
-}
-
-.divBasketContentUnder
-{
-
-	margin:auto;
-	float:left;
-	padding: 5px;
-}
-
-
-
-#divBasket
-{
-	margin-top:10px;
-	padding:10px;
-	height:350px;
-	border-radius:20px;
-	background-color:#FFF;
-	box-shadow: 8px 8px 12px #aaa;
-	border:solid 1px #797D80;
-	/*background-color:#F2F2F2;*/
-}
-
-#divBasketUnknow, #divBasketKnow
-{
-	width: 300px;
-	border:solid 1px #797D80;
-	border-radius:10px;
-	padding:10px;
-	margin:5px;
-	height:200px;
-}
 
 /*design the contact_us page*/
 #contactUs
@@ -912,7 +870,7 @@ textarea
 .input_css
 {
 	height:30px;
-	width:250px;
+	width:350px;
 	border-radius:5px;
 	padding:5px;
 	border:none;
@@ -962,10 +920,7 @@ textarea
 	width: 525px;
 }
 
-.submitCompte
-{
-	width:260px;
-}
+
 
 /*Test */
 a:hover span, a:focus span{
