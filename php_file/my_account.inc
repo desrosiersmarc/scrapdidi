@@ -1,12 +1,15 @@
 <div class='account'>
-  <h4>Identifiez-vous</h4>
-  <form method="post" action="produits.php">
-  	<div class="divBasketContent">
-  		<div class="divBasketContentUnder">
-  			<div id="divBasketUnknow">
-  				<p>
+  <h4>
+    IDENTIFIEZ-VOUS
+  </h4>
+  <hr>
+  <div class="divBasketContent">
+    <form method="post" action="produits.php">
+      <div class="divBasketContentUnder">
+  		  <div id="divBasketUnknow">
+  				<h4>
             CREEZ VOTRE COMPTE
-          </p>
+          </h4>
           <hr>
           <p>
             Saisissez votre adresse mail pour créer votre compte
@@ -15,16 +18,16 @@
           <label for="mailClientNew">Adresse mail</label>
   				<input name="mailClientNew" class="input_css" id="mailClientNew" type="email" placeholder="Votre mail">
   				<br/>
-  				<button name="submitAccountUnknow"class="input_css submitCompte" type="submit">
+  				<button name="submitAccountUnknow" class="input_css submitCompte" type="submit">
             Créer mon compte
           </button>
-  			</div>
-  		</div>
+  		  </div>
+      </div>
       <div class="divBasketContentUnder">
         <div id="divBasketKnow">
-          <p>
+          <h4>
             DEJA INSCRIT ?
-          </p>
+          </h4>
           <hr>
           <label for="mailClient">Adresse mail</label>
           <input name="mailClient" class="input_css" id="mailClient" type="mail" placeholder="Votre mail">
@@ -38,6 +41,6 @@
           </button>
         </div>
       </div>
-  	</div>
-  </form>
+    </form>
+  </div>
 </div>

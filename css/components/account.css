@@ -10,7 +10,7 @@ padding: 0 15px 0 15px;
 
 .divBasketContentUnder
 {
-  margin:auto;
+  margin-left: 4%;
   float:left;
   padding: 5px;
 }
@@ -18,6 +18,10 @@ padding: 0 15px 0 15px;
 .divBasketContentUnder p {
   font-family: arial;
   font-size: 14px;
+}
+
+.divBasketContentUnder h2 {
+  font-family: arial;
 }
 
 

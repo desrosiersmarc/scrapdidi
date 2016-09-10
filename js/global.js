@@ -22,3 +22,11 @@
 // function goToTarget(target) {
 //   window.location.href= "#" + target;
 // };
+
+$(document).ready(function() {
+  $('#button_to_animate').click(function(){
+    $('#h2animate').addClass('animated hinge');
+  });
+
+
+});
