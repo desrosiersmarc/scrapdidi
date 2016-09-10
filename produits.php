@@ -83,11 +83,8 @@
 				include ("php_file/my_account.inc");
 			}
 		elseif (isset($_POST['valider_commande']))
-		//elseif (isset($_POST['valider_commande']) || $_SESSION['valider_commande']=='yes')
-		//elseif (isset($_POST['valider_commande']) || isset($_POST['myAccount']))
 			{
 					if(isset($_POST['valider_commande']))
-					//if(isset($_POST['valider_commande']) || $_SESSION['valider_commande']=='yes')
 						{
 							if ($_SESSION['shippingSelected']=='')
 								{
@@ -106,17 +103,13 @@
 								{
 									$_SESSION['td_class_alert_shipping']='';
 									$_SESSION['td_class_alert_payement']='';
-									//include ("php_file/my_account.inc");
+
 									if (isset($_SESSION['connected']) and $_SESSION['connected']=='yes')
 										{
-                      //To add information into BD. etatCommandeClient => Ok, etatCommande => To validate
-                      //
                       updateValidatedBasket();
                       updateCommande('etatCommande', 1);
-                      // Find an other solution for the statement of etat commande with an other table an id
 
 											include ("php_file/envoiMailOrder.php");
-											//To send the email to Amandine
 											include ("php_file/envoiMailOrderAmandine.php");
 										}
 									else
