@@ -1,33 +1,64 @@
-<form method='post' action='produits.php'>
-  <div class='divAccountContent'>
-      <div id='divAccount'>
-        <p>Veuillez renseigner les différents champs</p>
-        <input name='nom' class='input_css' placeholder='Nom' required='required' value=$nom></input>
-        <input name='prenom' class='input_css' placeholder='prénom' required='required' value=$prenom></input>
-        <br/>
-        <input
-          name='mailClient'
-          class='input_css'
-          id='mailClient'
-          type='mail'
-          value=$mailClient
-        ></input>
+<div class="divAccountAlign">
+  <form method='post' action='produits.php'>
+    <h2>Création d'un compte</h2>
+    <p>Merci de renseigner les informations ci-dessous. Les champs marqués d'un * sont obligatoires</p>
+    <table>
+      <tr>
+        <td class="label-align-right">
+          <label for="mailClient">Adresse email*</label>
+        </td>
+        <td>
+          <input
+            name='mailClient'
+            class='input_css'
+            id='mailClient'
+            type='mail'
+            value= <?php $mailClient ?>
+          >
+          </input>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="mailClientVerification">Confirmer votre adresse email*</label>
+        </td>
+        <td>
+          <input
+            name='mailClientVerification'
+            class='input_css'
+            id='mailClientVerification'
+            type='mail'
+            value= <?php $mailClient ?>
+          >
+          </input>
+        </td>
+      </tr>
+      <tr>
+        <td class="label-align-right">
+          <label for="namePassword">Mot de passe*</label>
+        </td>
+        <td>
+          <input name='namePassword' class='input_css' type='password' placeholder='Votre mot de passe' id='namePassword' required='required'>
+          </input>
 
-        <input name='namePassword' class='input_css' type='password' placeholder='Votre mot de passe' required='required'></input>
-        <!--<input name='namePassword' class='input_css' type='password' placeholder='Retapez votre mot de passe' required='required'>-->
-        <br/>
-        <input name='adresse' class='input_css' id='adresse' placeholder='Adresse' required='required' value=$adresse></input>
-        <br/>
-        <input name='cp' class='input_css' id='code_postal' type='' placeholder='CP' required='required' value=$cp></input>
-
-        <input name='ville' class='input_css' id='ville' placeholder='Ville' required='required'value=$ville></input>
-        <br/>
-        <input name='mobile_phone' class='input_css' id='mobile_phone' type='tel' placeholder='Portable' value=$tel></input>
-        <input name='birthday' class='input_css' id='birthday' type='datetime' placeholder='Un petit cadeau ? Notez votre date anniversaire ;)' value=$birthdayDate ></input>
-        <br/>
-        <button name='submitAccount' class='input_css' id='submitCompte' type='submit'>Mettre à jour</button>
-
-
-      </div>
-  </div>
-</form>
+        </td>
+      </tr>
+      <tr>
+        <td class="label-align-right">
+          <label for="namePasswordVerification">Confirmer votre mot de passe*</label>
+        </td>
+        <td>
+          <input name='namePasswordVerification' class='input_css' type='password' id='namePasswordVerification' placeholder='Votre mot de passe' required='required'>
+          </input>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <button name='submitAccount' class='button-submit' id='submitCompte' type='submit'>Mettre à jour</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

@@ -32,7 +32,7 @@
 		if ($_SESSION['mailExist']=='no')
 			{
 				account();
-        include('php_file/my_account_create.inc')
+        // include('php_file/my_account_create.inc');
 			}
 		else
 			{

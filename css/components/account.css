@@ -1,6 +1,19 @@
 .account {
 padding: 0 15px 0 15px;
-};
+}
+
+.divAccountAlign td {
+  text-align: right;
+}
+
+.divAccountAlign p {
+  font-family: arial;
+  font-size: 0.8em;
+}
+
+.divAccountAlign {
+  margin-left: 20%;
+}
 
 .divBasketContent
 {
@@ -49,4 +62,26 @@ padding: 0 15px 0 15px;
 .submitCompte
 {
   width:260px;
+}
+
+#namePassword
+{
+  width: 350px;
+}
+
+.button-submit {
+  height: 42px;
+  width: 361px;
+  border-radius: 5px;
+  background-color: var(--main_bg_color_blue);
+  padding:5px;
+  margin-top:5px;
+  font-family: arial;
+  font-size:0.8em;
+  border:solid 1px #797D80;
+}
+
+.button-submit:hover {
+  border:solid 1px #F10091;
+  color: #F10091;
 }
