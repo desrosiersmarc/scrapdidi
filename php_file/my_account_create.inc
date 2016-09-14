@@ -18,6 +18,7 @@
             class='input_css'
             id='mailClient'
             type='mail'
+            required='required'
             value= <?php $mailClient ?>
           >
           </input>
@@ -33,6 +34,7 @@
             class='input_css'
             id='mailClientVerification'
             type='mail'
+            required='required'
             value= <?php $mailClient ?>
           >
           </input>
@@ -43,7 +45,14 @@
           <label for="namePassword">Mot de passe*</label>
         </td>
         <td>
-          <input name='namePassword' class='input_css' type='password' placeholder='Votre mot de passe' id='namePassword' required='required'>
+          <input
+            name='namePassword'
+            class='input_css'
+            type='password'
+            placeholder='Votre mot de passe'
+            id='namePassword'
+            required='required'
+            maxlength=10>
           </input>
 
         </td>
@@ -53,7 +62,14 @@
           <label for="namePasswordVerification">Confirmer votre mot de passe*</label>
         </td>
         <td>
-          <input name='namePasswordVerification' class='input_css' type='password' id='namePasswordVerification' placeholder='Votre mot de passe' required='required'>
+          <input
+            name='namePasswordVerification'
+            class='input_css'
+            type='password'
+            id='namePasswordVerification'
+            placeholder='Votre mot de passe'
+            required='required'
+            maxlength=10>
           </input>
         </td>
       </tr>
@@ -68,8 +84,8 @@
         <td class="label-align-right">Civilité</td>
         <td>
           <select class="button-submit" name="" id="">
-            <option value="">Madame</option>
-            <option value="">Monsieur</option>
+            <option value="Madame">Madame</option>
+            <option value="Monsieur">Monsieur</option>
           </select>
         </td>
       </tr>
@@ -80,56 +96,89 @@
           </label>
         </td>
         <td>
-          <input name='' class='input_css' type='' id='' placeholder=''>
+          <input
+            name='nom'
+            class='input_css'
+            type='text'
+            id=''
+            placeholder='Vannieuwerburgh'
+            required="required">
           </input>
         </td>
       </tr>
       <tr>
         <td class="label-align-right">Prénom*</td>
         <td>
-          <input name='' class='input_css' type='' id='' placeholder=''>
+          <input
+            name='prenom'
+            class='input_css'
+            type='text'
+            id=''
+            placeholder='Amandine'
+            maxlength=25
+            required='required'>
         </td>
       </tr>
       <tr>
         <td class="label-align-right">N° et rue*</td>
         <td>
-          <input name='' class='input_css' type='' id='' placeholder=''>
+          <input
+            name='adresse'
+            class='input_css'
+            type='text'
+            id=''
+            placeholder='1, rue du scrapp'
+            maxlength=25
+            required='required'>
         </td>
       </tr>
       <tr>
         <td class="label-align-right">Complément d'adresse</td>
         <td>
-          <input name='' class='input_css' type='' id='' placeholder=''>
+          <input
+            name='complementAdresseClient'
+            class='input_css'
+            type='text'
+            id=''
+            placeholder=''
+            maxlength=25>
         </td>
       </tr>
       <tr>
         <td class="label-align-right">Code postal*</td>
         <td>
-          <input name='' class='input_css' type='' id='' placeholder=''>
+          <input
+            name='cp'
+            class='input_css'
+            type='number'
+            id=''
+            placeholder='59000'
+            required='required'
+            maxlength=5>
         </td>
       </tr>
       <tr>
         <td class="label-align-right">Ville*</td>
         <td>
-          <input name='' class='input_css' type='' id='' placeholder=''>
-        </td>
-      </tr>
-      <tr>
-        <td class="label-align-right">Pays</td>
-        <td>
-          <input name='' class='input_css' type='' id='' placeholder='FRANCE'>
-        </td>
-      </tr>
-      <tr>
-        <td class="label-align-right">Téléphone fixe</td>
-        <td>
-          <input name='' class='input_css' type='' id='' placeholder='0223344556'>
+          <input
+            name='ville'
+            class='input_css'
+            type='text'
+            id=''
+            placeholder='Lille'
+            required='required'
+            maxlength=25>
         </td>
       </tr>
       <tr>
         <td class="label-align-right">Téléphone portable*</td>
         <td>
-          <input name='' class='input_css' type='' id='' placeholder='0607080901'>
+          <input
+            name='mobile_phone'
+            class='input_css'
+            type='tel'
+            id=''
+            placeholder='0607080901'>
         </td>
       </tr>
       <tr>
@@ -146,7 +195,14 @@
       </tr>
       <tr>
         <td></td>
-        <td><input name='' class='input_css' type='date' id='' placeholder='03/12/1988'></td>
+        <td>
+          <input
+            name='birthday'
+            class='input_css'
+            type='date'
+            id=''
+            placeholder='03/12/1988'>
+        </td>
       </tr>
       <tr>
         <td colspan="2" class="text-title-color">
