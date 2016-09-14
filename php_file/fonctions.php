@@ -1882,10 +1882,13 @@ function updateClient()
 		$mailClient=$_POST['mailClient'];
 		$namePassword=$_POST['namePassword'];
 		$adresse=$_POST['adresse'];
+    $complementAdresseClient=$_POST['complementAdresseClient'];
 		$cp=$_POST['cp'];
 		$ville=$_POST['ville'];
 		$mobile_phone=$_POST['mobile_phone'];
-		$birthday=$_POST['birthday'];
+    $birthday=$_POST['birthday'];
+    $newsletter=$_POST['newsletter'];
+		$loyalty=$_POST['loyalty'];
 
 		//Connexion informations
 		include ("php_file/commun.php");
@@ -1893,8 +1896,7 @@ function updateClient()
 
 		$idClient=$_SESSION['idClient'];
 
-		$rq="UPDATE client SET nomClient='$nom', prenomClient='$prenom', emailClient='$mailClient', password='$namePassword', adresseClient='$adresse', codePostalClient='$cp', villeClient='$ville', telClient='$mobile_phone', birthdayDate='$birthday' WHERE idClient=$idClient;";
-		//popupMessage($rq);
+		$rq="UPDATE client SET nomClient='$nom', prenomClient='$prenom', emailClient='$mailClient', password='$namePassword', adresseClient='$adresse', complementAdresseClient='$complementAdresseClient', codePostalClient='$cp', villeClient='$ville', telClient='$mobile_phone', newsletterClient='$newsletter', loyalty='$loyalty', birthdayDate='$birthday' WHERE idClient=$idClient;";
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 		//$ligne=mysqli_fetch_assoc($reponse);
 
