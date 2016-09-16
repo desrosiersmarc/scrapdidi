@@ -41,7 +41,11 @@
         </td>
       </tr>
       <tr id="mail-alert" class="hide-tr">
-        <td></td>
+        <td class="label-align-right">
+          <p>
+            oups
+          </p>
+        </td>
         <td class="alert-td" >
           <p>Les mails saisis ne sont pas identiques</p>
         </td>
@@ -77,6 +81,12 @@
             required='required'
             maxlength=10>
           </input>
+        </td>
+      </tr>
+      <tr id="password-alert" class="hide-tr">
+        <td></td>
+        <td class="alert-td" >
+          <p>Les mots de passe saisis ne sont pas identiques</p>
         </td>
       </tr>
 
