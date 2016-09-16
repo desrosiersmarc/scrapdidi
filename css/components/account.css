@@ -91,3 +91,18 @@ padding: 0 15px 0 15px;
   border:solid 1px #F10091;
   color: #F10091;
 }
+
+.hide-tr {
+  display: none;
+}
+
+.alert-td {
+  color: #FFF;
+  border: red solid 1px;
+  text-align: center;
+  height: 42px;
+  border-radius: 5px;
+  width: 360px;
+  background-color: #FD4E68;
+
+}
