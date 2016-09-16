@@ -40,6 +40,12 @@
           </input>
         </td>
       </tr>
+      <tr id="mail-alert" class="hide-tr">
+        <td></td>
+        <td class="alert-td" >
+          <p>Les mails saisis ne sont pas identiques</p>
+        </td>
+      </tr>
       <tr>
         <td class="label-align-right">
           <label for="namePassword">Mot de passe*</label>
