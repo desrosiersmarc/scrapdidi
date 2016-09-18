@@ -1427,7 +1427,7 @@ function showBasket ()
 
 								//popupMessage($poidsArticlesPanier);
 								$prix_fdp_home=number_format(shipping($poidsArticlesPanier, "home"),2,',','');
-
+                $_SESSION['prix_fdp_home']=$prix_fdp_home;
 								$prix_fdp_salon=number_format(shipping($poidsArticlesPanier, "salon"),2,',','');
 
 								$prix_fdp_suivi=number_format(shipping($poidsArticlesPanier, "suivi"),2,',','');

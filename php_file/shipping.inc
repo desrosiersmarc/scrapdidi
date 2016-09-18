@@ -1,112 +1,154 @@
 
-          <tr class='tr_title'>
-            <td colspan='6'>
-              <p>Choix du mode de livraison</p>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class=$td_class_alert_shipping>
-            ";
-
-                $shippingTest=$_SESSION['shippingSelected'];
+                <!-- $shippingTest=$_SESSION['shippingSelected'];
                 if ($shippingTest=='home')
                   {
-                  echo"<button class='buttonFraisPortSelected' name='shippingHome' value='$prix_fdp_home'>";
-                  }
+                 -->
+                  <!-- <button class='buttonFraisPortSelected' name='shippingHome' value='$prix_fdp_home'> -->
+<!--                   }
                 else
-                  {
-                  echo "<button class='buttonFraisPort' name='shippingHome' value='$prix_fdp_home'>";
-                  }
-            echo"
+                  { -->
+          <!--         <button class='buttonFraisPort' name='shippingHome' value='$prix_fdp_home'>
                 <img class='imgButtonFraisPort' src='media_site/home.png'>
                 Récupérer à domicile $prix_fdp_home €
-              </button>
-            ";
+              </button> -->
 
-                $shippingTest=$_SESSION['shippingSelected'];
+<!--                 $shippingTest=$_SESSION['shippingSelected'];
                 if ($shippingTest=='salon')
-                  {
-                  echo"<button class='buttonFraisPortSelected' name='shippingSalon' value='$prix_fdp_salon'>";
-                  }
+                  { -->
+                  <!-- <button class='buttonFraisPortSelected' name='shippingSalon' value='$prix_fdp_salon'> -->
+<!--                   }
                 else
-                  {
-                  echo "<button class='buttonFraisPort' name='shippingSalon' value='$prix_fdp_salon'>";
-                  }
-            echo"
-                <img class='imgButtonFraisPort' src='media_site/salon.png'>
+                  { -->
+                  <!-- <button class='buttonFraisPort' name='shippingSalon' value='$prix_fdp_salon'> -->
+                  <!-- } -->
+           <!--      <img class='imgButtonFraisPort' src='media_site/salon.png'>
                 Récupérer sur un salon $prix_fdp_salon €
-              </button>
-            </td>
-            <td></td>
-            <td colspan='3'></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class=$td_class_alert_shipping>
-            ";
+              </button> -->
 
-                $shippingTest=$_SESSION['shippingSelected'];
+
+<!--                 $shippingTest=$_SESSION['shippingSelected'];
                 if ($shippingTest=='suivi')
-                  {
-                  echo"<button class='buttonFraisPortSelected' name='shippingSuivi' value='$prix_fdp_suivi'>";
-                  }
+                  { -->
+                  <!-- <button class='buttonFraisPortSelected' name='shippingSuivi' value='$prix_fdp_suivi'> -->
+<!--                   }
                 else
-                  {
-                  echo "<button class='buttonFraisPort' name='shippingSuivi' value='$prix_fdp_suivi'>";
-                  }
-            echo"
-                  <img class='imgButtonFraisPort' src='media_site/lettre_suivie.jpg'>
-                  Courrier suivi $prix_fdp_suivi €
-                </button>
-            ";
+                  { -->
+                  <!-- <button class='buttonFraisPort' name='shippingSuivi' value='$prix_fdp_suivi'> -->
+                  <!-- } -->
 
-                $shippingTest=$_SESSION['shippingSelected'];
+                 <!--  <img class='imgButtonFraisPort' src='media_site/lettre_suivie.jpg'>
+                  Courrier suivi $prix_fdp_suivi €
+                </button> -->
+
+                <!-- $shippingTest=$_SESSION['shippingSelected'];
                 if ($shippingTest=='colissimo')
-                  {
-                  echo"<button class='buttonFraisPortSelected' name='shippingColissimo' value='$prix_fdp_colissimo'>";
-                  }
+                  { -->
+                  <!-- <button class='buttonFraisPortSelected' name='shippingColissimo' value='$prix_fdp_colissimo'> -->
+              <!--     }
                 else
-                  {
-                  echo "<button class='buttonFraisPort' name='shippingColissimo' value='$prix_fdp_colissimo'>";
-                  }
-            //Put information into a variable
+                  { -->
+                  <!-- <button class='buttonFraisPort' name='shippingColissimo' value='$prix_fdp_colissimo'> -->
+                  <!-- } -->
+<!--             //Put information into a variable
             $shippingChoice=$_SESSION['shippingSelectedText'];
-            $payementChoice=$_SESSION['payementChoiceText'];
-            echo"
-                <img class='imgButtonFraisPort' src='media_site/colissimo.jpg'>
+            $payementChoice=$_SESSION['payementChoiceText']; -->
+<!--                 <img class='imgButtonFraisPort' src='media_site/colissimo.jpg'>
                 Colissimo $prix_fdp_colissimo €
               </button>
-            </td>
-
-            <td colspan='3' class='td_others'>
               <i>Choix : $shippingChoice</i>
-            </td>
-            <td></td>
-          </tr>
 
-          <tr>
-            <td colspan='2'>
-            </td>
-            <td colspan='2'class='td_others'>
                 Total frais de port
-            </td>
-            <td class='td_others'>
+
               $prixChoisiFraisPort €
-            </td>
-            <td></td>
-          </tr>
-          <tr></tr>
-          <tr></tr>
-          <tr>
-            <td colspan='2'>
-            </td>
-            <td colspan='2'class='td_total'>
-                Total commande
-            </td>
-            <td class='td_total'>
-              $prixTotalPanierFraisPort €
-            </td>
-            <td></td>
-          </tr>
-          ////
+
+              $prixTotalPanierFraisPort € -->
+
+<div class="container-md">
+  <h2>
+    Choix du mode de livraison
+  </h2>
+  <form action="">
+    <table>
+      <tr>
+        <td class="shipping-td-total">
+          <input type="radio" name="shippingChoice" value="home">
+        </td>
+        <td class="shipping-td-total">
+          <img class='imgButtonFraisPort' src='media_site/home.png'>
+        </td>
+        <td class="shipping-td-total">
+          <p>Retrait à mon domicile sur RDV</p>
+          <p>(40 rue des coulons, 59200 Tourcoing)</p>
+        </td>
+        <td class="shipping-td-total">
+          <p>Gratuit</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="shipping-td-total">
+          <input type="radio" name="shippingChoice" value="salon">
+        </td>
+        <td class="shipping-td-total">
+          <img class='imgButtonFraisPort' src='media_site/salon.png'>
+        </td>
+        <td class="shipping-td-total">
+          <p>Retrait sur salon</p>
+          <p>Merci de préciser dans le champs ci-dessous le salon pour le retrait de la commande</p>
+        </td>
+        <td class="shipping-td-total">
+          <p>Gratuit</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="shipping-td-total">
+          <input type="radio" name="shippingChoice" value="lettre">
+        </td>
+        <td class="shipping-td-total">
+          <img class='imgButtonFraisPort' src='media_site/lettre_suivie.jpg'>
+        </td>
+        <td class="shipping-td-total">
+          <p>Lettre suivie</p>
+        </td>
+        <td class="shipping-td-total">
+          <?php echo'$prix_fdp_suivi' ?>
+        </td>
+      </tr>
+      <tr>
+        <td class="shipping-td-total">
+          <input type="radio" name="shippingChoice" value="colissimo">
+        </td>
+        <td class="shipping-td-total">
+          <img class='imgButtonFraisPort' src='media_site/colissimo.jpg'>
+        </td>
+        <td class="shipping-td-total">
+          <p>Colissimo</p>
+        </td>
+        <td class="shipping-td-total">
+          <?php
+            $prix_fdp_home=$_SESSION['prix_fdp_home'];
+            echo "$prix_fdp_home";
+
+          ?>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <strong>
+        Laisser un message
+      </strong>
+    </p>
+    <p>Si vous souhaitez nous laisser un message à propos de votre commande ou spécifier le salon pour le retrait de votre commande, merci de bien vouloir utiliser le champs ci-dessous : </p>
+    <textarea name="" id="" cols="60" rows="6"></textarea>
+    <p>
+      <strong>
+        Conditions générales de ventes
+      </strong>
+    </p>
+    <p>
+      j'ai lu et j'accepte les conditions générales de vente et j'y adhère sans réserve <a href="">(lire les conditions générales de vente)</a>
+    </p>
+    <button >
+      Je valide ma livraison et je passe au paiement
+    </button>
+  </form>
+</div>

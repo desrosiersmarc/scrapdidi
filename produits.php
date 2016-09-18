@@ -86,60 +86,60 @@
 			}
 		elseif (isset($_POST['valider_commande']))
 			{
-					if(isset($_POST['valider_commande']))
-						{
-							if ($_SESSION['shippingSelected']=='')
-								{
-									$_SESSION['td_class_alert_shipping']='td_alert';
-									popupMessage('Choisissez un mode de livraison');
-									showBasket();
+        include ("php_file/shipping.inc");
+     //      if(isset($_POST['valider_commande']))
+					// 	{
+					// 		if ($_SESSION['shippingSelected']=='')
+					// 			{
+					// 				$_SESSION['td_class_alert_shipping']='td_alert';
+					// 				popupMessage('Choisissez un mode de livraison');
+					// 				showBasket();
 
-								}
-							elseif ($_SESSION['payementChoice']=='')
-								{
-									$_SESSION['td_class_alert_payement']='td_alert';
-									popupMessage('Choisissez un mode de paiement');
-									showBasket();
-								}
-							else
-								{
-									$_SESSION['td_class_alert_shipping']='';
-									$_SESSION['td_class_alert_payement']='';
+					// 			}
+					// 		elseif ($_SESSION['payementChoice']=='')
+					// 			{
+					// 				$_SESSION['td_class_alert_payement']='td_alert';
+					// 				popupMessage('Choisissez un mode de paiement');
+					// 				showBasket();
+					// 			}
+					// 		else
+					// 			{
+					// 				$_SESSION['td_class_alert_shipping']='';
+					// 				$_SESSION['td_class_alert_payement']='';
 
-									if (isset($_SESSION['connected']) and $_SESSION['connected']=='yes')
-										{
-                      updateValidatedBasket();
-                      updateCommande('etatCommande', 1);
+					// 				if (isset($_SESSION['connected']) and $_SESSION['connected']=='yes')
+					// 					{
+     //                  updateValidatedBasket();
+     //                  updateCommande('etatCommande', 1);
 
-											include ("php_file/envoiMailOrder.php");
-											include ("php_file/envoiMailOrderAmandine.php");
-										}
-									else
-										{
-											popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
-											$_SESSION['valider_commande']='yes';
-											include ("php_file/my_account.inc");
-										}
-								}
-						}
-					else
-						{
-							$_SESSION['td_class_alert_shipping']='';
-							$_SESSION['td_class_alert_payement']='';
-							//include ("php_file/my_account.inc");
+					// 						include ("php_file/envoiMailOrder.php");
+					// 						include ("php_file/envoiMailOrderAmandine.php");
+					// 					}
+					// 				else
+					// 					{
+					// 						popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
+					// 						$_SESSION['valider_commande']='yes';
+					// 						include ("php_file/my_account.inc");
+					// 					}
+					// 			}
+					// 	}
+					// else
+					// 	{
+					// 		$_SESSION['td_class_alert_shipping']='';
+					// 		$_SESSION['td_class_alert_payement']='';
+					// 		//include ("php_file/my_account.inc");
 
-							if ($_SESSION['connected']=='yes')
-								{
-									include ("php_file/envoiMailOrder.php");
-									//To send the email to Amandine
-									include ("php_file/envoiMailOrderAmandine.php");
-								}
-							else
-								{
-									popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
-
-								}
-						}
+					// 		if ($_SESSION['connected']=='yes')
+					// 			{
+					// 				include ("php_file/envoiMailOrder.php");
+					// 				//To send the email to Amandine
+					// 				include ("php_file/envoiMailOrderAmandine.php");
+					// 			}
+					// 		else
+					// 			{
+					// 				popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
+					// 			}
+					// 	}
 
 			}
 		// Update shipping price
