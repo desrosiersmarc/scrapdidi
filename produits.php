@@ -8,6 +8,9 @@
 		//Save user's informations
 		include ("php_file/saveUser.inc");
 
+    //Display a div with session informations
+    //include ("php_file/display_session.inc");
+
 		//Empty the session's variable of $_SESSION['noSousFamilles'] on a clic to the image home and initialize variables
 		if (isset($_POST['home']) || !isset($_SESSION['noSousFamilles']) || !isset($_SESSION['noFamilles']))
 			{
@@ -73,7 +76,6 @@
 				//procedure_reglement($payement_choice);
 				connected_message();
 			}
-		//Test of the 'passer commande' button
 		elseif (isset($_POST['submitAccountKnow']) || isset($_POST['submitAccountUnknow']))
 			{
 				include ("php_file/account.inc");

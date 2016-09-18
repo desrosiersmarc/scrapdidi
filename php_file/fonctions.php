@@ -1648,7 +1648,7 @@ function showBasket ()
 						<td colspan='3'></td>
 						<td colspan='2'>
 							<button class='buttonPasserCommande' name='valider_commande'>
-								Passer commande
+								Je commande
 							</button>
 						</td>
 						<td></td>
@@ -1878,7 +1878,9 @@ function check_account($mail, $password)
 function updateClient()
 	{
 		$nom=$_POST['nom'];
-		$prenom=$_POST['prenom'];
+    $_SESSION['nom']=$_POST['nom'];
+    $prenom=$_POST['prenom'];
+    $_SESSION['prenom']=$_POST['prenom'];
 		$mailClient=$_POST['mailClient'];
 		$namePassword=$_POST['namePassword'];
 		$adresse=$_POST['adresse'];
