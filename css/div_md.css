@@ -91,28 +91,6 @@
 		background-color: white;
 	}
 
-/*Define div about basket */
-	#basketDivContent
-	{
-		margin-top:10px;
-	}
-
-	#basketDiv
-	{
-		padding:10px;
-		width:90%;
-		border : solid 1px #797D80;
-		border-radius:20Px;
-		margin:auto;
-		box-shadow: 8px 8px 12px #aaa;
-	}
-
-
-	.basketDivAlert
-	{
-		background-color:#F10091;
-	}
-
 th
 {
 	font-family:arial;
@@ -792,79 +770,6 @@ textarea
 	border-top-left-radius:5px;
 	border-bottom-left-radius:5px;
 	margin:0px;
-}
-
-.quantityBasket
-{
-	border: solid 1px #f10091;
-	color:#f10091;
-	width: 20px;
-	background-color:white;
-	margin:-5px;
-}
-
-.lessMoreRight
-{
-	background-color: #f8e0f7;
-	border: solid 1px #f10091;
-	color:#f10091;
-	width: 20px;
-	border-top-right-radius:5px;
-	border-bottom-right-radius:5px;
-	margin:0px;
-}
-
-.basketImage
-	{
-		max-height:80px;
-	}
-
-.basketBin
-{
-	width:15px;
-}
-
-.basketBinButton
-{
-	border:none;
-	background-color: #FFFFFF;
-	width:30px;
-	height:25px;
-	border-radius:5px;
-}
-
-.basketBinButton:hover
-{
-	background-color: #f8e0f7;
-	border: solid 1px #f10091;
-}
-/*
- * Gestion de la police d'affichage du panier
- */
-
-.basketText
-{
-	font-family:arial;
-	font-size:1em;
-}
-
-.basketTextReference
-{
-	font-family:arial;
-	font-size:0.7em;
-	color:#99A2A8;
-	font-style:italic;
-}
-
-/*
- * CSS de la zone de validation du panier
- */
-
-
-
-.p_valider_panier
-{
-
 }
 
 .input_css

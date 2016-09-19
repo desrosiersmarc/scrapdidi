@@ -20,6 +20,9 @@
 @import url("components/trait-home.css");
 @import url("components/order_detail.css");
 @import url("components/account.css");
+@import url("components/div_fixed_var_dump.css");
+@import url("components/basket.css");
+@import url("components/shipping.css");
 
 
 /*Declaration of CSS's variables*/

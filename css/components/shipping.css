@@ -1,0 +1,8 @@
+.shipping-td-total {
+  border: 1px solid var(--main_color_grey_border);
+  padding: 5px;
+}
+
+.container-md {
+  padding: 10px;
+}

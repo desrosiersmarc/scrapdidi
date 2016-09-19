@@ -1,12 +1,14 @@
 <?php session_start();?>
 	<!--récupération du code de l'en-tête html-->
 	<?php
-		//Intégration des fonctions
-		include ("php_file/fonctions.php");
-		include ("php_file/commun.php");
 
-		//Save user's informations
-		include ("php_file/saveUser.inc");
+    //Intégration des fonctions
+    include ("php_file/fonctions.php");
+    include ("php_file/commun.php");
+
+    //Save user's informations
+    include ("php_file/saveUser.inc");
+
 
 		//Empty the session's variable of $_SESSION['noSousFamilles'] on a clic to the image home and initialize variables
 		if (isset($_POST['home']) || !isset($_SESSION['noSousFamilles']) || !isset($_SESSION['noFamilles']))
@@ -73,7 +75,6 @@
 				//procedure_reglement($payement_choice);
 				connected_message();
 			}
-		//Test of the 'passer commande' button
 		elseif (isset($_POST['submitAccountKnow']) || isset($_POST['submitAccountUnknow']))
 			{
 				include ("php_file/account.inc");
@@ -84,68 +85,70 @@
 			}
 		elseif (isset($_POST['valider_commande']))
 			{
-					if(isset($_POST['valider_commande']))
-						{
-							if ($_SESSION['shippingSelected']=='')
-								{
-									$_SESSION['td_class_alert_shipping']='td_alert';
-									popupMessage('Choisissez un mode de livraison');
-									showBasket();
+        include ("php_file/shipping.inc");
+     //      if(isset($_POST['valider_commande']))
+					// 	{
+					// 		if ($_SESSION['shippingSelected']=='')
+					// 			{
+					// 				$_SESSION['td_class_alert_shipping']='td_alert';
+					// 				popupMessage('Choisissez un mode de livraison');
+					// 				showBasket();
 
-								}
-							elseif ($_SESSION['payementChoice']=='')
-								{
-									$_SESSION['td_class_alert_payement']='td_alert';
-									popupMessage('Choisissez un mode de paiement');
-									showBasket();
-								}
-							else
-								{
-									$_SESSION['td_class_alert_shipping']='';
-									$_SESSION['td_class_alert_payement']='';
+					// 			}
+					// 		elseif ($_SESSION['payementChoice']=='')
+					// 			{
+					// 				$_SESSION['td_class_alert_payement']='td_alert';
+					// 				popupMessage('Choisissez un mode de paiement');
+					// 				showBasket();
+					// 			}
+					// 		else
+					// 			{
+					// 				$_SESSION['td_class_alert_shipping']='';
+					// 				$_SESSION['td_class_alert_payement']='';
 
-									if (isset($_SESSION['connected']) and $_SESSION['connected']=='yes')
-										{
-                      updateValidatedBasket();
-                      updateCommande('etatCommande', 1);
+					// 				if (isset($_SESSION['connected']) and $_SESSION['connected']=='yes')
+					// 					{
+     //                  updateValidatedBasket();
+     //                  updateCommande('etatCommande', 1);
 
-											include ("php_file/envoiMailOrder.php");
-											include ("php_file/envoiMailOrderAmandine.php");
-										}
-									else
-										{
-											popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
-											$_SESSION['valider_commande']='yes';
-											include ("php_file/my_account.inc");
-										}
-								}
-						}
-					else
-						{
-							$_SESSION['td_class_alert_shipping']='';
-							$_SESSION['td_class_alert_payement']='';
-							//include ("php_file/my_account.inc");
+					// 						include ("php_file/envoiMailOrder.php");
+					// 						include ("php_file/envoiMailOrderAmandine.php");
+					// 					}
+					// 				else
+					// 					{
+					// 						popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
+					// 						$_SESSION['valider_commande']='yes';
+					// 						include ("php_file/my_account.inc");
+					// 					}
+					// 			}
+					// 	}
+					// else
+					// 	{
+					// 		$_SESSION['td_class_alert_shipping']='';
+					// 		$_SESSION['td_class_alert_payement']='';
+					// 		//include ("php_file/my_account.inc");
 
-							if ($_SESSION['connected']=='yes')
-								{
-									include ("php_file/envoiMailOrder.php");
-									//To send the email to Amandine
-									include ("php_file/envoiMailOrderAmandine.php");
-								}
-							else
-								{
-									popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
-
-								}
-						}
+					// 		if ($_SESSION['connected']=='yes')
+					// 			{
+					// 				include ("php_file/envoiMailOrder.php");
+					// 				//To send the email to Amandine
+					// 				include ("php_file/envoiMailOrderAmandine.php");
+					// 			}
+					// 		else
+					// 			{
+					// 				popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
+					// 			}
+					// 	}
 
 			}
 		// Update shipping price
-		elseif (isset($_POST['shippingHome']) or isset($_POST['shippingSalon']) or isset($_POST['shippingSuivi']) or isset($_POST['shippingColissimo']) or isset($_POST['payementChoice']))
+		// elseif (isset($_POST['shippingHome']) or isset($_POST['shippingSalon']) or isset($_POST['shippingSuivi']) or isset($_POST['shippingColissimo']) or isset($_POST['payementChoice']))
+    elseif (isset($_POST['shipping_and_payement_step']))
 			{
-				include ("php_file/shipping.php");
-				include ("php_file/payement.php");
-				showBasket();
+				// include ("php_file/shipping.php");
+				// include ("php_file/payement.php");
+				// showBasket();
+        echo "Payement and Shipping step";
 			}
 
 		//When a clic is on a bin image to delete a line in the basket
@@ -238,6 +241,7 @@
 		include ("php_file/09_finContent.inc");
 		include ("php_file/10_basDePage.inc");
 		//Fin de la partie bas de page.
-
+    //Display a div with session informations
+    include ("php_file/display_session.inc");
 
 	?>

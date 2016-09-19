@@ -1,7 +1,7 @@
 <?php
 	if (isset($_SESSION['prenom']))
 		{
-			$prenomClient="Mon Compte : " . $_SESSION['prenom'];
+			$prenomClient="Mon Compte : " . $_SESSION['prenom'] .' '. $_SESSION['nom'];
 			//$prenomClient="Mon Compte : Prénom";
 		}
 	else
@@ -21,7 +21,7 @@
 								<button class='buttonMenuTop' name='contactUs' type='submit'>Nous contacter </button>
 							</div>
 							<div id="titreCompte" class="couleurpTitre">
-								<button class='buttonMenuTop' name='myAccount' type='submit'><?php echo"$prenomClient" ?> </button>
+								<button class='buttonMenuTop' name='myAccount' type='submit'><?php echo"$prenomClient " ?> </button>
 							</div>
 						</form>
 					</div>

@@ -19,7 +19,7 @@
             id='mailClient'
             type='mail'
             required='required'
-            value= <?php $mailClient ?>
+            value= <?php echo"$_SESSION[mailClient]" ?>
           >
           </input>
         </td>
@@ -35,16 +35,12 @@
             id='mailClientVerification'
             type='mail'
             required='required'
-            value= <?php $mailClient ?>
           >
           </input>
         </td>
       </tr>
       <tr id="mail-alert" class="hide-tr">
         <td class="label-align-right">
-          <p>
-            oups
-          </p>
         </td>
         <td class="alert-td" >
           <p>Les mails saisis ne sont pas identiques</p>
