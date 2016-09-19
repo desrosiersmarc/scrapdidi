@@ -110,7 +110,6 @@
           <p>Lettre suivie</p>
         </td>
         <td class="shipping-td-total">
-          <?php echo'$prix_fdp_suivi' ?>
           <?php
             $prix_fdp_suivi=$_SESSION['prix_fdp_suivi'];
             echo "$prix_fdp_suivi";
