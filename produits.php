@@ -1,15 +1,14 @@
 <?php session_start();?>
 	<!--récupération du code de l'en-tête html-->
 	<?php
-		//Intégration des fonctions
-		include ("php_file/fonctions.php");
-		include ("php_file/commun.php");
 
-		//Save user's informations
-		include ("php_file/saveUser.inc");
+    //Intégration des fonctions
+    include ("php_file/fonctions.php");
+    include ("php_file/commun.php");
 
-    //Display a div with session informations
-    //include ("php_file/display_session.inc");
+    //Save user's informations
+    include ("php_file/saveUser.inc");
+
 
 		//Empty the session's variable of $_SESSION['noSousFamilles'] on a clic to the image home and initialize variables
 		if (isset($_POST['home']) || !isset($_SESSION['noSousFamilles']) || !isset($_SESSION['noFamilles']))
@@ -143,11 +142,13 @@
 
 			}
 		// Update shipping price
-		elseif (isset($_POST['shippingHome']) or isset($_POST['shippingSalon']) or isset($_POST['shippingSuivi']) or isset($_POST['shippingColissimo']) or isset($_POST['payementChoice']))
+		// elseif (isset($_POST['shippingHome']) or isset($_POST['shippingSalon']) or isset($_POST['shippingSuivi']) or isset($_POST['shippingColissimo']) or isset($_POST['payementChoice']))
+    elseif (isset($_POST['shipping_and_payement_step']))
 			{
-				include ("php_file/shipping.php");
-				include ("php_file/payement.php");
-				showBasket();
+				// include ("php_file/shipping.php");
+				// include ("php_file/payement.php");
+				// showBasket();
+        echo "Payement and Shipping step";
 			}
 
 		//When a clic is on a bin image to delete a line in the basket
@@ -240,6 +241,7 @@
 		include ("php_file/09_finContent.inc");
 		include ("php_file/10_basDePage.inc");
 		//Fin de la partie bas de page.
-
+    //Display a div with session informations
+    include ("php_file/display_session.inc");
 
 	?>

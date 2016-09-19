@@ -67,7 +67,7 @@
   <h2>
     Choix du mode de livraison
   </h2>
-  <form action="">
+  <form action="produits.php" method="POST">
     <table>
       <tr>
         <td class="shipping-td-total">
@@ -78,7 +78,7 @@
         </td>
         <td class="shipping-td-total">
           <p>Retrait à mon domicile sur RDV</p>
-          <p>(40 rue des coulons, 59200 Tourcoing)</p>
+          <p>(59200 Tourcoing)</p>
         </td>
         <td class="shipping-td-total">
           <p>Gratuit</p>
@@ -101,7 +101,7 @@
       </tr>
       <tr>
         <td class="shipping-td-total">
-          <input type="radio" name="shippingChoice" value="lettre">
+          <input type="radio" name="shippingChoice" value="suivi">
         </td>
         <td class="shipping-td-total">
           <img class='imgButtonFraisPort' src='media_site/lettre_suivie.jpg'>
@@ -111,6 +111,10 @@
         </td>
         <td class="shipping-td-total">
           <?php echo'$prix_fdp_suivi' ?>
+          <?php
+            $prix_fdp_suivi=$_SESSION['prix_fdp_suivi'];
+            echo "$prix_fdp_suivi";
+          ?>
         </td>
       </tr>
       <tr>
@@ -125,9 +129,8 @@
         </td>
         <td class="shipping-td-total">
           <?php
-            $prix_fdp_home=$_SESSION['prix_fdp_home'];
-            echo "$prix_fdp_home";
-
+            $prix_fdp_colissimo=$_SESSION['prix_fdp_colissimo'];
+            echo "$prix_fdp_colissimo";
           ?>
         </td>
       </tr>
@@ -138,7 +141,7 @@
       </strong>
     </p>
     <p>Si vous souhaitez nous laisser un message à propos de votre commande ou spécifier le salon pour le retrait de votre commande, merci de bien vouloir utiliser le champs ci-dessous : </p>
-    <textarea name="" id="" cols="60" rows="6"></textarea>
+    <textarea name="client-comments" id="" cols="60" rows="6"></textarea>
     <p>
       <strong>
         Conditions générales de ventes
@@ -147,7 +150,7 @@
     <p>
       j'ai lu et j'accepte les conditions générales de vente et j'y adhère sans réserve <a href="">(lire les conditions générales de vente)</a>
     </p>
-    <button >
+    <button type='submit' name='shipping_and_payement_step' class="buttonPasserCommande">
       Je valide ma livraison et je passe au paiement
     </button>
   </form>

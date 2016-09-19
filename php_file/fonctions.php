@@ -1429,10 +1429,13 @@ function showBasket ()
 								$prix_fdp_home=number_format(shipping($poidsArticlesPanier, "home"),2,',','');
                 $_SESSION['prix_fdp_home']=$prix_fdp_home;
 								$prix_fdp_salon=number_format(shipping($poidsArticlesPanier, "salon"),2,',','');
+                $_SESSION['prix_fdp_salon']=$prix_fdp_salon;
 
 								$prix_fdp_suivi=number_format(shipping($poidsArticlesPanier, "suivi"),2,',','');
+                $_SESSION['prix_fdp_suivi']=$prix_fdp_suivi;
 
 								$prix_fdp_colissimo=number_format(shipping($poidsArticlesPanier, "colissimo"),2,',','');
+                $_SESSION['prix_fdp_colissimo']=$prix_fdp_colissimo;
 
 								if (isset($_SESSION['shippingPrice']))
 									{
