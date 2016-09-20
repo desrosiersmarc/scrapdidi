@@ -19,8 +19,9 @@
 				$_SESSION['shippingSelectedText']='';
 				$_SESSION['payementChoice']='';
 				$_SESSION['payementChoiceText']='';
-				$_SESSION['td_class_alert_shipping']='';//?
-				$_SESSION['td_class_alert_payement']='';//?
+        $_SESSION['shippingChoice']='';
+				// $_SESSION['td_class_alert_shipping']='';//?
+				// $_SESSION['td_class_alert_payement']='';//?
 				$_SESSION['valider_commande']='';//?
 				$_SESSION['connected']='';//?
 			}
@@ -145,10 +146,11 @@
 		// elseif (isset($_POST['shippingHome']) or isset($_POST['shippingSalon']) or isset($_POST['shippingSuivi']) or isset($_POST['shippingColissimo']) or isset($_POST['payementChoice']))
     elseif (isset($_POST['shipping_and_payement_step']))
 			{
-				// include ("php_file/shipping.php");
-				// include ("php_file/payement.php");
-				// showBasket();
-        echo "Payement and Shipping step";
+        $_SESSION['shippingChoice']=$_POST['shippingChoice'];
+				showBasket();
+        $price_shipping='prix_fdp_' . $_POST['shippingChoice'];
+        $price_shipping=$_SESSION[$price_shipping];
+        include("php_file/payement.inc");
 			}
 
 		//When a clic is on a bin image to delete a line in the basket

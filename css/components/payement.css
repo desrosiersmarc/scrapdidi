@@ -1,0 +1,8 @@
+.payement-div {
+height: 150px;
+width: 450px;
+background-color: gray;
+margin:10px;
+border: solid 1px #000;
+border-radius: 2px;
+}
