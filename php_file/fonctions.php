@@ -1955,6 +1955,7 @@ function sum_of_two_price ($price_1, $price_2)
   $price_2 = str_replace(',','.', $price_2);
   $sum = $price_1 + $price_2;
   $sum=number_format($sum,2,',','');
+  $_SESSION['prixTotal']=$sum;
   return $sum;
 }
 

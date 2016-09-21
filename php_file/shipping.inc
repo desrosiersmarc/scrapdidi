@@ -101,7 +101,7 @@
       </tr>
       <tr>
         <td class="shipping-td-total">
-          <input type="radio" name="shippingChoice" value="suivi">
+          <input type="radio" name="shippingChoice" value="suivi" selected="selected">
         </td>
         <td class="shipping-td-total">
           <img class='imgButtonFraisPort' src='media_site/lettre_suivie.jpg'>

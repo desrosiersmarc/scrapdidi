@@ -1,8 +1,20 @@
-.payement-div {
-height: 150px;
-width: 450px;
-background-color: gray;
-margin:10px;
-border: solid 1px #000;
-border-radius: 2px;
+.payement-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.btn-payement {
+  border: none;
+  height: 120px;
+  width: 450px;
+  border-radius: 2px;
+  margin: 20px;
+}
+
+.payement-content i {
+  font-size: 30px;
+}
+
+.payement-procedure {
+  margin: 60px;
 }
