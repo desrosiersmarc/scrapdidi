@@ -1,66 +1,23 @@
-          <tr class='tr_title'>
-            <td colspan='6'>
-              <p>Choisissez votre moyen de paiement</p>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class='$td_class_alert_payement'>
-          ";
-              if ($_SESSION['payementChoice']=='espece')
-                {
-                  echo"<button class='buttonFraisPortSelected' name='payementChoice' value='espece'>";
-                }
-              else
-                {
-                  echo"<button class='buttonFraisPort' name='payementChoice' value='espece'>";
-                }
-          echo"
-                    <img class='imgButtonFraisPort' src='media_site/picto_monnaie.png'>
-                    Espéces
-                </button>
+<form action="produits.php" method="POST">
+  <div class="payement-content">
+    <button class="btn-payement" name="payementChoice" value="virement">
+      <img src="css/media_css/picto-virement.png" alt="" class="picto-payement">
+      <strong>Payer par virement bancaire</strong> (le traitement de la commande sera plus long)
+    </button>
 
-          ";
-              if ($_SESSION['payementChoice']=='cheque')
-                {
-                  echo"<button class='buttonFraisPortSelected' name='payementChoice' value='cheque'>";
-                }
-              else
-                {
-                  echo"<button class='buttonFraisPort' name='payementChoice' value='cheque'>";
-                }
-          echo"
+    <button class="btn-payement" name="payementChoice" value="cheque">
+      <img src="css/media_css/picto-cheque.png" alt="" class="picto-payement">
+      <strong>Payer par chèque</strong> (le traitement de la commande sera plus long)
+    </button>
 
-                <img class='imgButtonFraisPort' src='media_site/picto_cheque.png'>
-                Chéque
-              </button>
-            </td>
-            <td></td>
-            <td colspan='2'>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class='$td_class_alert_payement'>
-          ";
-              if ($_SESSION['payementChoice']=='paypal')
-                {
-                  echo"<button class='buttonFraisPortSelected' name='payementChoice' value='paypal'>";
-                }
-              else
-                {
-                  echo"<button class='buttonFraisPort' name='payementChoice' value='paypal'>";
-                }
-          echo"
+    <button class="btn-payement" name="payementChoice" value="paypal">
+      <img src="css/media_css/picto-paypal.png" alt="" class="picto-payement">
+      <strong>Payez par carte ou par compte Paypal</strong>
+    </button>
 
-                <img class='imgButtonFraisPort' src='media_site/picto_paypal.jpg'>
-                  Paypal
-              </button>
-
-            </td>
-            <td></td>
-            <td colspan='3'>
-              <i>Mode de réglement : $payementChoice</i>
-            </td>
-          </tr>
+    <button class="btn-payement" name="payementChoice" value="comptant">
+      <img src="css/media_css/picto-espece.png" alt="" class="picto-payement">
+      <strong>Paiement comptant</strong> au moment du retrait de votre commande à mon domicile ou sur salon
+    </button>
+  </div>
+</form>

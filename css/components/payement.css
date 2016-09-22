@@ -1,0 +1,27 @@
+.payement-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.btn-payement {
+  border: 1px solid var(--main_color_pink_border);
+  height: 120px;
+  width: 450px;
+  border-radius: 2px;
+  margin: 20px;
+  background-color: var(--main_bg_color_blue);
+  display: flex;
+  align-items: center;
+}
+
+.payement-content i {
+  font-size: 30px;
+}
+
+.payement-procedure {
+  margin: 60px;
+}
+
+.picto-payement {
+  height: 80px;
+}

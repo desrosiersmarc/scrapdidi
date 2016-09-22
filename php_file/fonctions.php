@@ -1418,13 +1418,8 @@ function showBasket ()
 											</button>
 										</td>
 									</tr>
-
-
-
 								";
 							}
-
-
 								//popupMessage($poidsArticlesPanier);
 								$prix_fdp_home=number_format(shipping($poidsArticlesPanier, "home"),2,',','');
                 $_SESSION['prix_fdp_home']=$prix_fdp_home;
@@ -1436,7 +1431,7 @@ function showBasket ()
 
 								$prix_fdp_colissimo=number_format(shipping($poidsArticlesPanier, "colissimo"),2,',','');
                 $_SESSION['prix_fdp_colissimo']=$prix_fdp_colissimo;
-
+//
 								if (isset($_SESSION['shippingPrice']))
 									{
 										$prixChoisiFraisPort = $_SESSION['shippingPrice'];
@@ -1447,39 +1442,8 @@ function showBasket ()
 								$prixTotalPanier=number_format($prixTotalPanier,2,',','');
 								$prixTotalPanierFraisPort=number_format($prixTotalPanierFraisPort,2,',','');
 								$_SESSION['prixTotal']=$prixTotalPanierFraisPort;
-
-
-								//$prixChoisiFraisPort=number_format($prixChoisiFraisPort,2,',','');
-
-								$td_class_alert_shipping=$_SESSION['td_class_alert_shipping'];
-								$td_class_alert_payement=$_SESSION['td_class_alert_payement'];
-					echo "
-					<tr>
-						<td colspan='6'>
-						</td>
-					</tr>
-
-					<tr>
-						<td colspan='2'>
-						</td>
-						<td colspan='2' class='td_others basket-td-total'>
-								Total produits TTC
-						</td>
-						<td class='td_others basket-td-total'>
-							$prixTotalPanier €
-						</td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td colspan='3'></td>
-						<td colspan='2'>
-							<button class='buttonPasserCommande' name='valider_commande'>
-								Je commande
-							</button>
-						</td>
-						<td></td>
-					</tr>
+                include("php_file/total_basket.inc");
+            echo"
 					</table>
 				</FORM>
 			</div>
@@ -1985,5 +1949,14 @@ function load_information_customer ($idCommande)
   $_SESSION['prenom']=$ligne['prenomClient'];
 }
 
+function sum_of_two_price ($price_1, $price_2)
+{
+  $price_1 = str_replace(',','.', $price_1);
+  $price_2 = str_replace(',','.', $price_2);
+  $sum = $price_1 + $price_2;
+  $sum=number_format($sum,2,',','');
+  $_SESSION['prixTotal']=$sum;
+  return $sum;
+}
 
 ?>

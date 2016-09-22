@@ -19,8 +19,9 @@
 				$_SESSION['shippingSelectedText']='';
 				$_SESSION['payementChoice']='';
 				$_SESSION['payementChoiceText']='';
-				$_SESSION['td_class_alert_shipping']='';//?
-				$_SESSION['td_class_alert_payement']='';//?
+        $_SESSION['shippingChoice']='';
+				// $_SESSION['td_class_alert_shipping']='';//?
+				// $_SESSION['td_class_alert_payement']='';//?
 				$_SESSION['valider_commande']='';//?
 				$_SESSION['connected']='';//?
 			}
@@ -70,9 +71,6 @@
 		elseif (isset($_POST['submitAccount']))
 			{
 				updateClient();
-				//$payement_choice=$_SESSION['payementChoice'];
-				//include ("php_file/envoiMailOrder.php");
-				//procedure_reglement($payement_choice);
 				connected_message();
 			}
 		elseif (isset($_POST['submitAccountKnow']) || isset($_POST['submitAccountUnknow']))
@@ -86,70 +84,20 @@
 		elseif (isset($_POST['valider_commande']))
 			{
         include ("php_file/shipping.inc");
-     //      if(isset($_POST['valider_commande']))
-					// 	{
-					// 		if ($_SESSION['shippingSelected']=='')
-					// 			{
-					// 				$_SESSION['td_class_alert_shipping']='td_alert';
-					// 				popupMessage('Choisissez un mode de livraison');
-					// 				showBasket();
-
-					// 			}
-					// 		elseif ($_SESSION['payementChoice']=='')
-					// 			{
-					// 				$_SESSION['td_class_alert_payement']='td_alert';
-					// 				popupMessage('Choisissez un mode de paiement');
-					// 				showBasket();
-					// 			}
-					// 		else
-					// 			{
-					// 				$_SESSION['td_class_alert_shipping']='';
-					// 				$_SESSION['td_class_alert_payement']='';
-
-					// 				if (isset($_SESSION['connected']) and $_SESSION['connected']=='yes')
-					// 					{
-     //                  updateValidatedBasket();
-     //                  updateCommande('etatCommande', 1);
-
-					// 						include ("php_file/envoiMailOrder.php");
-					// 						include ("php_file/envoiMailOrderAmandine.php");
-					// 					}
-					// 				else
-					// 					{
-					// 						popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
-					// 						$_SESSION['valider_commande']='yes';
-					// 						include ("php_file/my_account.inc");
-					// 					}
-					// 			}
-					// 	}
-					// else
-					// 	{
-					// 		$_SESSION['td_class_alert_shipping']='';
-					// 		$_SESSION['td_class_alert_payement']='';
-					// 		//include ("php_file/my_account.inc");
-
-					// 		if ($_SESSION['connected']=='yes')
-					// 			{
-					// 				include ("php_file/envoiMailOrder.php");
-					// 				//To send the email to Amandine
-					// 				include ("php_file/envoiMailOrderAmandine.php");
-					// 			}
-					// 		else
-					// 			{
-					// 				popupMessage("Veuillez vous connecter ou créer un compte pour finaliser votre commande");
-					// 			}
-					// 	}
-
 			}
-		// Update shipping price
-		// elseif (isset($_POST['shippingHome']) or isset($_POST['shippingSalon']) or isset($_POST['shippingSuivi']) or isset($_POST['shippingColissimo']) or isset($_POST['payementChoice']))
     elseif (isset($_POST['shipping_and_payement_step']))
 			{
-				// include ("php_file/shipping.php");
-				// include ("php_file/payement.php");
-				// showBasket();
-        echo "Payement and Shipping step";
+        $_SESSION['shippingChoice']=$_POST['shippingChoice'];
+				showBasket();
+        $price_shipping='prix_fdp_' . $_POST['shippingChoice'];
+        $price_shipping=$_SESSION[$price_shipping];
+        include("php_file/payement.inc");
 			}
+    elseif (isset($_POST['payementChoice']))
+      {
+        include("php_file/payement.php");
+        include("php_file/confirmation_order.php");
+      }
 
 		//When a clic is on a bin image to delete a line in the basket
 		elseif (isset($_POST['basketBinButton']) or isset($_POST['buttonLess']) or isset($_POST['buttonMore']))
@@ -160,13 +108,6 @@
 		elseif (isset($_POST['basketButton']))
 			{
 				showBasket();
-			}
-
-		//Passage après clic sur un filtre en cours d'écriture - utiliser un nom pour tous les filtres et une variable de session fonction du filtre
-		//sélectionné
-		elseif (isset($_POST['filters_stock']) or isset($_POST['filters_brand']) or isset($_POST['filters_price']))
-			{
-				include ("php_file/filtersProducts.inc");
 			}
 
 		elseif (isset($_POST['nomMenuFamilles']))
