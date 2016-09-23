@@ -91,12 +91,15 @@
 				showBasket();
         $price_shipping='prix_fdp_' . $_POST['shippingChoice'];
         $price_shipping=$_SESSION[$price_shipping];
-        include("php_file/payement.inc");
 			}
     elseif (isset($_POST['payementChoice']))
       {
         include("php_file/payement.php");
         include("php_file/confirmation_order.php");
+      }
+    elseif (isset($_POST['confirmation-button']))
+      {
+        include("php_file/payement-confirmation.inc");
       }
 
 		//When a clic is on a bin image to delete a line in the basket

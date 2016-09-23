@@ -1358,6 +1358,7 @@ function showBasket ()
 		include ("php_file/commun.php");
 		$functionName=__function__;
 
+    include("php_file/payement-steps.inc");
 		echo"
 		<div id='basketDivContent'>
 			<div id='basketDiv'>
@@ -1443,6 +1444,26 @@ function showBasket ()
 								$prixTotalPanierFraisPort=number_format($prixTotalPanierFraisPort,2,',','');
 								$_SESSION['prixTotal']=$prixTotalPanierFraisPort;
                 include("php_file/total_basket.inc");
+
+                if (isset($_POST['shipping_and_payement_step']))
+                  {
+                    include("php_file/payement.inc");
+                  }
+                else
+                  {
+                    echo"
+                      <tr>
+                        <td colspan='3'></td>
+                        <td colspan='2'>
+                          <button
+                            class='buttonPasserCommande' name='valider_commande' id='step1-button'>
+                            Je commande
+                          </button>
+                        </td>
+                        <td></td>
+                      </tr>
+                      ";
+                  }
             echo"
 					</table>
 				</FORM>
