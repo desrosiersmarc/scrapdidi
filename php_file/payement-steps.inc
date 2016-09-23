@@ -6,13 +6,3 @@
   <div class="button-steps" id="step5">5.Confirmation</div>
 </div>
 
-<?php
-  if ($_SESSION['step']==1)
-    {
-      echo"button-steps-active";
-    }
-  else
-    {
-      echo"button-steps";
-    }
-?>
