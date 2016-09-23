@@ -14,6 +14,12 @@
   align-items: center;
 }
 
+.btn-payement:hover {
+  box-shadow: 8px 8px 12px #aaa;
+  color:#FFFFFF;
+  background-color: #F10091;
+}
+
 .payement-content i {
   font-size: 30px;
 }
@@ -24,4 +30,28 @@
 
 .picto-payement {
   height: 80px;
+}
+
+.button-steps-content {
+  display: flex;
+  justify-content: space-around;
+  height: 44px;
+  align-items: center;
+  margin: 15px;
+}
+
+.button-steps, .button-steps-active {
+  background: var(--main_color_grey_border);
+  width: 150px;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 3px;
+  font-family: arial;
+  border: 1px solid var(--main_color_grayer_border);
+}
+
+.button-steps-active {
+  background: var(--main_color_pink_active);
+  color: #FFF;
 }

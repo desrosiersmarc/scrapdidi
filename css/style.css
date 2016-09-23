@@ -34,7 +34,9 @@
   --main_bg_color_pink:#F7D1F6;/*Use for the background of differentss -  intial color : #CEE3F6 div*/
   --main_color_blue_dark:#4c378a;/*Use for font and border-initial color : #4c378a*/
   --main_color_grey_border:#ebebeb;/*use for borders-intial color : #ebebeb*/
+  --main_color_grayer_border:#AAA;
   --main_color_pink_border:#F7D1F6; /*Use for borders with background blue*/
+  --main_color_pink_active:#f10091;
 
   /*Warning : css's variables are not disponible with IE*/
   /*need to continue to replace other color by css's variables*/

@@ -1,3 +1,4 @@
+<?php include("payement-steps.inc");?>
 <div class="payement-procedure">
   <p>PAIEMENT PAR PAYPAL</p>
   <hr>

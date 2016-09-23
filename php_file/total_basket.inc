@@ -53,12 +53,3 @@
   <td></td>
 </tr>
 
-<tr>
-  <td colspan='3'></td>
-  <td colspan='2'>
-    <button class='buttonPasserCommande' name='valider_commande'>
-      Je commande
-    </button>
-  </td>
-  <td></td>
-</tr>
