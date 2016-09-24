@@ -20,6 +20,7 @@
 				$_SESSION['payementChoice']='';
 				$_SESSION['payementChoiceText']='';
         $_SESSION['shippingChoice']='';
+        $_SESSION['step']=1;
 				// $_SESSION['td_class_alert_shipping']='';//?
 				// $_SESSION['td_class_alert_payement']='';//?
 				$_SESSION['valider_commande']='';//?
@@ -83,10 +84,12 @@
 			}
 		elseif (isset($_POST['valider_commande']))
 			{
+        $_SESSION['step']=2;
         include ("php_file/shipping.inc");
 			}
     elseif (isset($_POST['shipping_and_payement_step']))
 			{
+        $_SESSION['step']=3;
         $_SESSION['shippingChoice']=$_POST['shippingChoice'];
 				showBasket();
         $price_shipping='prix_fdp_' . $_POST['shippingChoice'];
@@ -94,11 +97,13 @@
 			}
     elseif (isset($_POST['payementChoice']))
       {
+        $_SESSION['step']=4;
         include("php_file/payement.php");
         include("php_file/confirmation_order.php");
       }
     elseif (isset($_POST['confirmation-button']))
       {
+        $_SESSION['step']=5;
         include("php_file/payement-confirmation.inc");
       }
 
