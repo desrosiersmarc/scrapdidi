@@ -1660,11 +1660,7 @@ function check_account($mail, $password)
 
 				$_SESSION['connected']='yes';
 
-				//return true;
-				account();
-				//include ("php_file/valider_panier_2.php");
-				//popupMessage('check_account');
-
+//				account();
 			}
 		else
 			{

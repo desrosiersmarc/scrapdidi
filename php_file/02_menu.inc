@@ -1,8 +1,7 @@
 <?php
 	if (isset($_SESSION['prenom']))
 		{
-			$prenomClient="Mon Compte : " . $_SESSION['prenom'] .' '. $_SESSION['nom'];
-			//$prenomClient="Mon Compte : Prénom";
+			$prenomClient="Mon Compte : " . $_SESSION['prenom'];
 		}
 	else
 		{
@@ -21,7 +20,21 @@
 								<button class='buttonMenuTop' name='contactUs' type='submit'>Nous contacter </button>
 							</div>
 							<div id="titreCompte" class="couleurpTitre">
-								<button class='buttonMenuTop' name='myAccount' type='submit'><?php echo"$prenomClient " ?> </button>
+								<button class='buttonMenuTop' name='myAccount' type='submit'>
+                  <?php
+                    echo"$prenomClient ";
+                  ?>
+                </button >
+                <?php
+                if (isset($_SESSION['prenom']))
+                  {
+                    echo"
+                      <button name='disconnect' class='disconnect' id='disconnect'>
+                        X
+                      </button>
+                    ";
+                  }
+                ?>
 							</div>
 						</form>
 					</div>
@@ -37,10 +50,6 @@
 
 						<div id="rechercheContent" class="titreEtRecherche ">
 							<div id="recherche">
-<!-- 									<input type="text" name="recherche" class="blocRecherche" placeholder="Recherche..."/>
-									<div id="loupe" class="loupe">
-										<img src="media_site/loupe.png" id="loupeSearch">
-									</div> -->
 							</div>
 						</div>
 

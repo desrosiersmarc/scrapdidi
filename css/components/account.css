@@ -104,5 +104,14 @@ padding: 0 15px 0 15px;
   border-radius: 5px;
   width: 360px;
   background-color: #FD4E68;
+}
 
+.disconnect {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--main_color_grey_border);
+  color: var(--main_color_grayer_border);
+  line-height: 24px;
+  border: 1px solid var(--main_color_grayer_border);
 }
