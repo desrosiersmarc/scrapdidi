@@ -9,9 +9,8 @@
     //Save user's informations
     include ("php_file/saveUser.inc");
 
-
 		//Empty the session's variable of $_SESSION['noSousFamilles'] on a clic to the image home and initialize variables
-		if (isset($_POST['home']) || !isset($_SESSION['noSousFamilles']) || !isset($_SESSION['noFamilles']))
+		if (isset($_POST['home']) || !isset($_SESSION['noSousFamilles']) || !isset($_SESSION['noFamilles']) || isset($_POST['disconnect']))
 			{
 				$_SESSION['noSousFamilles']='';
 				$_SESSION['noFamilles']='';
@@ -21,13 +20,13 @@
 				$_SESSION['payementChoiceText']='';
         $_SESSION['shippingChoice']='';
         $_SESSION['step']=1;
-				// $_SESSION['td_class_alert_shipping']='';//?
-				// $_SESSION['td_class_alert_payement']='';//?
 				$_SESSION['valider_commande']='';//?
-				$_SESSION['connected']='';//?
+				//$_SESSION['connected']='';//?
+        if (isset($_POST['disconnect']))
+          {
+            session_destroy();
+          }
 			}
-
-
 		//Add an article to the basket ('panier')
 		if (isset($_POST['addBasket']))
 			{
@@ -82,14 +81,24 @@
 			{
 				include ("php_file/my_account.inc");
 			}
+
 		elseif (isset($_POST['valider_commande']))
 			{
-        $_SESSION['step']=2;
-        include ("php_file/shipping.inc");
+        if (!isset($_SESSION['connected']) || $_SESSION['connected']=='' || $_SESSION['connected']=='no')
+          {
+            $_SESSION['step']=2;
+            include("php_file/payement-steps.inc");
+            include("php_file/my_account.inc");
+          }
+        elseif ($_SESSION['connected']=='yes')
+          {
+            $_SESSION['step']=3;
+            include ("php_file/shipping.inc");
+          }
 			}
     elseif (isset($_POST['shipping_and_payement_step']))
 			{
-        $_SESSION['step']=3;
+        $_SESSION['step']=4;
         $_SESSION['shippingChoice']=$_POST['shippingChoice'];
 				showBasket();
         $price_shipping='prix_fdp_' . $_POST['shippingChoice'];
@@ -115,6 +124,7 @@
 
 		elseif (isset($_POST['basketButton']))
 			{
+        $_SESSION['step']=1;
 				showBasket();
 			}
 

@@ -20,11 +20,8 @@ $(document).ready(function(){
       {$('#password-alert').slideUp();}
   });
 
-  // $('#step1-button').click(function(){
-  //   alert('Oups');
-  //   $('#step1').removeClass();
-  //   $('#step2').addClass('button-steps');
-  //   $('#step2').addClass('button-steps-active');
+  // $('#disconnect').click(function(){
+  //   location.reload();
   // });
 
 
