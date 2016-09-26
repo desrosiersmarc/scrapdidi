@@ -1453,8 +1453,8 @@ function showBasket ()
                   {
                     echo"
                       <tr>
-                        <td colspan='3'></td>
-                        <td colspan='2'>
+                        <td colspan='2'></td>
+                        <td colspan='3'>
                           <button
                             class='buttonPasserCommande' name='valider_commande' id='step1-button'>
                             Je commande
@@ -1592,7 +1592,7 @@ function check_existing_mail($mail)
 				$_SESSION['mailExist']='no';
 				//If mail doesn't existe, create the customer with the mail and collect id
 				$dateTime=date('Y-m-d H:i:s');
-				$rq2="INSERT INTO client VALUES ('','$dateTime','','','','','','','','','$mail','','','');";
+				$rq2="INSERT INTO client VALUES ('','$dateTime','','','','','','','','','$mail','','','','');";
 				$reponse2=mysqli_query($connexion,$rq2) or die ("Request's Error... $functionName");
 
 				$rq="select * from client where emailClient='$mail'";
@@ -1604,8 +1604,10 @@ function check_existing_mail($mail)
 				$_SESSION['prenom']='';
 				$_SESSION['nom']='';
 				$_SESSION['adresse']='';
-				$_SESSION['codePostalClient']='';
-				$_SESSION['villeClient']='';
+        $_SESSION['complementAdresse']='';
+        $_SESSION['codePostalClient']='';
+        $_SESSION['villeClient']='';
+        $_SESSION['pays']='';
 				$_SESSION['telClient']='';
 				$_SESSION['birthdayDate']='';
 			}
@@ -1642,6 +1644,9 @@ function check_account($mail, $password)
 
         $complementAdresse=$ligne['complementAdresseClient'];
         $_SESSION['complementAdresse']=$complementAdresse;
+
+        $pays=$ligne['pays'];
+        $_SESSION['pays']=$pays;
 
 				$cp=$ligne['codePostalClient'];
 				$_SESSION['codePostalClient']=$cp;
@@ -1691,7 +1696,8 @@ function updateClient()
 		$adresse=$_POST['adresse'];
     $complementAdresseClient=$_POST['complementAdresseClient'];
 		$cp=$_POST['cp'];
-		$ville=$_POST['ville'];
+    $ville=$_POST['ville'];
+		$pays=$_POST['pays'];
 		$mobile_phone=$_POST['mobile_phone'];
     $birthday=$_POST['birthday'];
     $newsletter=$_POST['newsletter'];
@@ -1703,7 +1709,7 @@ function updateClient()
 
 		$idClient=$_SESSION['idClient'];
 
-		$rq="UPDATE client SET nomClient='$nom', prenomClient='$prenom', emailClient='$mailClient', password='$namePassword', adresseClient='$adresse', complementAdresseClient='$complementAdresseClient', codePostalClient='$cp', villeClient='$ville', telClient='$mobile_phone', newsletterClient='$newsletter', loyalty='$loyalty', birthdayDate='$birthday' WHERE idClient=$idClient;";
+		$rq="UPDATE client SET nomClient='$nom', prenomClient='$prenom', emailClient='$mailClient', password='$namePassword', adresseClient='$adresse', complementAdresseClient='$complementAdresseClient', codePostalClient='$cp', villeClient='$ville', pays='$pays', telClient='$mobile_phone', newsletterClient='$newsletter', loyalty='$loyalty', birthdayDate='$birthday' WHERE idClient=$idClient;";
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 		//$ligne=mysqli_fetch_assoc($reponse);
 	}
@@ -1717,7 +1723,8 @@ Function account()
 	$adresse=$_SESSION['adresse'];
   $complementAdresse=$_SESSION['complementAdresse'];
 	$cp=$_SESSION['codePostalClient'];
-	$ville=$_SESSION['villeClient'];
+  $ville=$_SESSION['villeClient'];
+	$pays=$_SESSION['pays'];
   $tel=$_SESSION['telClient'];
 	$birthdayDate=$_SESSION['birthdayDate'];
   include('php_file/my_account_create.inc');

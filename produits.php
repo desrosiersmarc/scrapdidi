@@ -200,6 +200,6 @@
 		include ("php_file/10_basDePage.inc");
 		//Fin de la partie bas de page.
     //Display a div with session informations
-    //include ("php_file/display_session.inc");
+    include ("php_file/display_session.inc");
 
 	?>

@@ -190,6 +190,15 @@
         </td>
       </tr>
       <tr>
+        <td class="label-align-right">Pays*</td>
+        <td>
+          <select class="button-submit" name="" id="">
+            <option value="france" selected="selected">France</option>
+            <option value="belgique">Belgique</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
         <td class="label-align-right">Téléphone portable</td>
         <td>
           <input
