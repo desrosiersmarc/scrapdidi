@@ -18,7 +18,7 @@
           <label for="mailClientNew">Adresse mail</label>
   				<input name="mailClientNew" class="input_css" id="mailClientNew" type="email" placeholder="Votre mail">
   				<br/>
-  				<button name="submitAccountUnknow" class="input_css submitCompte" type="submit">
+  				<button name="submitAccountUnknow" class="submitCompte" type="submit">
             Créer mon compte
           </button>
   		  </div>
@@ -37,7 +37,7 @@
           <p>
             mot de passe oublié ?
           </p>
-          <button name="submitAccountKnow" class="input_css submitCompte" type="submit">  Me connecter
+          <button name="submitAccountKnow" class="submitCompte" type="submit">  Me connecter
           </button>
         </div>
       </div>
