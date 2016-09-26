@@ -21,6 +21,7 @@
         $_SESSION['shippingChoice']='';
         $_SESSION['step']=1;
 				$_SESSION['valider_commande']='';//?
+        $_SESSION['process']='';
 				//$_SESSION['connected']='';//?
         if (isset($_POST['disconnect']))
           {
@@ -66,22 +67,19 @@
 			{
 				include ("php_file/contact_us.inc");
 			}
-
-		//
-		elseif (isset($_POST['submitAccount']))
-			{
-				updateClient();
-				connected_message();
-			}
 		elseif (isset($_POST['submitAccountKnow']) || isset($_POST['submitAccountUnknow']))
 			{
 				include ("php_file/account.inc");
+        if ($_SESSION['process']=='order')
+          {
+            include("php_file/my_account_connexion.inc");
+          }
+      }
+    elseif (isset($_POST['myAccount']))
+      {
+        $_SESSION['process']='account';
+        include ("php_file/my_account.inc");
 			}
-		elseif (isset($_POST['myAccount']))
-			{
-				include ("php_file/my_account.inc");
-			}
-
 		elseif (isset($_POST['valider_commande']))
 			{
         if (!isset($_SESSION['connected']) || $_SESSION['connected']=='' || $_SESSION['connected']=='no')
@@ -125,6 +123,7 @@
 		elseif (isset($_POST['basketButton']))
 			{
         $_SESSION['step']=1;
+        $_SESSION['process']='order';
 				showBasket();
 			}
 
@@ -201,6 +200,6 @@
 		include ("php_file/10_basDePage.inc");
 		//Fin de la partie bas de page.
     //Display a div with session informations
-    include ("php_file/display_session.inc");
+    //include ("php_file/display_session.inc");
 
 	?>

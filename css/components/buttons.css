@@ -8,7 +8,7 @@
 /*Mise en forme des boutons du menu*/
   .buttonMenu
   {
-    font-family: "dancing script", fantasy, sans-serif;
+    /*font-family: "dancing script", fantasy, sans-serif;*/
     font-size: 1.4em;/*en ligne*/
     height:60px;
     color: var(--main_color_blue_dark);
@@ -29,7 +29,7 @@
   /*Layout the first menu buttons*/
   .buttonMenuTop
   {
-    font-family: "dancing script", fantasy, sans-serif;
+    /*font-family: "dancing script", fantasy, sans-serif;*/
     font-size: 1.4em;/*en ligne*/
     /*height:60px;*/
     color: var(--main_color_blue_dark);

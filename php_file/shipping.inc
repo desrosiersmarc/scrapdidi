@@ -70,24 +70,53 @@
           ?>
         </td>
       </tr>
+      <tr>
+        <td colspan='4'>
+          <p>
+            <strong>
+              Laisser un message
+            </strong>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='4'>
+          <p>
+            Si vous souhaitez nous laisser un message à propos de votre commande ou spécifier le salon pour le retrait de votre commande, merci de bien vouloir utiliser le champs ci-dessous :
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='4'>
+          <textarea name="client-comments" id="" cols="150" rows="6"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='4'>
+          <p>
+            <strong>
+              Conditions générales de ventes
+            </strong>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='4'>
+          <p>
+            j'ai lu et j'accepte les conditions générales de vente et j'y adhère sans réserve <a href="">(lire les conditions générales de vente)</a>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='2'>
+        </td>
+        <td>
+          <button type='submit' name='shipping_and_payement_step' class="shipping-button">
+            Je valide ma livraison et je passe au paiement
+          </button>
+        </td>
+        <td></td>
+      </tr>
     </table>
-    <p>
-      <strong>
-        Laisser un message
-      </strong>
-    </p>
-    <p>Si vous souhaitez nous laisser un message à propos de votre commande ou spécifier le salon pour le retrait de votre commande, merci de bien vouloir utiliser le champs ci-dessous : </p>
-    <textarea name="client-comments" id="" cols="60" rows="6"></textarea>
-    <p>
-      <strong>
-        Conditions générales de ventes
-      </strong>
-    </p>
-    <p>
-      j'ai lu et j'accepte les conditions générales de vente et j'y adhère sans réserve <a href="">(lire les conditions générales de vente)</a>
-    </p>
-    <button type='submit' name='shipping_and_payement_step' class="buttonPasserCommande">
-      Je valide ma livraison et je passe au paiement
-    </button>
   </form>
 </div>

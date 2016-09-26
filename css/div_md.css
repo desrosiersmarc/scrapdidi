@@ -360,16 +360,14 @@ textarea
 /*Boutons administration*/
 .buttonAdmin
 {
-
-     font-size: 0.8em;
-     width: 100px;
-     height: 30px;
- 	font-family: "dancing script", fantasy, sans-serif;
-	color: #FFF;
-	cursor:pointer;
-	background-color: #99a2a8;
-	border:solid #797d80 2px;
-	box-shadow: 0px 1px 3px #FFF;
+  font-size: 0.8em;
+  width: 100px;
+  height: 30px;
+  color: #FFF;
+  cursor:pointer;
+  background-color: #99a2a8;
+  border:solid #797d80 2px;
+  box-shadow: 0px 1px 3px #FFF;
 }
 
 .buttonAdmin:hover
@@ -394,7 +392,7 @@ textarea
 
 .TitreH
 {
-		font-family: "dancing script", fantasy, sans-serif;
+		/*font-family: "dancing script", fantasy, sans-serif;*/
 		color: #F10091;
 		font-size: 6em;/*en ligne*/
 
@@ -406,7 +404,7 @@ textarea
  */
 	.buttonSousMenu
 	{
-	font-family: "dancing script", fantasy, sans-serif;
+	/*font-family: "dancing script", fantasy, sans-serif;*/
 	font-size: 1.4em;/*en ligne*/
 	height:60px;
 	width:150px;
@@ -463,7 +461,7 @@ textarea
 
 .buttonNavigation
 {
-	font-family: "dancing script", fantasy, sans-serif;
+	/*font-family: "dancing script", fantasy, sans-serif;*/
 	font-size: 1.1em;/*en ligne*/
 	height:40px;
 	color: var(--main_color_blue_dark);
@@ -582,7 +580,7 @@ textarea
     font-size: 0.9em;
     width: 100%;
     height: 30px;
- 	font-family: "dancing script", fantasy, sans-serif;
+ 	/*font-family: "dancing script", fantasy, sans-serif;*/
 	color: #99a2a8;
 	cursor:pointer;
 	background-color: #FFF;
@@ -598,7 +596,7 @@ textarea
     font-size: 0.9em;
     width: 100%;
     height: 30px;
- 	font-family: "dancing script", fantasy, sans-serif;
+ 	/*font-family: "dancing script", fantasy, sans-serif;*/
 	color: #FFF;
 	cursor:pointer;
 	background-color: #99a2a8;
@@ -775,7 +773,7 @@ textarea
 .input_css
 {
 	height:30px;
-	width:350px;
+	width:329px;
 	border-radius:5px;
 	padding:5px;
 	border:none;

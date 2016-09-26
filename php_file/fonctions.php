@@ -1586,8 +1586,6 @@ function check_existing_mail($mail)
 					{
 						popupMessage('Ce mail est déjà utilisé');
 					}
-
-
 			}
 		else
 			{
@@ -1610,10 +1608,7 @@ function check_existing_mail($mail)
 				$_SESSION['villeClient']='';
 				$_SESSION['telClient']='';
 				$_SESSION['birthdayDate']='';
-
-				//return false;
 			}
-
 	}
 
 //Test account with mail and password
@@ -1624,7 +1619,7 @@ function check_account($mail, $password)
 		$functionName=__function__;
 
 		$rq="select * from client where emailClient='$mail' and password='$password';";
-		//popupmessage($rq);
+
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 		$nblignesAccount=mysqli_num_rows($reponse);
 
@@ -1632,7 +1627,6 @@ function check_account($mail, $password)
 
 		//Initialize the session's variable to 'no'
 		$_SESSION['connected']='no';
-
 
 		if ($nblignesAccount==1)
 			//Account is existing
@@ -1645,6 +1639,9 @@ function check_account($mail, $password)
 
 				$adresse=$ligne['adresseClient'];
 				$_SESSION['adresse']=$adresse;
+
+        $complementAdresse=$ligne['complementAdresseClient'];
+        $_SESSION['complementAdresse']=$complementAdresse;
 
 				$cp=$ligne['codePostalClient'];
 				$_SESSION['codePostalClient']=$cp;
@@ -1660,14 +1657,15 @@ function check_account($mail, $password)
 
 				$_SESSION['connected']='yes';
 
-//				account();
+        if ($_SESSION['process']=='account')
+          {
+            // popupmessage('Check account & process=account');
+            account();
+          }
+
 			}
 		else
 			{
-			//check_existing_mail($mail);
-			//$message=$_SESSION['mailExist'];
-			//popupMessage($message);
-
 			if ($_SESSION['mailExist']=='yes')
 				{
 					popupMessage('Mot de passe non valide');
@@ -1675,7 +1673,6 @@ function check_account($mail, $password)
 				}
 			else
 				{
-					//return false;
 					popupMessage('Vous n\'avez pas de compte');
 					include ("php_file/my_account.inc");
 				}
@@ -1709,10 +1706,8 @@ function updateClient()
 		$rq="UPDATE client SET nomClient='$nom', prenomClient='$prenom', emailClient='$mailClient', password='$namePassword', adresseClient='$adresse', complementAdresseClient='$complementAdresseClient', codePostalClient='$cp', villeClient='$ville', telClient='$mobile_phone', newsletterClient='$newsletter', loyalty='$loyalty', birthdayDate='$birthday' WHERE idClient=$idClient;";
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 		//$ligne=mysqli_fetch_assoc($reponse);
-
 	}
 
-//Function account
 Function account()
 {
 	$mailClient=$_SESSION['mailClient'];
@@ -1720,9 +1715,10 @@ Function account()
 	$prenom=$_SESSION['prenom'];
 	$nom=$_SESSION['nom'];
 	$adresse=$_SESSION['adresse'];
+  $complementAdresse=$_SESSION['complementAdresse'];
 	$cp=$_SESSION['codePostalClient'];
 	$ville=$_SESSION['villeClient'];
-	$tel=$_SESSION['telClient'];
+  $tel=$_SESSION['telClient'];
 	$birthdayDate=$_SESSION['birthdayDate'];
   include('php_file/my_account_create.inc');
 }
@@ -1741,18 +1737,6 @@ function procedure_reglement($payement)
 			{
 				echo"<p>Ici sera présenté la procédure pour le réglément via paypal</p>";
 			}
-	}
-
-function connected_message()
-	{
-		$prenom_client=$_SESSION['prenom'];
-		echo"
-			<div class='messageDivContent'>
-				<div class='messageDiv'>
-					<p>$prenom_client, vous êtes maintenant connecté(e) vous pouvez continuer votre shopping... ;o)
-				</div>
-			</div>
-		";
 	}
 
 function display_information_on_order($etatCommande)
