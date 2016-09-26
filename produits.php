@@ -74,15 +74,12 @@
           {
             include("php_file/my_account_connexion.inc");
           }
-
       }
     elseif (isset($_POST['myAccount']))
       {
         $_SESSION['process']='account';
         include ("php_file/my_account.inc");
-
 			}
-
 		elseif (isset($_POST['valider_commande']))
 			{
         if (!isset($_SESSION['connected']) || $_SESSION['connected']=='' || $_SESSION['connected']=='no')
@@ -203,6 +200,6 @@
 		include ("php_file/10_basDePage.inc");
 		//Fin de la partie bas de page.
     //Display a div with session informations
-    include ("php_file/display_session.inc");
+    //include ("php_file/display_session.inc");
 
 	?>
