@@ -9,7 +9,7 @@
   .buttonMenu
   {
     /*font-family: "dancing script", fantasy, sans-serif;*/
-    font-size: 1.4em;/*en ligne*/
+    font-size: 14px;/*en ligne*/
     height:60px;
     color: var(--main_color_blue_dark);
     cursor:pointer;
@@ -30,7 +30,7 @@
   .buttonMenuTop
   {
     /*font-family: "dancing script", fantasy, sans-serif;*/
-    font-size: 1.4em;/*en ligne*/
+    font-size: 14px;/*en ligne*/
     /*height:60px;*/
     color: var(--main_color_blue_dark);
     cursor:pointer;

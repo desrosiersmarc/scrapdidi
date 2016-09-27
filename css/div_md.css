@@ -172,7 +172,7 @@ td
 
 .buttonPasserCommande
 {
-	width:200px;
+	width:100%;
 	height: 40px;
 	border-radius:5px;
 	background-color:var(--main_bg_color_blue);
@@ -405,7 +405,7 @@ textarea
 	.buttonSousMenu
 	{
 	/*font-family: "dancing script", fantasy, sans-serif;*/
-	font-size: 1.4em;/*en ligne*/
+	font-size: 14px;/*en ligne*/
 	height:60px;
 	width:150px;
 	color: var(--main_color_blue_dark);
@@ -429,8 +429,7 @@ textarea
 #idNavigationContent
 {
 	height:40px;
-	/*background-color: var(--main_bg_color_blue);
-	border:solid 1px;*/
+  margin-top: 15px;
 }
 
 #idNavigation
@@ -461,8 +460,7 @@ textarea
 
 .buttonNavigation
 {
-	/*font-family: "dancing script", fantasy, sans-serif;*/
-	font-size: 1.1em;/*en ligne*/
+	font-size: 14px;/*en ligne*/
 	height:40px;
 	color: var(--main_color_blue_dark);
 	cursor:pointer;
