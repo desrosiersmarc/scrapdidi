@@ -11,8 +11,8 @@
 }
 
 .titreEtRecherche {
-  width:32%;
-  min-width:298px;
+  width:38%;
+  min-width:380px;
   height: 78px;
   float:left;
 }
@@ -61,18 +61,19 @@
 
 #panierContent {
   height:100px;
-  width:298px;
+  width:225px;
   float:left;
-  text-align: center;
-  line-height: 100px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
 }
 
 #panier {
-  height:100px;
+/*  height:100px;
   width:150px;
   float:left;
   text-align:right;
-  -moz-margin-top:30px;
+  -moz-margin-top:30px;*/
 }
 
 #basketButtonCSS {
