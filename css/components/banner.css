@@ -50,37 +50,7 @@ body {
   left: 10px;
   position: absolute;
 }
-/* Code from test
-.banner {
-  background: url(https://static.pexels.com/photos/1188/city-landmark-lights-night-large.jpg);
-  position: relative;
-  background-size: cover;
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  justify-content: center;
+
+.first-page-text {
+  font-family: 'Dancing Script', cursive;
 }
-
-.banner-picture {
-  width: 200px;
-  margin-top: 30px;
-}
-
-
-.banner h3 {
-  padding-bottom: 30px;
-  text-shadow: 0 0 10px #000;
-}
-
-.banner-picture-white-background {
-  background-color: #FFF;
-  opacity: 1;
-  border-radius: 50%;
-  height: 200px;
-  width:200px;
-  top: 10px;
-  left: 10px;
-  position: absolute;
-}
-
-*/

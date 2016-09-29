@@ -1432,7 +1432,6 @@ function showBasket ()
 
 								$prix_fdp_colissimo=number_format(shipping($poidsArticlesPanier, "colissimo"),2,',','');
                 $_SESSION['prix_fdp_colissimo']=$prix_fdp_colissimo;
-//
 								if (isset($_SESSION['shippingPrice']))
 									{
 										$prixChoisiFraisPort = $_SESSION['shippingPrice'];
@@ -1470,7 +1469,6 @@ function showBasket ()
 			</div>
 		</div>
 		";
-
 	}
 
 function updateValidatedBasket()
@@ -1484,7 +1482,8 @@ function updateValidatedBasket()
   $payement = $_SESSION['payementChoiceText'];
   $idCli = $_SESSION['idClient'];
   $shippingPrice = str_replace(',', '.', $_SESSION['shippingPrice']);
-
+  // add message from client $??? = $_SESSION['client-comments'];
+  popupmessage("Don't forget to save message client in DB !!!");
 
   $rq = "UPDATE commande SET idClient = $idCli ,payement = '$payement', shippingMode = '$shippingText', shippingPrice = '$shippingPrice' WHERE idCommande = $idC";
   mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");

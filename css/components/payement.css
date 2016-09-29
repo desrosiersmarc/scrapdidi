@@ -6,9 +6,9 @@
 .btn-payement {
   border: 1px solid var(--main_color_pink_border);
   height: 120px;
-  width: 450px;
+  width: 400px;
   border-radius: 2px;
-  margin: 20px;
+  margin: 15px;
   background-color: var(--main_bg_color_blue);
   display: flex;
   align-items: center;
