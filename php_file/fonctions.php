@@ -1482,10 +1482,9 @@ function updateValidatedBasket()
   $payement = $_SESSION['payementChoiceText'];
   $idCli = $_SESSION['idClient'];
   $shippingPrice = str_replace(',', '.', $_SESSION['shippingPrice']);
-  // add message from client $??? = $_SESSION['client-comments'];
-  popupmessage("Don't forget to save message client in DB !!!");
-
-  $rq = "UPDATE commande SET idClient = $idCli ,payement = '$payement', shippingMode = '$shippingText', shippingPrice = '$shippingPrice' WHERE idCommande = $idC";
+  $clientComments = $_SESSION['client-comments'];
+  $etatCommande = 1;
+  $rq = "UPDATE commande SET idClient = $idCli ,payement = '$payement', shippingMode = '$shippingText', shippingPrice = '$shippingPrice', comments='$clientComments', etatCommande='$etatCommande' WHERE idCommande = $idC";
   mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 }
 
