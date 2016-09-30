@@ -22,17 +22,16 @@
   </td>
   <td class='td_others basket-td-total'>
     <?php
-      if ($_SESSION['shippingChoice']=='')
+      if ($_SESSION['shippingSelected']=='')
         {
           $prix_fdp_selected = $prix_fdp_suivi;
           echo"$prix_fdp_selected";
         }
       else
         {
-          $price_shipping='prix_fdp_' . $_POST['shippingChoice'];
+          $price_shipping='prix_fdp_' . $_POST['shippingSelected'];
           $prix_fdp_selected=$_SESSION[$price_shipping];
           echo "$prix_fdp_selected";
-          $_SESSION['shippingChoice']='';
         }
     ?>€
   </td>

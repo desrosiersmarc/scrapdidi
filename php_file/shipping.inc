@@ -8,7 +8,7 @@
     <table>
       <tr>
         <td class="shipping-td-total">
-          <input type="radio" name="shippingChoice" value="home">
+          <input type="radio" name="shippingSelected" value="home">
         </td>
         <td class="shipping-td-total">
           <img class='imgButtonFraisPort' src='media_site/home.png'>
@@ -23,7 +23,7 @@
       </tr>
       <tr>
         <td class="shipping-td-total">
-          <input type="radio" name="shippingChoice" value="salon">
+          <input type="radio" name="shippingSelected" value="salon">
         </td>
         <td class="shipping-td-total">
           <img class='imgButtonFraisPort' src='media_site/salon.png'>
@@ -38,7 +38,7 @@
       </tr>
       <tr>
         <td class="shipping-td-total">
-          <input type="radio" name="shippingChoice" value="suivi" checked="checked">
+          <input type="radio" name="shippingSelected" value="suivi" checked="checked">
         </td>
         <td class="shipping-td-total">
           <img class='imgButtonFraisPort' src='media_site/lettre_suivie.jpg'>
@@ -55,7 +55,7 @@
       </tr>
       <tr>
         <td class="shipping-td-total">
-          <input type="radio" name="shippingChoice" value="colissimo">
+          <input type="radio" name="shippingSelected" value="colissimo">
         </td>
         <td class="shipping-td-total">
           <img class='imgButtonFraisPort' src='media_site/colissimo.jpg'>

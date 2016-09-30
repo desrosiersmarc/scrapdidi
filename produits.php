@@ -18,7 +18,6 @@
 				$_SESSION['shippingSelectedText']='';
 				$_SESSION['payementChoice']='';
 				$_SESSION['payementChoiceText']='';
-        $_SESSION['shippingChoice']='';
         $_SESSION['step']=1;
 				$_SESSION['valider_commande']='';//?
         $_SESSION['process']='';
@@ -97,10 +96,8 @@
     elseif (isset($_POST['shipping_and_payement_step']))
 			{
         $_SESSION['step']=4;
-        $_SESSION['shippingChoice']=$_POST['shippingChoice'];
+        include("php_file/shipping.php");
 				showBasket();
-        $price_shipping='prix_fdp_' . $_POST['shippingChoice'];
-        $price_shipping=$_SESSION[$price_shipping];
 			}
     elseif (isset($_POST['payementChoice']))
       {
@@ -112,6 +109,7 @@
       {
         $_SESSION['step']=5;
         include("php_file/payement-confirmation.inc");
+        updateValidatedBasket();
       }
 
 		//When a clic is on a bin image to delete a line in the basket
@@ -124,6 +122,7 @@
 			{
         $_SESSION['step']=1;
         $_SESSION['process']='order';
+        $_SESSION['shippingSelected']='';
 				showBasket();
 			}
 
