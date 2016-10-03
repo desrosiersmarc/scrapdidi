@@ -406,7 +406,7 @@ textarea
 	{
 	/*font-family: "dancing script", fantasy, sans-serif;*/
 	font-size: 14px;/*en ligne*/
-	height:60px;
+	height:40px;
 	width:150px;
 	color: var(--main_color_blue_dark);
 	cursor:pointer;
