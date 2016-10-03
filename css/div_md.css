@@ -196,7 +196,7 @@ td
 	#basPageContent
 	{
 		height: 200px;
-		width:900px;
+		width:95%;
 		background :var(--main_bg_color_blue) ;
 
 	    border: 1px solid var(--main_color_grey_border);
@@ -206,6 +206,10 @@ td
 	    border-radius:5px;
 
 	}
+  .social-media-content {
+    width: 900px;
+    margin: auto;
+  }
 
 	.blocsBasPage
 	{
