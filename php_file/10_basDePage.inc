@@ -28,7 +28,7 @@
             <li>
               <form action="produits.php" method="POST">
                 <button class="cgv-button" name="cgv" type="submit">
-                  Conditions générales de ventes
+                  <u>Conditions générales de ventes</u>
                 </button>
               </form>
             </li>
