@@ -25,7 +25,13 @@
           <p class="couleurpTitre">Informations</p>
           <ul class="tailleTexteInformations couleurpTitre" >
             <li><p class="tailleTexteInformations">Mentions légales</p></li>
-            <li><p class="tailleTexteInformations">Conditions générales de ventes</p></li>
+            <li>
+              <form action="produits.php" method="POST">
+                <button class="cgv-button" name="cgv" type="submit">
+                  Conditions générales de ventes
+                </button>
+              </form>
+            </li>
             <li><p class="tailleTexteInformations"><a href="http://ec.europa.eu/consumers/odr"  target="_blank">En cas de litiges</a></p></li>
           </ul>
         </div>

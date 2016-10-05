@@ -1,6 +1,6 @@
 <div class="divAccountAlign">
   <form method='post' action='produits.php'>
-    <h2>Mon compte</h2>
+    <h2>Création de mon compte</h2>
     <p>Merci de renseigner les informations ci-dessous. Les champs marqués d'un * sont obligatoires</p>
     <table>
     <tr>
@@ -114,7 +114,7 @@
             class='input_css'
             type='text'
             id=''
-            placeholder='Vannieuwerburgh'
+            placeholder=''
             required="required"
             value=<?php echo"$nom" ?>>
           </input>
@@ -128,7 +128,7 @@
             class='input_css'
             type='text'
             id=''
-            placeholder='Amandine'
+            placeholder=''
             maxlength=25
             required='required'
             value=<?php echo"$prenom" ?>>
@@ -142,7 +142,7 @@
             class='input_css'
             type='text'
             id=''
-            placeholder='1, rue du scrapp'
+            placeholder=''
             maxlength=25
             required='required'
             value=<?php echo"$adresse" ?>>
@@ -169,7 +169,7 @@
             class='input_css'
             type='number'
             id=''
-            placeholder='59000'
+            placeholder=''
             required='required'
             maxlength=5
             value=<?php echo"$cp" ?>>
@@ -183,7 +183,7 @@
             class='input_css'
             type='text'
             id=''
-            placeholder='Lille'
+            placeholder=''
             required='required'
             maxlength=25
             value=<?php echo"$ville" ?>>
@@ -206,7 +206,7 @@
             class='input_css'
             type='tel'
             id=''
-            placeholder='0607080901'
+            placeholder=''
             value=<?php echo"$tel" ?>>
         </td>
       </tr>
@@ -230,7 +230,7 @@
             class='input_css'
             type='date'
             id=''
-            placeholder='03/12/1988'
+            placeholder=''
             value=<?php echo"$birthdayDate" ?>>
         </td>
       </tr>
@@ -304,7 +304,7 @@
             id='submitCompte'
             type='submit'
           >
-            Mettre à jour
+            Je valide mon compte
           </button>
         </td>
       </tr>
