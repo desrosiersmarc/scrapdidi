@@ -182,6 +182,10 @@
 				</div>
 			";
 		}
+    elseif (isset($_POST['cgv']))
+      {
+        include("php_file/cgv.inc");
+      }
 
 		else //Add an information to hide this part when we're on article's page
 			{

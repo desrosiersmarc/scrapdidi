@@ -2,9 +2,10 @@
   <td colspan='6'>
     <form action="produits.php" method="POST">
       <div class="payement-content">
-        <button class="btn-payement" name="payementChoice" value="virement">
-          <img src="css/media_css/picto-virement.png" alt="" class="picto-payement">
-          <strong>Payer par virement bancaire</strong> (le traitement de la commande sera plus long)
+
+        <button class="btn-payement" name="payementChoice" value="paypal">
+          <img src="css/media_css/picto-paypal.png" alt="" class="picto-payement">
+          <strong>Payez par carte ou par compte Paypal</strong>
         </button>
 
         <button class="btn-payement" name="payementChoice" value="cheque">
@@ -12,9 +13,9 @@
           <strong>Payer par chèque</strong> (le traitement de la commande sera plus long)
         </button>
 
-        <button class="btn-payement" name="payementChoice" value="paypal">
-          <img src="css/media_css/picto-paypal.png" alt="" class="picto-payement">
-          <strong>Payez par carte ou par compte Paypal</strong>
+        <button class="btn-payement" name="payementChoice" value="virement">
+          <img src="css/media_css/picto-virement.png" alt="" class="picto-payement">
+          <strong>Payer par virement bancaire</strong> (le traitement de la commande sera plus long)
         </button>
 
         <button class="btn-payement" name="payementChoice" value="comptant">

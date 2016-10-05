@@ -1,0 +1,11 @@
+.cgv-button {
+  border: none;
+  background-color: transparent;
+  font-size: 0.9em;
+  margin: -7px;
+  color: var(--main_color_blue_dark);
+}
+
+.cgv-button {
+  cursor: pointer;
+}

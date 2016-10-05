@@ -17,6 +17,10 @@ padding: 0 15px 0 15px;
   font-size: 0.8em;
 }
 
+.divAccountAlign table, td {
+  margin-top: 20px;
+}
+
 .divAccountAlign {
   margin-left: 20%;
 }

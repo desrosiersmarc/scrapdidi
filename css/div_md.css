@@ -85,10 +85,15 @@
 /*Définition des titres*/
 	.titreHP
 	{
-		text-align: center;
+/*		text-align: center;
 		line-height: 40px;
 		width:150px;
-		background-color: white;
+		background-color: white;*/
+    text-align: center;
+    padding: 5px;
+    font-family: arial, sans-serif;
+    margin: 0;
+    font-size: 20px;
 	}
 
 th
@@ -191,7 +196,7 @@ td
 	#basPageContent
 	{
 		height: 200px;
-		width:900px;
+		width:95%;
 		background :var(--main_bg_color_blue) ;
 
 	    border: 1px solid var(--main_color_grey_border);
@@ -201,6 +206,10 @@ td
 	    border-radius:5px;
 
 	}
+  .social-media-content {
+    width: 900px;
+    margin: auto;
+  }
 
 	.blocsBasPage
 	{
@@ -406,7 +415,7 @@ textarea
 	{
 	/*font-family: "dancing script", fantasy, sans-serif;*/
 	font-size: 14px;/*en ligne*/
-	height:60px;
+	height:40px;
 	width:150px;
 	color: var(--main_color_blue_dark);
 	cursor:pointer;
@@ -716,6 +725,14 @@ textarea
 	background-color:var(--main_bg_color_blue);
 	border-radius:5px;
 	border:solid #797D80 1px;
+}
+
+.buttonAjouterPanier:hover {
+  cursor: pointer;
+  background: #FFF;
+  border:solid #f10091 2px;
+  color:#f10091;
+  text-decoration: none;
 }
 
 .buttonAjouterPanierRupture
