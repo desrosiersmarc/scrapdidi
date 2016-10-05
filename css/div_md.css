@@ -727,6 +727,14 @@ textarea
 	border:solid #797D80 1px;
 }
 
+.buttonAjouterPanier:hover {
+  cursor: pointer;
+  background: #FFF;
+  border:solid #f10091 2px;
+  color:#f10091;
+  text-decoration: none;
+}
+
 .buttonAjouterPanierRupture
 {
 	height: 30px;
