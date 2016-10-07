@@ -69,10 +69,13 @@
 		elseif (isset($_POST['submitAccountKnow']) || isset($_POST['submitAccountUnknow']))
 			{
 				include ("php_file/account.inc");
-        if ($_SESSION['process']=='order')
-          {
+      }
+    elseif (isset($_POST['submitAccount']))
+      {
+        // if ($_SESSION['process']=='order')
+          // {
             include("php_file/my_account_connexion.inc");
-          }
+          // }
       }
     elseif (isset($_POST['myAccount']))
       {
@@ -185,6 +188,10 @@
     elseif (isset($_POST['cgv']))
       {
         include("php_file/cgv.inc");
+      }
+    elseif (isset($_POST['mentions_legales']))
+      {
+        include("php_file/mentions_legales.inc");
       }
 
 		else //Add an information to hide this part when we're on article's page
