@@ -24,14 +24,18 @@
         <div id="informations" class="blocsBasPage">
           <p class="couleurpTitre">Informations</p>
           <ul class="tailleTexteInformations couleurpTitre" >
-            <li><p class="tailleTexteInformations">Mentions légales</p></li>
-            <li>
-              <form action="produits.php" method="POST">
-                <button class="cgv-button" name="cgv" type="submit">
-                  <u>Conditions générales de ventes</u>
+            <form action="produits.php" method="POST">
+              <li>
+                <button class="cgv-button" name="mentions_legales" type="submit">
+                  <u>Mentions légales</u>
                 </button>
-              </form>
-            </li>
+              </li>
+              <li>
+                  <button class="cgv-button" name="cgv" type="submit">
+                    <u>Conditions générales de ventes</u>
+                  </button>
+                </form>
+              </li>
             <li><p class="tailleTexteInformations"><a href="http://ec.europa.eu/consumers/odr"  target="_blank">En cas de litiges</a></p></li>
           </ul>
         </div>
