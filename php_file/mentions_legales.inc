@@ -1,4 +1,4 @@
-<div class="cdv-div">
+<div class="cdv-div" id="">
   <strong>Mentions légales</strong>
   <p>Scrapdidi auto-entreprise gérée par Amandine Vannieuwerburgh</p>
   <p>40, rue des coulons, 59200, Tourcoing</p>
