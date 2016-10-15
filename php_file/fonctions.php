@@ -1570,16 +1570,10 @@ function check_existing_mail($mail)
 		$nblignes=mysqli_num_rows($reponse);
 
 		if ($nblignes>0)
-		//Ok if mail is correct
 			{
 				$_SESSION['idClient']=$ligne['idClient'];
 				$idClient=$_SESSION['idClient'];
-				//popupMessage("Votre compte existe : ".$idClient);
-
-				//mail is already into a session's variable $_SESSION['mailClient']
-
 				$_SESSION['mailExist']='yes';
-				//Open the account's function
 				if (isset($_POST['submitAccountUnknow']))
 					{
 						popupMessage('Ce mail est déjà utilisé');
@@ -1588,17 +1582,18 @@ function check_existing_mail($mail)
 		else
 			{
 				$_SESSION['mailExist']='no';
-				//If mail doesn't existe, create the customer with the mail and collect id
 				$dateTime=date('Y-m-d H:i:s');
-				$rq2="INSERT INTO client VALUES ('','$dateTime','','','','','','','','','$mail','','','','');";
-				$reponse2=mysqli_query($connexion,$rq2) or die ("Request's Error... $functionName");
 
-				$rq="select * from client where emailClient='$mail'";
-				$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
-				$ligne=mysqli_fetch_assoc($reponse);
-				$_SESSION['idClient']=$ligne['idClient'];
+        $rq2="INSERT INTO client VALUES ('','$dateTime','','','','','','','','','','','','','');";
+        $reponse2=mysqli_query($connexion,$rq2) or die ("Request's Error... $functionName");
 
-				//Reset variable's session
+        $rq="select * from client where dateCreationClient='$dateTime'";
+        $reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+        $ligne=mysqli_fetch_assoc($reponse);
+        $_SESSION['idClient']=$ligne['idClient'];
+
+        //Reset variable's session
+        // $_SESSION['mailClientCreate']=$mail;
 				$_SESSION['prenom']='';
 				$_SESSION['nom']='';
 				$_SESSION['adresse']='';
@@ -1710,6 +1705,7 @@ function updateClient()
 		$rq="UPDATE client SET nomClient='$nom', prenomClient='$prenom', emailClient='$mailClient', password='$namePassword', adresseClient='$adresse', complementAdresseClient='$complementAdresseClient', codePostalClient='$cp', villeClient='$ville', pays='$pays', telClient='$mobile_phone', newsletterClient='$newsletter', loyalty='$loyalty', birthdayDate='$birthday' WHERE idClient=$idClient;";
 		$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 		//$ligne=mysqli_fetch_assoc($reponse);
+    $_SESSION['connected']='yes';
 	}
 
 Function account()

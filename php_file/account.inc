@@ -9,6 +9,7 @@
 
 					check_existing_mail($mail);
 					check_account($mail, $password);
+          echo"<p>POUET</p>";
 				}
 			else
 				{
