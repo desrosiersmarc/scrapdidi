@@ -1,5 +1,5 @@
 <?php
-	if (isset($_SESSION['prenom']))
+	if (isset($_SESSION['prenom']) && $_SESSION['prenom']!="")
 		{
 			$prenomClient="Mon Compte : " . $_SESSION['prenom'];
 		}
@@ -26,7 +26,7 @@
                   ?>
                 </button >
                 <?php
-                if (isset($_SESSION['prenom']))
+                if (isset($_SESSION['prenom']) && $_SESSION['prenom']!="")
                   {
                     echo"
                       <button name='disconnect' class='disconnect' id='disconnect'>

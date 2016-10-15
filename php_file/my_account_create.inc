@@ -192,7 +192,7 @@
       <tr>
         <td class="label-align-right">Pays*</td>
         <td>
-          <select class="button-submit" name="" id="">
+          <select class="button-submit" name="pays" id="">
             <option value="france" selected="selected">France</option>
             <option value="belgique">Belgique</option>
           </select>

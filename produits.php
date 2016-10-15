@@ -25,6 +25,7 @@
         if (isset($_POST['disconnect']))
           {
             session_destroy();
+            $_SESSION['connected']='no';
           }
 			}
 		//Add an article to the basket ('panier')
@@ -61,7 +62,7 @@
 		include ("php_file/04_menuSuite.inc");
 		//Fin de la première partie
 
-		//TO acces to the form
+		//TO access to the form
 		if (isset($_POST['contactUs']))
 			{
 				include ("php_file/contact_us.inc");
@@ -72,10 +73,16 @@
       }
     elseif (isset($_POST['submitAccount']))
       {
-        // if ($_SESSION['process']=='order')
-          // {
+        if ($_SESSION['process']=='order')
+          {
             include("php_file/my_account_connexion.inc");
-          // }
+            updateClient();
+          }
+        elseif ($_SESSION['process']=='account')
+          {
+            include("php_file/my_account_confirmation.inc");
+            updateClient();
+          }
       }
     elseif (isset($_POST['myAccount']))
       {
