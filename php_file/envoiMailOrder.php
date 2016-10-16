@@ -2,9 +2,9 @@
 <?php
 
 //Préparation de variable :
-	$nomSociete='SCRAPDIDI';			
+	$nomSociete='SCRAPDIDI';
 	$adresseMailSociete=utf8_encode('scrapdidi@gmail.com');
-	
+
 	$no_order=$_SESSION['idCommande'];
 	$nom_client=$_SESSION['nom'];
 	$prenom_client=$_SESSION['prenom'];
@@ -12,14 +12,17 @@
 	$total_commande=$_SESSION['prixTotal'];
 	$mode_livraison=$_SESSION['shippingSelectedText'];;
 	$payement_choice=$_SESSION['payementChoiceText'];
-	
+
 //Delete the value of $_SESSION['valider_commande']
 	$_SESSION['valider_commande']='';
-	
+
 //Style de la balise <p>
 	$styleP="style='font-size: 1.1em;'";
 	$stylePetit="style='font-size: 0.7em;'";
 	$styleligneHeight="style='ligne-height:30px;'";
+
+  $textExpedition=$_SESSION['textExpedition'];
+
 
 
 $mail = "$_SESSION[mailClient]";
@@ -35,7 +38,7 @@ else
     $passage_ligne = "\n";
 }
 //=====Déclaration des messages au format texte et au format HTML.
-$message_txt = 
+$message_txt =
 "Bonjour ".$prenom_client.","
 ."Votre Commande n°".$no_order
 ." a bien été envoyée."
@@ -44,31 +47,48 @@ $message_txt =
 ;
 
 
-$message_html = 
+$message_html =
 	"<html>
 		<head></head>
 		<body>
-			<p $styleP>$prenom_client, </p>
+			<p $styleP>
+        Bonjour $prenom_client,
+      </p>
 			</br $styleligneHeight>
-			<p $styleP>Votre commande <i>(n° $no_order)</i> pour un montant de $total_commande € a bien été prise en compte.</p>
-			<p $styleP>Vous avez choisi de régler votre commande par $payement_choice</p>
-			<p $styleP>Voici la procédure à suivre pour régler votre commande ...</p>
-			<p $styleP>Vous recevrez un mail au moment de l'expédition de votre commande par $mode_livraison</p>
+      <p $styleP>
+        Nous avons bien enregistré votre commande sur ScrapDidi et nous vous en remercions.
+      </p>
+      </br $styleligneHeight>
+      <p $styleP>
+        Voici le détail de votre commande :
+      </p>
+      <ul>
+        <li>N° commande : $no_order</li>
+        <li>Montant total : $total_commande € </li>
+        <li>Mode de paiement : $payement_choice</li>
+        <li>Mode de livraison : $mode_livraison</li>
+      </ul>
+      <p $styleP>
+        $textExpedition
+      </p>
+			<p $styleP>
+        Merci de votre confiance et à bientôt.
+      </p>
 		</body>
 	</html>";
- 
+
 //echo "$message_html";
 //==========
- 
+
 //=====Création de la boundary
 $boundary = "-----=".md5(rand());
 //==========
- 
+
 //=====Définition du sujet.
-$sujet = "[scrapdidi.fr]-Validation de votre commande n°$no_order ";
+$sujet = "[scrapdidi.fr] Confirmation de commande";
 //$sujet = $_SESSION['EnseigneTemp'] ." ". $_SESSION['VilleTemp'] ." - Commande n° ". $_SESSION['idCommande'];
 //=========
- 
+
 //=====Création du header de l'e-mail.
 //$header = "From: \"WeaponsB\"<weaponsb@mail.fr>".$passage_ligne;
 $header = "From: $nomSociete <$adresseMailSociete>".$passage_ligne;
@@ -77,7 +97,7 @@ $header.= "Reply-to: $nomSociete <$adresseMailSociete>".$passage_ligne;
 $header.= "MIME-Version: 1.0".$passage_ligne;
 $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 //==========
- 
+
 //=====Création du message.
 $message = $passage_ligne."--".$boundary.$passage_ligne;
 //=====Ajout du message au format texte.
@@ -94,7 +114,7 @@ $message.= $passage_ligne.$message_html.$passage_ligne;
 $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
 $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
 //==========
- 
+
 //=====Envoi de l'e-mail.
 mail($mail,$sujet,$message,$header);
 echo "
@@ -126,7 +146,7 @@ $mail="mdesrosiers@orange.fr";
 $sujet="Buffalo Grill";
 $message="Voilà un mail simple";
 mail($mail,$sujet,$message);
- 
+
  */
 
 ?>

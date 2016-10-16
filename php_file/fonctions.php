@@ -1905,7 +1905,8 @@ function change_order_statement ($idCommande, $order_statement)
   elseif ($order_statement == 4)
   {
     $rq="UPDATE commande SET etatCommande = $order_statement, send_date = '$dateTime' WHERE idCommande = $idCommande";
-    include("php_file/envoiMailOrderSent.php");
+    include("php_file/envoiMailOrder.php");
+    include("php_file/envoiMailOrderAmandine.php");
   }
   elseif ($order_statement == 5)
   {
