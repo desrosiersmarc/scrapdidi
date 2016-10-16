@@ -35,6 +35,10 @@ switch ($_SESSION['payementChoice'])
       break;
     case 'paypal':
       include("php_file/payement-paypal-confirmation.inc");
+      $_SESSION['textExpedition']='
+      <p $styleP>
+        Nous informerons de l’expédition de votre commande.
+      </p>';
       break;
     case 'comptant':
       if ($_SESSION['shippingSelected']=='salon')
