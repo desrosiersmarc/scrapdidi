@@ -117,13 +117,13 @@ $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
 
 //=====Envoi de l'e-mail.
 mail($mail,$sujet,$message,$header);
-echo "
-	<div class='messageDivContent'>
-		<div class='messageDiv'>
-			$message_html
-		</div>
-	</div>
-";
+// echo "
+// 	<div class='messageDivContent'>
+// 		<div class='messageDiv'>
+// 			$message_html
+// 		</div>
+// 	</div>
+// ";
 
 //List of session's variable
 // var_dump($_SESSION);
