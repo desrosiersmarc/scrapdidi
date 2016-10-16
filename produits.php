@@ -120,6 +120,8 @@
         $_SESSION['step']=5;
         include("php_file/payement-confirmation.inc");
         updateValidatedBasket();
+        include("php_file/envoiMailOrder.php");
+        include("php_file/envoiMailOrderAmandine.php");
       }
 
 		//When a clic is on a bin image to delete a line in the basket
