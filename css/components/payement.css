@@ -24,6 +24,10 @@
   font-size: 30px;
 }
 
+.payement-confirmation {
+  text-align: center;
+}
+
 .payement-procedure {
   margin: 60px;
 }

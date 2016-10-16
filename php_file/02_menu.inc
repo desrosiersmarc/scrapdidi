@@ -2,6 +2,7 @@
 	if (isset($_SESSION['prenom']) && $_SESSION['prenom']!="")
 		{
 			$prenomClient="Mon Compte : " . $_SESSION['prenom'];
+      $prenomClientSeul=$_SESSION['prenom'];
 		}
 	else
 		{
