@@ -941,7 +941,7 @@ function showArticlesFunction($rq, $functionName) {
 
 	$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
 
-	echo"<form method='post' action='produits.php'>";
+	echo"<form method='post' action='produits.php' class='articles-display'>";
 		while ($ligne=mysqli_fetch_assoc($reponse))
 			{
 				$libelleArticles=utf8_encode($ligne['libelleArticles']);
