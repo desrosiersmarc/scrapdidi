@@ -1408,15 +1408,38 @@ function showBasket ()
 										<td class='td_libelle'><p class='basketText'>$libelleArticles</p> <p class='basketTextReference'>$ligne[ref]</p></td>
 										<td class='td_others'>$prixVente</td>
 										<td class='td_others'>
-											<button name='buttonLess' class='lessMoreLeft' value='$ligne[ref]'>-</button>
+                  ";
+                    if ($_SESSION['step']<>4)
+                      {
+                        echo"<button name='buttonLess' class='lessMoreLeft' value='$ligne[ref]'>-</button>";
+                      }
+                  echo"
 											<button class='quantityBasket'>$ligne[nbArticles]</button>
-											<button name='buttonMore' class='lessMoreRight' value='$ligne[ref]'>+</button>
+                  ";
+                    if ($_SESSION['step']<>4)
+                      {
+                        echo"
+											   <button name='buttonMore' class='lessMoreRight' value='$ligne[ref]'>+</button>
+                        ";
+                      }
+                  echo"
 										</td>
 										<td class='td_others'>$prixVenteTotal €</td>
 										<td>
-											<button name='basketBinButton' class='basketBinButton' value='$ligne[ref]'>
-												<img src='media_site/bin_pink.png' class='basketBin'>
-											</button>
+                  ";
+                    if ($_SESSION['step']<>4)
+                    {
+                      echo"
+  											<button name='basketBinButton' class='basketBinButton' value='$ligne[ref]'>
+  												<img src='media_site/bin_pink.png' class='basketBin'>
+  											</button>
+                        ";
+                    }
+                    else
+                    {
+                      echo " ";
+                    }
+                  echo"
 										</td>
 									</tr>
 								";

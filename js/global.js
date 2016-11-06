@@ -24,7 +24,7 @@ $(document).ready(function(){
     $('#shipping-cgv-alert').hide();
     $('#shipping-validation').hide();
     $('#shipping-validation').removeClass('shipping-button-hide');
-    $('#shipping-validation').slideDown(slow);
+    $('#shipping-validation').slideDown();
   });
 
   // #TODO find a solution toggle ? to hide button if checkbox is uncheck if checkbox or not
