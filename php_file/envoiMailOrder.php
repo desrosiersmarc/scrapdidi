@@ -51,33 +51,38 @@ $message_html =
 	"<html>
 		<head></head>
 		<body>
-			<p $styleP>
-        Bonjour $prenom_client,
-      </p>
-			</br $styleligneHeight>
-      <p $styleP>
-        Nous avons bien enregistré votre commande sur ScrapDidi et nous vous en remercions.
-      </p>
-      </br $styleligneHeight>
-      <p $styleP>
-        Voici le détail de votre commande :
-      </p>
-      <ul>
-        <li>N° commande : $no_order</li>
-        <li>Montant total : $total_commande € </li>
-        <li>Mode de paiement : $payement_choice</li>
-        <li>Mode de livraison : $mode_livraison</li>
-      </ul>
-      <p $styleP>
-        $textExpedition
-      </p>
-			<p $styleP>
-        Merci de votre confiance et à bientôt.
-      </p>
+      <div style='background-color:#F8E0F7; padding:10px 10px 10px 10px; border-radius:14px 14px 0 0;'>
+        <img src='http://scrapdidi.fr/media_site/logo_titre.png' alt='logo scrapdidi.fr'>
+      </div>
+      <div style='background-color:#CEE3F6; padding:10px; border-radius:0 0 14px 14px ;'>
+        <p $styleP>
+          Bonjour $prenom_client,
+        </p>
+        </br $styleligneHeight>
+        <p $styleP>
+          Nous avons bien enregistré votre commande sur ScrapDidi et nous vous en remercions.
+        </p>
+        </br $styleligneHeight>
+        <p $styleP>
+          Voici le détail de votre commande :
+        </p>
+        <ul>
+          <li>N° commande : $no_order</li>
+          <li>Montant total : $total_commande € </li>
+          <li>Mode de paiement : $payement_choice</li>
+          <li>Mode de livraison : $mode_livraison</li>
+        </ul>
+        <p $styleP>
+          $textExpedition
+        </p>
+        <p $styleP>
+          Merci de votre confiance et à bientôt.
+        </p>
+      </div>
 		</body>
 	</html>";
 
-//echo "$message_html";
+echo "$message_html";
 //==========
 
 //=====Création de la boundary
