@@ -1362,133 +1362,145 @@ function showBasket ()
 		echo"
 		<div id='basketDivContent'>
 			<div id='basketDiv'>
-				<FORM method='post' action='produits.php'>
-					<table>
-						<tr class='tr_title'>
-							<td colspan='6'>
-								<p>Mon panier</p>
-							</td>
-						</tr>
-						<tr>
-							<th></th>
-							<!--<th>Référence</th>-->
-							<th>Désignation</th>
-							<th>Prix unitaire</th>
-							<th>Quantité</th>
-							<th>Prix total</th>
-							<th></th>
-						</tr>
-					";
+    ";
+      if ($_SESSION['total_basket']== 0)
+        {
+          echo "<h2>Votre panier est vide pour le moment...</h2>";
+        }
+      else
+        {
+          echo"
+        				<FORM method='post' action='produits.php'>
+        					<table>
+        						<tr class='tr_title'>
+        							<td colspan='6'>
+        								<p>Mon panier</p>
+        							</td>
+        						</tr>
+        						<tr>
+        							<th></th>
+        							<!--<th>Référence</th>-->
+        							<th>Désignation</th>
+        							<th>Prix unitaire</th>
+        							<th>Quantité</th>
+        							<th>Prix total</th>
+        							<th></th>
+        						</tr>
+        					";
 
-						$prixTotalPanier=0;
-						$prixTotalPanierFraisPort=0;
-						$poidsArticlesPanier=0;
-						$prixChoisiFraisPort=0;
+        						$prixTotalPanier=0;
+        						$prixTotalPanierFraisPort=0;
+        						$poidsArticlesPanier=0;
+        						$prixChoisiFraisPort=0;
 
-						$rq="select a.imagesArticles1 as image, p.referenceArticles as ref, a.libelleArticles as libelle, ((a.prixVenteArticles * (100-a.tauxPromoArticles))/100) as prixDeVenteArticles, sum(a.poidsArticles) as poidsArticlesPanier, sum(p.quantiteArticles) as nbArticles, SUM(((a.prixVenteArticles * (100-a.tauxPromoArticles))/100)) as prixArticles from panier p, articles a where p.referenceArticles=a.referenceArticles and p.idCommande=$_SESSION[idCommande] group by p.referenceArticles order by p.idPanier;";
+        						$rq="select a.imagesArticles1 as image, p.referenceArticles as ref, a.libelleArticles as libelle, ((a.prixVenteArticles * (100-a.tauxPromoArticles))/100) as prixDeVenteArticles, sum(a.poidsArticles) as poidsArticlesPanier, sum(p.quantiteArticles) as nbArticles, SUM(((a.prixVenteArticles * (100-a.tauxPromoArticles))/100)) as prixArticles from panier p, articles a where p.referenceArticles=a.referenceArticles and p.idCommande=$_SESSION[idCommande] group by p.referenceArticles order by p.idPanier;";
 
-						$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
-						while ($ligne=mysqli_fetch_assoc($reponse))
-							{
-								$prixVente=number_format($ligne['prixDeVenteArticles'],2,',','');
-								$prixVenteTotal=number_format($ligne['prixArticles'],2,',','');
+        						$reponse=mysqli_query($connexion,$rq) or die ("Request's Error... $functionName");
+        						while ($ligne=mysqli_fetch_assoc($reponse))
+        							{
+        								$prixVente=number_format($ligne['prixDeVenteArticles'],2,',','');
+        								$prixVenteTotal=number_format($ligne['prixArticles'],2,',','');
 
-								$prixTotalPanier = $prixTotalPanier + $ligne['prixArticles'];
+        								$prixTotalPanier = $prixTotalPanier + $ligne['prixArticles'];
 
-								$poidsArticlesPanier=$poidsArticlesPanier + $ligne['poidsArticlesPanier'];
+        								$poidsArticlesPanier=$poidsArticlesPanier + $ligne['poidsArticlesPanier'];
 
-								$imageBasket='media_site/produits/'.$ligne['image'];
-								//popupMessage($imageBasket);
-								$libelleArticles=utf8_encode($ligne['libelle']);
+        								$imageBasket='media_site/produits/'.$ligne['image'];
+        								//popupMessage($imageBasket);
+        								$libelleArticles=utf8_encode($ligne['libelle']);
 
-								echo "
-									<tr>
-										<td><img class='basketImage' src='$imageBasket' ></td>
-										<!--<td>$ligne[ref]</td>-->
-										<td class='td_libelle'><p class='basketText'>$libelleArticles</p> <p class='basketTextReference'>$ligne[ref]</p></td>
-										<td class='td_others'>$prixVente</td>
-										<td class='td_others'>
-                  ";
-                    if ($_SESSION['step']<>4)
-                      {
-                        echo"<button name='buttonLess' class='lessMoreLeft' value='$ligne[ref]'>-</button>";
-                      }
-                  echo"
-											<button class='quantityBasket'>$ligne[nbArticles]</button>
-                  ";
-                    if ($_SESSION['step']<>4)
-                      {
-                        echo"
-											   <button name='buttonMore' class='lessMoreRight' value='$ligne[ref]'>+</button>
-                        ";
-                      }
-                  echo"
-										</td>
-										<td class='td_others'>$prixVenteTotal €</td>
-										<td>
-                  ";
-                    if ($_SESSION['step']<>4)
-                    {
-                      echo"
-  											<button name='basketBinButton' class='basketBinButton' value='$ligne[ref]'>
-  												<img src='media_site/bin_pink.png' class='basketBin'>
-  											</button>
-                        ";
-                    }
-                    else
-                    {
-                      echo " ";
-                    }
-                  echo"
-										</td>
-									</tr>
-								";
-							}
-								//popupMessage($poidsArticlesPanier);
-								$prix_fdp_home=number_format(shipping($poidsArticlesPanier, "home"),2,',','');
-                $_SESSION['prix_fdp_home']=$prix_fdp_home;
-								$prix_fdp_salon=number_format(shipping($poidsArticlesPanier, "salon"),2,',','');
-                $_SESSION['prix_fdp_salon']=$prix_fdp_salon;
+        								echo "
+        									<tr>
+        										<td><img class='basketImage' src='$imageBasket' ></td>
+        										<!--<td>$ligne[ref]</td>-->
+        										<td class='td_libelle'><p class='basketText'>$libelleArticles</p> <p class='basketTextReference'>$ligne[ref]</p></td>
+        										<td class='td_others'>$prixVente</td>
+        										<td class='td_others'>
+                          ";
+                            if ($_SESSION['step']<>4)
+                              {
+                                echo"<button name='buttonLess' class='lessMoreLeft' value='$ligne[ref]'>-</button>";
+                              }
+                          echo"
+        											<button class='quantityBasket'>$ligne[nbArticles]</button>
+                          ";
+                            if ($_SESSION['step']<>4)
+                              {
+                                echo"
+        											   <button name='buttonMore' class='lessMoreRight' value='$ligne[ref]'>+</button>
+                                ";
+                              }
+                          echo"
+        										</td>
+        										<td class='td_others'>$prixVenteTotal €</td>
+        										<td>
+                          ";
+                            if ($_SESSION['step']<>4)
+                            {
+                              echo"
+          											<button name='basketBinButton' class='basketBinButton' value='$ligne[ref]'>
+          												<img src='media_site/bin_pink.png' class='basketBin'>
+          											</button>
+                                ";
+                            }
+                            else
+                            {
+                              echo " ";
+                            }
+                          echo"
+        										</td>
+        									</tr>
+        								";
+        							}
+        								//popupMessage($poidsArticlesPanier);
+        								$prix_fdp_home=number_format(shipping($poidsArticlesPanier, "home"),2,',','');
+                        $_SESSION['prix_fdp_home']=$prix_fdp_home;
+        								$prix_fdp_salon=number_format(shipping($poidsArticlesPanier, "salon"),2,',','');
+                        $_SESSION['prix_fdp_salon']=$prix_fdp_salon;
 
-								$prix_fdp_suivi=number_format(shipping($poidsArticlesPanier, "suivi"),2,',','');
-                $_SESSION['prix_fdp_suivi']=$prix_fdp_suivi;
+        								$prix_fdp_suivi=number_format(shipping($poidsArticlesPanier, "suivi"),2,',','');
+                        $_SESSION['prix_fdp_suivi']=$prix_fdp_suivi;
 
-								$prix_fdp_colissimo=number_format(shipping($poidsArticlesPanier, "colissimo"),2,',','');
-                $_SESSION['prix_fdp_colissimo']=$prix_fdp_colissimo;
-								if (isset($_SESSION['shippingPrice']))
-									{
-										$prixChoisiFraisPort = $_SESSION['shippingPrice'];
-									}
+        								$prix_fdp_colissimo=number_format(shipping($poidsArticlesPanier, "colissimo"),2,',','');
+                        $_SESSION['prix_fdp_colissimo']=$prix_fdp_colissimo;
+        								if (isset($_SESSION['shippingPrice']))
+        									{
+        										$prixChoisiFraisPort = $_SESSION['shippingPrice'];
+        									}
 
-								$prixTotalPanierFraisPort = $prixTotalPanier + $prixChoisiFraisPort;
+        								$prixTotalPanierFraisPort = $prixTotalPanier + $prixChoisiFraisPort;
 
-								$prixTotalPanier=number_format($prixTotalPanier,2,',','');
-								$prixTotalPanierFraisPort=number_format($prixTotalPanierFraisPort,2,',','');
-								$_SESSION['prixTotal']=$prixTotalPanierFraisPort;
-                include("php_file/total_basket.inc");
+        								$prixTotalPanier=number_format($prixTotalPanier,2,',','');
+        								$prixTotalPanierFraisPort=number_format($prixTotalPanierFraisPort,2,',','');
+        								$_SESSION['prixTotal']=$prixTotalPanierFraisPort;
+                        include("php_file/total_basket.inc");
 
-                if (isset($_POST['shipping_and_payement_step']))
-                  {
-                    include("php_file/payement.inc");
-                  }
-                else
-                  {
+                        if (isset($_POST['shipping_and_payement_step']))
+                          {
+                            include("php_file/payement.inc");
+                          }
+                        else
+                          {
+                            echo"
+                              <tr>
+                                <td colspan='2'></td>
+                                <td colspan='3'>
+                                  <button
+                                    class='buttonPasserCommande' name='valider_commande' id='step1-button'>
+                                    Je commande
+                                  </button>
+                                </td>
+                                <td></td>
+                              </tr>
+                              ";
+                          }
                     echo"
-                      <tr>
-                        <td colspan='2'></td>
-                        <td colspan='3'>
-                          <button
-                            class='buttonPasserCommande' name='valider_commande' id='step1-button'>
-                            Je commande
-                          </button>
-                        </td>
-                        <td></td>
-                      </tr>
-                      ";
-                  }
-            echo"
-					</table>
-				</FORM>
+        					</table>
+        				</FORM>
+          ";
+        }
+
+    echo "
 			</div>
 		</div>
 		";
