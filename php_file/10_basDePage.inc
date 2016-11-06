@@ -31,11 +31,9 @@
                 </button>
               </li>
               <li>
-                  <button class="cgv-button" name="cgv" type="submit">
-                    <u>Conditions générales de ventes</u>
-                  </button>
-                </form>
+                <?php include("php_file/inc_button_cgv.inc") ?>
               </li>
+            </form>
             <li><p class="tailleTexteInformations"><a href="http://ec.europa.eu/consumers/odr"  target="_blank">En cas de litiges</a></p></li>
           </ul>
         </div>

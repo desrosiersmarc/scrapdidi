@@ -72,7 +72,7 @@
       </tr>
       <tr>
         <td colspan='4'>
-          <p>
+          <p class='shipping-title-padding-top'>
             <strong>
               Laisser un message
             </strong>
@@ -93,7 +93,7 @@
       </tr>
       <tr>
         <td colspan='4'>
-          <p>
+          <p class='shipping-title-padding-top'>
             <strong>
               Conditions générales de ventes
             </strong>
@@ -101,9 +101,12 @@
         </td>
       </tr>
       <tr>
-        <td colspan='4'>
+        <td class="shipping-align-right">
+          <input type="checkbox" name="cgv" id="cgv" >
+        </td>
+        <td colspan='3'>
           <p>
-            j'ai lu et j'accepte les conditions générales de vente et j'y adhère sans réserve <a href="">(lire les conditions générales de vente)</a>
+            j'ai lu et j'accepte les conditions générales de vente et j'y adhère sans réserve. Lire les <?php include("php_file/inc_button_cgv.inc") ?>
           </p>
         </td>
       </tr>

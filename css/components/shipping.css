@@ -22,3 +22,11 @@
   color:#FFFFFF;
   background-color: #F10091;
 }
+
+.shipping-title-padding-top {
+  padding-top: 10px;
+}
+
+.shipping-align-right {
+  text-align: right;
+}
