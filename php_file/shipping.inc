@@ -114,11 +114,16 @@
         <td colspan='2'>
         </td>
         <td>
-          <button type='submit' name='shipping_and_payement_step' class="shipping-button">
+          <button type='submit' name='shipping_and_payement_step' class="shipping-button shipping-button-hide" id="shipping-validation">
             Je valide ma livraison et je passe au paiement
           </button>
         </td>
         <td></td>
+      </tr>
+      <tr>
+        <td colspan='4'>
+          <p class="shipping-cgv-alert" id="shipping-cgv-alert"> Cochez les cgv pour passer à l'étape suivante</p>
+        </td>
       </tr>
     </table>
   </form>

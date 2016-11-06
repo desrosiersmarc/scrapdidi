@@ -20,10 +20,14 @@ $(document).ready(function(){
       {$('#password-alert').slideUp();}
   });
 
-  // $('#disconnect').click(function(){
-  //   location.reload();
-  // });
+  $('#cgv').click(function(){
+    $('#shipping-cgv-alert').hide();
+    $('#shipping-validation').hide();
+    $('#shipping-validation').removeClass('shipping-button-hide');
+    $('#shipping-validation').slideDown(slow);
+  });
 
+  // #TODO find a solution toggle ? to hide button if checkbox is uncheck if checkbox or not
 
 });
 
