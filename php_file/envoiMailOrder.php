@@ -82,7 +82,7 @@ $message_html =
 		</body>
 	</html>";
 
-echo "$message_html";
+// echo "$message_html";
 //==========
 
 //=====Création de la boundary

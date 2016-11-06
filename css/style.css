@@ -26,6 +26,7 @@
 @import url("components/payement.css");
 @import url("components/home.css");
 @import url("components/cgv.css");
+@import url("components/article.css");
 
 
 /*Declaration of CSS's variables*/
@@ -84,6 +85,9 @@
   {
     margin:0;
 
+  }
+  h2 {
+    font-family: arial, sans-serif;
   }
 
   a

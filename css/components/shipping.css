@@ -13,7 +13,10 @@
   border-radius:5px;
   background-color:var(--main_bg_color_blue);
   border:solid 1px #F10091;
+}
 
+.shipping-button-hide {
+  display: none;
 }
 
 .shipping-button:hover
@@ -21,4 +24,20 @@
   box-shadow: 8px 8px 12px #aaa;
   color:#FFFFFF;
   background-color: #F10091;
+}
+
+.shipping-title-padding-top {
+  padding-top: 10px;
+}
+
+.shipping-align-right {
+  text-align: right;
+}
+
+.shipping-cgv-alert {
+  background-color: #F00;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
 }
