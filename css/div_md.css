@@ -153,6 +153,7 @@ td
 	box-shadow: 8px 8px 12px #aaa;
 	color:#FFFFFF;
 	background-color: #F10091;
+  cursor:pointer;
 }
 
 .imgButtonFraisPort
@@ -174,6 +175,7 @@ td
 	box-shadow: 8px 8px 12px #aaa;
 	color:#FFFFFF;
 	background-color: #F10091;
+  cursor:pointer;
 }
 
 
@@ -417,6 +419,7 @@ textarea
 	/*background-image: linear-gradient(to bottom, #f10091, var(--main_color_blue_dark));*/
 	color:#FFF;
 	text-decoration: none;
+
 	}
 
 /*Gestion de la div menu navigation*/
