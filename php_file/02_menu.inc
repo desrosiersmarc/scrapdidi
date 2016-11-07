@@ -57,7 +57,7 @@
 						<div id="panierContent" >
 							<div id="panier">
 								<FORM method='post' action='produits.php'>
-									<button id="basketButtonCSS" name="basketButton">
+									<button id="basketButtonCSS" class="basketButtonCSS" name="basketButton">
 										<img src="media_site/panier.png" class="panierLogo">
 											<div class='rondArticle'>
 												<?php
