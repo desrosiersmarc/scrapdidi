@@ -1477,7 +1477,14 @@ function showBasket ()
 
                         if (isset($_POST['shipping_and_payement_step']))
                           {
-                            include("php_file/payement.inc");
+                            if ($_SESSION['shippingSelected']=='suivi' || $_SESSION['shippingSelected']=='colissimo' )
+                              {
+                                include("php_file/payement-online.inc");
+                              }
+                            else
+                              {
+                                include("php_file/payement.inc");
+                              }
                           }
                         else
                           {

@@ -24,6 +24,7 @@
     /*background-image: linear-gradient(to bottom, #f10091, var(--main_color_blue_dark));*/
     color:#FFF;
     text-decoration: none;
+    cursor: pointer;
   }
 
   /*Layout the first menu buttons*/
